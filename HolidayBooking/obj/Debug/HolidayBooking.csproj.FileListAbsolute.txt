@@ -9,3 +9,4 @@ M:\My Documents\TopUp\Group\HolidayBooking\obj\Debug\HolidayBooking.exe
 M:\My Documents\TopUp\Group\HolidayBooking\obj\Debug\HolidayBooking.pdb
 M:\My Documents\TopUp\Group\HolidayBooking\obj\Debug\HolidayBooking.CreateAccount.resources
 M:\My Documents\TopUp\Group\HolidayBooking\obj\Debug\HolidayBooking.MainForm.resources
+M:\My Documents\TopUp\Group\HolidayBooking\obj\Debug\HolidayBooking.Comfirmation.resources

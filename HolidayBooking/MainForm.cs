@@ -29,7 +29,14 @@ namespace HolidayBooking
             NavIndex = 0;
             NavPanels.Add(plGetLocation);
             NavPanels.Add(plBookingDates);
-            NavPanels[NavIndex].BringToFront();
+            NavPanels.Add(plFlight);
+            NavPanels.Add(plHotel);
+            NavPanels.Add(plCarHire);
+            NavPanels.Add(plInsurance);
+            NavPanels.Add(plCheckDetails);
+            NavPanels.Add(plSummary);
+            NavPanels.Add(plPayment);
+            LoadPage(NavIndex);
             updateProgressBar(NavIndex);
 
         }
@@ -53,8 +60,22 @@ namespace HolidayBooking
         {
             //Takes user to next page in navigation
             if (NavIndex < NavPanels.Count - 1)
+            {
                 NavPanels[++NavIndex].BringToFront();
-            updateProgressBar(NavIndex);
+                updateProgressBar(NavIndex);
+            }
+            else if (NavIndex ==8)
+            {
+                Comfirmation comfirmation = new Comfirmation();
+                comfirmation.Show();
+                this.Hide();
+            }
+        }
+
+        private void LoadPage(int _NavIndex)
+        {
+            NavPanels[NavIndex].BringToFront();
+            updateProgressBar(_NavIndex);
         }
 
 
@@ -64,6 +85,60 @@ namespace HolidayBooking
             BookingProgressBar.Value = ((_NavIndex +1) * 10);
         }
 
+        private void Navbtn1NewBooking_Click(object sender, EventArgs e)
+        {
+            NavIndex = 0;
+            LoadPage(NavIndex);
+        }
+
+        private void Navbtn2Dates_Click(object sender, EventArgs e)
+        {
+            NavIndex = 1;
+            LoadPage(NavIndex);
+        }
+
+        private void Navbtn3Flights_Click(object sender, EventArgs e)
+        {
+            NavIndex = 2;
+            LoadPage(NavIndex);
+        }
+
+        private void Navbtn4Hotel_Click(object sender, EventArgs e)
+        {
+            NavIndex = 3;
+            LoadPage(NavIndex);
+        }
+
+        private void Navbtn5Car_Click(object sender, EventArgs e)
+        {
+            NavIndex = 4;
+            LoadPage(NavIndex);
+        }
+
+        private void Navbtn6Inusrance_Click(object sender, EventArgs e)
+        {
+            NavIndex = 5;
+            LoadPage(NavIndex);
+        }
+
+        private void Navbtn7CheckDetails_Click(object sender, EventArgs e)
+        {
+            NavIndex = 6;
+            LoadPage(NavIndex);
+        }
+
+        private void Navbtn8Summary_Click(object sender, EventArgs e)
+        {
+            NavIndex = 7;
+            LoadPage(NavIndex);
+        }
+
+        private void Navbtn9Payments_Click(object sender, EventArgs e)
+        {
+            NavIndex = 8;
+            LoadPage(NavIndex);
+        }
+
         //********************************** Page 1 - Get location Buttons and functions ****************************************************
 
         private void cbLocations_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,9 +146,23 @@ namespace HolidayBooking
 
         }
 
+
+
+
+
         //********************************** Page 2 - Get Dates Buttons and functions ****************************************************
 
 
 
+
+
+
+
+        /***********************************LIST OF THINGS TO ADD ***********************************************************************
+       HIDE NEXT BUTTON ON CERTAIN PAGES EXAMPLE PAYMENT
+       iMPLEMENT CALANDER
+
+
+       */
     }
 }
