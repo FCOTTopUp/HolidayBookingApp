@@ -56,5 +56,10 @@ namespace HolidayBooking
         {
 
         }
+
+        private void CreateAccount_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

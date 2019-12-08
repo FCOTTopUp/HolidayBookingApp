@@ -28,16 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.plGetLocation = new System.Windows.Forms.Panel();
-            this.cbLocations = new System.Windows.Forms.ComboBox();
-            this.lbGetHolidayLocation = new System.Windows.Forms.Label();
-            this.plBookingDates = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.plPg1GetLocation = new System.Windows.Forms.Panel();
+            this.btnPg1AddChild = new System.Windows.Forms.Button();
+            this.btnPg1AddAdult = new System.Windows.Forms.Button();
+            this.tbPg1NoOfChildren = new System.Windows.Forms.TextBox();
+            this.btnPg1MinusChild = new System.Windows.Forms.Button();
+            this.btnPg1MinusAdult = new System.Windows.Forms.Button();
+            this.tbPg1NoOfAdults = new System.Windows.Forms.TextBox();
+            this.lbPg1HowManyLabel = new System.Windows.Forms.Label();
+            this.lbPg1ChildrenLabel = new System.Windows.Forms.Label();
+            this.lbPg1AdultsLabel = new System.Windows.Forms.Label();
+            this.lbPg1NewBookingTitle = new System.Windows.Forms.Label();
+            this.cbPg1GetLocation = new System.Windows.Forms.ComboBox();
+            this.lbPg1WhereLabel = new System.Windows.Forms.Label();
+            this.plPg2BookingDates = new System.Windows.Forms.Panel();
+            this.dtPg2HolidayEnd = new System.Windows.Forms.DateTimePicker();
+            this.lbPg2End = new System.Windows.Forms.Label();
+            this.CalPg2HolidayDates = new System.Windows.Forms.MonthCalendar();
+            this.lbPg2Start = new System.Windows.Forms.Label();
+            this.lbPg2DatesTitle = new System.Windows.Forms.Label();
+            this.dtPg2HolidayStart = new System.Windows.Forms.DateTimePicker();
             this.BookingProgressBar = new System.Windows.Forms.ProgressBar();
             this.Navbtn1NewBooking = new System.Windows.Forms.Button();
             this.Navbtn2Dates = new System.Windows.Forms.Button();
@@ -51,224 +61,356 @@
             this.Navbtn9Payments = new System.Windows.Forms.Button();
             this.btnPreviousPage = new System.Windows.Forms.Button();
             this.btnNextPage = new System.Windows.Forms.Button();
-            this.plFlight = new System.Windows.Forms.Panel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.plCarHire = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.plInsurance = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.plCheckDetails = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.plSummary = new System.Windows.Forms.Panel();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.label23 = new System.Windows.Forms.Label();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.label19 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.plPayment = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.plHotel = new System.Windows.Forms.Panel();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
+            this.plPg3Flight = new System.Windows.Forms.Panel();
+            this.cbPg3DepartureAirport = new System.Windows.Forms.ComboBox();
+            this.lbPg3AddFlightsQuestion = new System.Windows.Forms.Label();
+            this.chbPg3YesFlights = new System.Windows.Forms.CheckBox();
+            this.chbPg3NoFlights = new System.Windows.Forms.CheckBox();
+            this.cbPg3TravelClass = new System.Windows.Forms.ComboBox();
+            this.lbPg3FlightsTitle = new System.Windows.Forms.Label();
+            this.lbPg3TravelClass = new System.Windows.Forms.Label();
+            this.lbPg3DepartureAirport = new System.Windows.Forms.Label();
+            this.plPg5CarHire = new System.Windows.Forms.Panel();
             this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.plGetLocation.SuspendLayout();
-            this.plBookingDates.SuspendLayout();
-            this.plFlight.SuspendLayout();
-            this.plCarHire.SuspendLayout();
-            this.plInsurance.SuspendLayout();
-            this.plCheckDetails.SuspendLayout();
-            this.plSummary.SuspendLayout();
-            this.plPayment.SuspendLayout();
-            this.plHotel.SuspendLayout();
+            this.lbPg5CarEndDate = new System.Windows.Forms.Label();
+            this.lbPg5CarStartDate = new System.Windows.Forms.Label();
+            this.lbPg5CarHireSelection = new System.Windows.Forms.Label();
+            this.lbPg5HireCarQuestion = new System.Windows.Forms.Label();
+            this.lbPg5CarHireTitle = new System.Windows.Forms.Label();
+            this.cbPg5CarHireSelection = new System.Windows.Forms.ComboBox();
+            this.dtPg5CarStartDate = new System.Windows.Forms.DateTimePicker();
+            this.dtPg5CarEndDate = new System.Windows.Forms.DateTimePicker();
+            this.chbPg5YesHireCar = new System.Windows.Forms.CheckBox();
+            this.chbPg5NoHireCar = new System.Windows.Forms.CheckBox();
+            this.plPg6Insurance = new System.Windows.Forms.Panel();
+            this.lbPg6AddInsuranceQuestion = new System.Windows.Forms.Label();
+            this.lbPg6InsuranceTitle = new System.Windows.Forms.Label();
+            this.lbPg6InsurancePriceEstimate = new System.Windows.Forms.Label();
+            this.chbPg6YesInsurance = new System.Windows.Forms.CheckBox();
+            this.chbPg6NoInsurance = new System.Windows.Forms.CheckBox();
+            this.plPg7CheckDetails = new System.Windows.Forms.Panel();
+            this.lbPg7Postcode = new System.Windows.Forms.Label();
+            this.tbPg7Postcode = new System.Windows.Forms.TextBox();
+            this.tbPg7Town = new System.Windows.Forms.TextBox();
+            this.tbPg7Street = new System.Windows.Forms.TextBox();
+            this.tbPg7HouseNo = new System.Windows.Forms.TextBox();
+            this.lbPg7HouseNo = new System.Windows.Forms.Label();
+            this.lbPg7Street = new System.Windows.Forms.Label();
+            this.lbPg7Town = new System.Windows.Forms.Label();
+            this.lbPg7CheckDetailsTitle = new System.Windows.Forms.Label();
+            this.btnPg7ChangeDetails = new System.Windows.Forms.Button();
+            this.lbPg7FirstName = new System.Windows.Forms.Label();
+            this.lbPg7LastName = new System.Windows.Forms.Label();
+            this.tbPg7FirstName = new System.Windows.Forms.TextBox();
+            this.tbPg7LastName = new System.Windows.Forms.TextBox();
+            this.tbPg7MiddleName = new System.Windows.Forms.TextBox();
+            this.tbPg7Phone = new System.Windows.Forms.TextBox();
+            this.btnPg7CorrectDetails = new System.Windows.Forms.Button();
+            this.tbPg7Email = new System.Windows.Forms.TextBox();
+            this.lbPg7Email = new System.Windows.Forms.Label();
+            this.lbPg7Phone = new System.Windows.Forms.Label();
+            this.lbPg7MiddleName = new System.Windows.Forms.Label();
+            this.plPg8Summary = new System.Windows.Forms.Panel();
+            this.lbPg8SummaryTitle = new System.Windows.Forms.Label();
+            this.rtbPgOptionalInfo = new System.Windows.Forms.RichTextBox();
+            this.lbPg8OptionalInfo = new System.Windows.Forms.Label();
+            this.rtbPg8BookingInfo = new System.Windows.Forms.RichTextBox();
+            this.dtPg8EndDate = new System.Windows.Forms.DateTimePicker();
+            this.lbPg8EndDate = new System.Windows.Forms.Label();
+            this.dtPg8StartDate = new System.Windows.Forms.DateTimePicker();
+            this.lbPg8StartDate = new System.Windows.Forms.Label();
+            this.rtbPg8HotelInfo = new System.Windows.Forms.RichTextBox();
+            this.lbPg8HotelInfo = new System.Windows.Forms.Label();
+            this.rtbPg8FlightInfo = new System.Windows.Forms.RichTextBox();
+            this.lbPg8FlightInfo = new System.Windows.Forms.Label();
+            this.lbPg8BookingInfo = new System.Windows.Forms.Label();
+            this.lbPg8ThankYou = new System.Windows.Forms.Label();
+            this.plPg9Payment = new System.Windows.Forms.Panel();
+            this.lbPg9PaymentMethod = new System.Windows.Forms.Label();
+            this.lbPg9BillingDetails = new System.Windows.Forms.Label();
+            this.mtbPg9CardNo = new System.Windows.Forms.MaskedTextBox();
+            this.lbPg9CardNum = new System.Windows.Forms.Label();
+            this.lbPg9Postcode = new System.Windows.Forms.Label();
+            this.tbPg9Postcode = new System.Windows.Forms.TextBox();
+            this.tbPg9Town = new System.Windows.Forms.TextBox();
+            this.tbPg9Street = new System.Windows.Forms.TextBox();
+            this.tbPg9HouseNo = new System.Windows.Forms.TextBox();
+            this.lbPg9HouseNo = new System.Windows.Forms.Label();
+            this.lbPg9Street = new System.Windows.Forms.Label();
+            this.lbPg9Town = new System.Windows.Forms.Label();
+            this.cbPg9Title = new System.Windows.Forms.ComboBox();
+            this.lbPg9Title = new System.Windows.Forms.Label();
+            this.chbPg9BillingSameAsAccount = new System.Windows.Forms.CheckBox();
+            this.lbPg9PaymentTitle = new System.Windows.Forms.Label();
+            this.btnPg9MakePayment = new System.Windows.Forms.Button();
+            this.chbPg9CreditCard = new System.Windows.Forms.CheckBox();
+            this.chbPg9DebitCard = new System.Windows.Forms.CheckBox();
+            this.mtbPg9SercuityCode = new System.Windows.Forms.MaskedTextBox();
+            this.mtbPg9ExpiryDate = new System.Windows.Forms.MaskedTextBox();
+            this.lbPg9SercuityCode = new System.Windows.Forms.Label();
+            this.lbPg9ExpiryDate = new System.Windows.Forms.Label();
+            this.mtbPg9NameOnCard = new System.Windows.Forms.MaskedTextBox();
+            this.lbPg9NameOnCard = new System.Windows.Forms.Label();
+            this.mtbPg9FirstName = new System.Windows.Forms.MaskedTextBox();
+            this.mtbPg9LastName = new System.Windows.Forms.MaskedTextBox();
+            this.lbPg9LastName = new System.Windows.Forms.Label();
+            this.lbPg9FirstName = new System.Windows.Forms.Label();
+            this.plPg4Hotel = new System.Windows.Forms.Panel();
+            this.lbPg4FamilyRoomsRequired = new System.Windows.Forms.Label();
+            this.lbPg4TwinRoomsRequired = new System.Windows.Forms.Label();
+            this.lbPg4DoubleRoomsRequired = new System.Windows.Forms.Label();
+            this.lbPg4HotelRoomsRequired = new System.Windows.Forms.Label();
+            this.lbPg4FamilyRoomsAvalible = new System.Windows.Forms.Label();
+            this.lbPg4TwinsRoomsAvalible = new System.Windows.Forms.Label();
+            this.lbPg4DoubleRoomsAvalible = new System.Windows.Forms.Label();
+            this.lbPg4HotelRoomsAvalible = new System.Windows.Forms.Label();
+            this.lbPg4SelectHotel = new System.Windows.Forms.Label();
+            this.lbPg4AddHotelQuestion = new System.Windows.Forms.Label();
+            this.lbPg4HotelBookingTitle = new System.Windows.Forms.Label();
+            this.lbPg4HotelEnd = new System.Windows.Forms.Label();
+            this.lbPg4HotelStart = new System.Windows.Forms.Label();
+            this.dtPg4HotelEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtPg4HotelStart = new System.Windows.Forms.DateTimePicker();
+            this.lbPg4HolidayEndDate = new System.Windows.Forms.Label();
+            this.lbPg4HolidayStartDate = new System.Windows.Forms.Label();
+            this.lbPg4HolidayDates = new System.Windows.Forms.Label();
+            this.lbPg4HotelInfo = new System.Windows.Forms.Label();
+            this.lbPg4HotelInfoSubTitle = new System.Windows.Forms.Label();
+            this.cbPg4SelectHotel = new System.Windows.Forms.ComboBox();
+            this.chbPg4NoHotel = new System.Windows.Forms.CheckBox();
+            this.chbPg4YesHotel = new System.Windows.Forms.CheckBox();
+            this.calPg4HotelBooking = new System.Windows.Forms.MonthCalendar();
+            this.lbRunningPrice = new System.Windows.Forms.Label();
+            this.plPg1GetLocation.SuspendLayout();
+            this.plPg2BookingDates.SuspendLayout();
+            this.plPg3Flight.SuspendLayout();
+            this.plPg5CarHire.SuspendLayout();
+            this.plPg6Insurance.SuspendLayout();
+            this.plPg7CheckDetails.SuspendLayout();
+            this.plPg8Summary.SuspendLayout();
+            this.plPg9Payment.SuspendLayout();
+            this.plPg4Hotel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // plGetLocation
+            // plPg1GetLocation
             // 
-            this.plGetLocation.Controls.Add(this.label44);
-            this.plGetLocation.Controls.Add(this.cbLocations);
-            this.plGetLocation.Controls.Add(this.lbGetHolidayLocation);
-            this.plGetLocation.Location = new System.Drawing.Point(15, 47);
-            this.plGetLocation.Name = "plGetLocation";
-            this.plGetLocation.Size = new System.Drawing.Size(1209, 561);
-            this.plGetLocation.TabIndex = 0;
+            this.plPg1GetLocation.Controls.Add(this.btnPg1AddChild);
+            this.plPg1GetLocation.Controls.Add(this.btnPg1AddAdult);
+            this.plPg1GetLocation.Controls.Add(this.tbPg1NoOfChildren);
+            this.plPg1GetLocation.Controls.Add(this.btnPg1MinusChild);
+            this.plPg1GetLocation.Controls.Add(this.btnPg1MinusAdult);
+            this.plPg1GetLocation.Controls.Add(this.tbPg1NoOfAdults);
+            this.plPg1GetLocation.Controls.Add(this.lbPg1HowManyLabel);
+            this.plPg1GetLocation.Controls.Add(this.lbPg1ChildrenLabel);
+            this.plPg1GetLocation.Controls.Add(this.lbPg1AdultsLabel);
+            this.plPg1GetLocation.Controls.Add(this.lbPg1NewBookingTitle);
+            this.plPg1GetLocation.Controls.Add(this.cbPg1GetLocation);
+            this.plPg1GetLocation.Controls.Add(this.lbPg1WhereLabel);
+            this.plPg1GetLocation.Location = new System.Drawing.Point(15, 47);
+            this.plPg1GetLocation.Name = "plPg1GetLocation";
+            this.plPg1GetLocation.Size = new System.Drawing.Size(1209, 561);
+            this.plPg1GetLocation.TabIndex = 0;
             // 
-            // cbLocations
+            // btnPg1AddChild
             // 
-            this.cbLocations.FormattingEnabled = true;
-            this.cbLocations.Location = new System.Drawing.Point(433, 150);
-            this.cbLocations.Name = "cbLocations";
-            this.cbLocations.Size = new System.Drawing.Size(326, 21);
-            this.cbLocations.TabIndex = 1;
-            this.cbLocations.SelectedIndexChanged += new System.EventHandler(this.cbLocations_SelectedIndexChanged);
+            this.btnPg1AddChild.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPg1AddChild.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPg1AddChild.Location = new System.Drawing.Point(635, 267);
+            this.btnPg1AddChild.Name = "btnPg1AddChild";
+            this.btnPg1AddChild.Size = new System.Drawing.Size(43, 33);
+            this.btnPg1AddChild.TabIndex = 18;
+            this.btnPg1AddChild.Text = "+";
+            this.btnPg1AddChild.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPg1AddChild.UseVisualStyleBackColor = true;
+            this.btnPg1AddChild.Click += new System.EventHandler(this.btnPg1AddChild_Click);
             // 
-            // lbGetHolidayLocation
+            // btnPg1AddAdult
             // 
-            this.lbGetHolidayLocation.AutoSize = true;
-            this.lbGetHolidayLocation.Location = new System.Drawing.Point(515, 121);
-            this.lbGetHolidayLocation.Name = "lbGetHolidayLocation";
-            this.lbGetHolidayLocation.Size = new System.Drawing.Size(142, 13);
-            this.lbGetHolidayLocation.TabIndex = 0;
-            this.lbGetHolidayLocation.Text = "Where would you like to go?";
+            this.btnPg1AddAdult.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPg1AddAdult.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPg1AddAdult.Location = new System.Drawing.Point(635, 230);
+            this.btnPg1AddAdult.Name = "btnPg1AddAdult";
+            this.btnPg1AddAdult.Size = new System.Drawing.Size(43, 33);
+            this.btnPg1AddAdult.TabIndex = 17;
+            this.btnPg1AddAdult.Text = "+";
+            this.btnPg1AddAdult.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPg1AddAdult.UseVisualStyleBackColor = true;
+            this.btnPg1AddAdult.Click += new System.EventHandler(this.btnPg1AddAdult_Click);
             // 
-            // plBookingDates
+            // tbPg1NoOfChildren
             // 
-            this.plBookingDates.Controls.Add(this.dateTimePicker2);
-            this.plBookingDates.Controls.Add(this.label4);
-            this.plBookingDates.Controls.Add(this.monthCalendar1);
-            this.plBookingDates.Controls.Add(this.label2);
-            this.plBookingDates.Controls.Add(this.label3);
-            this.plBookingDates.Controls.Add(this.dateTimePicker1);
-            this.plBookingDates.Location = new System.Drawing.Point(16, 47);
-            this.plBookingDates.Name = "plBookingDates";
-            this.plBookingDates.Size = new System.Drawing.Size(1212, 561);
-            this.plBookingDates.TabIndex = 1;
+            this.tbPg1NoOfChildren.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg1NoOfChildren.Location = new System.Drawing.Point(559, 266);
+            this.tbPg1NoOfChildren.Name = "tbPg1NoOfChildren";
+            this.tbPg1NoOfChildren.ReadOnly = true;
+            this.tbPg1NoOfChildren.Size = new System.Drawing.Size(65, 31);
+            this.tbPg1NoOfChildren.TabIndex = 16;
+            this.tbPg1NoOfChildren.Text = "0";
+            this.tbPg1NoOfChildren.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dateTimePicker2
+            // btnPg1MinusChild
             // 
-            this.dateTimePicker2.CustomFormat = "dd-MM-yyyy";
-            this.dateTimePicker2.Location = new System.Drawing.Point(484, 316);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 13;
+            this.btnPg1MinusChild.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPg1MinusChild.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPg1MinusChild.Location = new System.Drawing.Point(509, 267);
+            this.btnPg1MinusChild.Name = "btnPg1MinusChild";
+            this.btnPg1MinusChild.Size = new System.Drawing.Size(43, 33);
+            this.btnPg1MinusChild.TabIndex = 15;
+            this.btnPg1MinusChild.Text = "-";
+            this.btnPg1MinusChild.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPg1MinusChild.UseVisualStyleBackColor = true;
+            this.btnPg1MinusChild.Click += new System.EventHandler(this.btnPg1MinusChild_Click);
             // 
-            // label4
+            // btnPg1MinusAdult
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(411, 316);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 15);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "End Date";
+            this.btnPg1MinusAdult.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPg1MinusAdult.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPg1MinusAdult.Location = new System.Drawing.Point(510, 228);
+            this.btnPg1MinusAdult.Name = "btnPg1MinusAdult";
+            this.btnPg1MinusAdult.Size = new System.Drawing.Size(43, 33);
+            this.btnPg1MinusAdult.TabIndex = 14;
+            this.btnPg1MinusAdult.Text = "-";
+            this.btnPg1MinusAdult.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPg1MinusAdult.UseVisualStyleBackColor = true;
+            this.btnPg1MinusAdult.Click += new System.EventHandler(this.btnPg1MinusAdult_Click);
             // 
-            // monthCalendar1
+            // tbPg1NoOfAdults
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(473, 110);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 9;
+            this.tbPg1NoOfAdults.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg1NoOfAdults.Location = new System.Drawing.Point(559, 229);
+            this.tbPg1NoOfAdults.Name = "tbPg1NoOfAdults";
+            this.tbPg1NoOfAdults.ReadOnly = true;
+            this.tbPg1NoOfAdults.Size = new System.Drawing.Size(65, 31);
+            this.tbPg1NoOfAdults.TabIndex = 12;
+            this.tbPg1NoOfAdults.Text = "0";
+            this.tbPg1NoOfAdults.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label2
+            // lbPg1HowManyLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(411, 284);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 15);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Start Date";
+            this.lbPg1HowManyLabel.AutoSize = true;
+            this.lbPg1HowManyLabel.Location = new System.Drawing.Point(534, 206);
+            this.lbPg1HowManyLabel.Name = "lbPg1HowManyLabel";
+            this.lbPg1HowManyLabel.Size = new System.Drawing.Size(110, 13);
+            this.lbPg1HowManyLabel.TabIndex = 11;
+            this.lbPg1HowManyLabel.Text = "How many are going?";
             // 
-            // label3
+            // lbPg1ChildrenLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Silver;
-            this.label3.Font = new System.Drawing.Font("Haettenschweiler", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(502, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 40);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Holiday Dates";
+            this.lbPg1ChildrenLabel.AutoSize = true;
+            this.lbPg1ChildrenLabel.Location = new System.Drawing.Point(450, 276);
+            this.lbPg1ChildrenLabel.Name = "lbPg1ChildrenLabel";
+            this.lbPg1ChildrenLabel.Size = new System.Drawing.Size(45, 13);
+            this.lbPg1ChildrenLabel.TabIndex = 10;
+            this.lbPg1ChildrenLabel.Text = "Children";
             // 
-            // dateTimePicker1
+            // lbPg1AdultsLabel
             // 
-            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
-            this.dateTimePicker1.Location = new System.Drawing.Point(484, 284);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.lbPg1AdultsLabel.AutoSize = true;
+            this.lbPg1AdultsLabel.Location = new System.Drawing.Point(458, 235);
+            this.lbPg1AdultsLabel.Name = "lbPg1AdultsLabel";
+            this.lbPg1AdultsLabel.Size = new System.Drawing.Size(36, 13);
+            this.lbPg1AdultsLabel.TabIndex = 9;
+            this.lbPg1AdultsLabel.Text = "Adults";
+            // 
+            // lbPg1NewBookingTitle
+            // 
+            this.lbPg1NewBookingTitle.AutoSize = true;
+            this.lbPg1NewBookingTitle.BackColor = System.Drawing.Color.Silver;
+            this.lbPg1NewBookingTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg1NewBookingTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbPg1NewBookingTitle.Location = new System.Drawing.Point(472, 31);
+            this.lbPg1NewBookingTitle.Name = "lbPg1NewBookingTitle";
+            this.lbPg1NewBookingTitle.Size = new System.Drawing.Size(250, 42);
+            this.lbPg1NewBookingTitle.TabIndex = 8;
+            this.lbPg1NewBookingTitle.Text = "New Booking";
+            // 
+            // cbPg1GetLocation
+            // 
+            this.cbPg1GetLocation.FormattingEnabled = true;
+            this.cbPg1GetLocation.Location = new System.Drawing.Point(433, 150);
+            this.cbPg1GetLocation.Name = "cbPg1GetLocation";
+            this.cbPg1GetLocation.Size = new System.Drawing.Size(326, 21);
+            this.cbPg1GetLocation.TabIndex = 1;
+            this.cbPg1GetLocation.SelectedIndexChanged += new System.EventHandler(this.cbPg1GetLocation_SelectedIndexChanged);
+            // 
+            // lbPg1WhereLabel
+            // 
+            this.lbPg1WhereLabel.AutoSize = true;
+            this.lbPg1WhereLabel.Location = new System.Drawing.Point(515, 121);
+            this.lbPg1WhereLabel.Name = "lbPg1WhereLabel";
+            this.lbPg1WhereLabel.Size = new System.Drawing.Size(142, 13);
+            this.lbPg1WhereLabel.TabIndex = 0;
+            this.lbPg1WhereLabel.Text = "Where would you like to go?";
+            // 
+            // plPg2BookingDates
+            // 
+            this.plPg2BookingDates.Controls.Add(this.dtPg2HolidayEnd);
+            this.plPg2BookingDates.Controls.Add(this.lbPg2End);
+            this.plPg2BookingDates.Controls.Add(this.CalPg2HolidayDates);
+            this.plPg2BookingDates.Controls.Add(this.lbPg2Start);
+            this.plPg2BookingDates.Controls.Add(this.lbPg2DatesTitle);
+            this.plPg2BookingDates.Controls.Add(this.dtPg2HolidayStart);
+            this.plPg2BookingDates.Location = new System.Drawing.Point(16, 47);
+            this.plPg2BookingDates.Name = "plPg2BookingDates";
+            this.plPg2BookingDates.Size = new System.Drawing.Size(1212, 561);
+            this.plPg2BookingDates.TabIndex = 1;
+            // 
+            // dtPg2HolidayEnd
+            // 
+            this.dtPg2HolidayEnd.CustomFormat = "dd-MM-yyyy";
+            this.dtPg2HolidayEnd.Location = new System.Drawing.Point(484, 316);
+            this.dtPg2HolidayEnd.Name = "dtPg2HolidayEnd";
+            this.dtPg2HolidayEnd.Size = new System.Drawing.Size(200, 20);
+            this.dtPg2HolidayEnd.TabIndex = 13;
+            this.dtPg2HolidayEnd.ValueChanged += new System.EventHandler(this.dtPg2HolidayEnd_ValueChanged);
+            // 
+            // lbPg2End
+            // 
+            this.lbPg2End.AutoSize = true;
+            this.lbPg2End.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg2End.Location = new System.Drawing.Point(411, 316);
+            this.lbPg2End.Name = "lbPg2End";
+            this.lbPg2End.Size = new System.Drawing.Size(54, 15);
+            this.lbPg2End.TabIndex = 12;
+            this.lbPg2End.Text = "End Date";
+            // 
+            // CalPg2HolidayDates
+            // 
+            this.CalPg2HolidayDates.Location = new System.Drawing.Point(473, 110);
+            this.CalPg2HolidayDates.Name = "CalPg2HolidayDates";
+            this.CalPg2HolidayDates.TabIndex = 9;
+            this.CalPg2HolidayDates.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.CalPg2HolidayDates_DateChanged);
+            // 
+            // lbPg2Start
+            // 
+            this.lbPg2Start.AutoSize = true;
+            this.lbPg2Start.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg2Start.Location = new System.Drawing.Point(411, 284);
+            this.lbPg2Start.Name = "lbPg2Start";
+            this.lbPg2Start.Size = new System.Drawing.Size(58, 15);
+            this.lbPg2Start.TabIndex = 8;
+            this.lbPg2Start.Text = "Start Date";
+            // 
+            // lbPg2DatesTitle
+            // 
+            this.lbPg2DatesTitle.AutoSize = true;
+            this.lbPg2DatesTitle.BackColor = System.Drawing.Color.Silver;
+            this.lbPg2DatesTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg2DatesTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbPg2DatesTitle.Location = new System.Drawing.Point(457, 22);
+            this.lbPg2DatesTitle.Name = "lbPg2DatesTitle";
+            this.lbPg2DatesTitle.Size = new System.Drawing.Size(264, 42);
+            this.lbPg2DatesTitle.TabIndex = 7;
+            this.lbPg2DatesTitle.Text = "Holiday Dates";
+            // 
+            // dtPg2HolidayStart
+            // 
+            this.dtPg2HolidayStart.CustomFormat = "dd-MM-yyyy";
+            this.dtPg2HolidayStart.Location = new System.Drawing.Point(484, 284);
+            this.dtPg2HolidayStart.Name = "dtPg2HolidayStart";
+            this.dtPg2HolidayStart.Size = new System.Drawing.Size(200, 20);
+            this.dtPg2HolidayStart.TabIndex = 6;
+            this.dtPg2HolidayStart.ValueChanged += new System.EventHandler(this.dtPg2HolidayStart_ValueChanged);
             // 
             // BookingProgressBar
             // 
@@ -280,6 +422,7 @@
             // 
             // Navbtn1NewBooking
             // 
+            this.Navbtn1NewBooking.Enabled = false;
             this.Navbtn1NewBooking.Location = new System.Drawing.Point(1, 2);
             this.Navbtn1NewBooking.Name = "Navbtn1NewBooking";
             this.Navbtn1NewBooking.Size = new System.Drawing.Size(94, 30);
@@ -290,6 +433,7 @@
             // 
             // Navbtn2Dates
             // 
+            this.Navbtn2Dates.Enabled = false;
             this.Navbtn2Dates.Location = new System.Drawing.Point(94, 2);
             this.Navbtn2Dates.Name = "Navbtn2Dates";
             this.Navbtn2Dates.Size = new System.Drawing.Size(80, 30);
@@ -310,6 +454,7 @@
             // 
             // Navbtn3Flights
             // 
+            this.Navbtn3Flights.Enabled = false;
             this.Navbtn3Flights.Location = new System.Drawing.Point(173, 2);
             this.Navbtn3Flights.Name = "Navbtn3Flights";
             this.Navbtn3Flights.Size = new System.Drawing.Size(101, 30);
@@ -320,6 +465,7 @@
             // 
             // Navbtn4Hotel
             // 
+            this.Navbtn4Hotel.Enabled = false;
             this.Navbtn4Hotel.Location = new System.Drawing.Point(274, 3);
             this.Navbtn4Hotel.Name = "Navbtn4Hotel";
             this.Navbtn4Hotel.Size = new System.Drawing.Size(124, 29);
@@ -330,6 +476,7 @@
             // 
             // Navbtn5Car
             // 
+            this.Navbtn5Car.Enabled = false;
             this.Navbtn5Car.Location = new System.Drawing.Point(398, 3);
             this.Navbtn5Car.Name = "Navbtn5Car";
             this.Navbtn5Car.Size = new System.Drawing.Size(124, 29);
@@ -340,6 +487,7 @@
             // 
             // Navbtn6Inusrance
             // 
+            this.Navbtn6Inusrance.Enabled = false;
             this.Navbtn6Inusrance.Location = new System.Drawing.Point(522, 3);
             this.Navbtn6Inusrance.Name = "Navbtn6Inusrance";
             this.Navbtn6Inusrance.Size = new System.Drawing.Size(124, 29);
@@ -350,6 +498,7 @@
             // 
             // Navbtn7CheckDetails
             // 
+            this.Navbtn7CheckDetails.Enabled = false;
             this.Navbtn7CheckDetails.Location = new System.Drawing.Point(646, 3);
             this.Navbtn7CheckDetails.Name = "Navbtn7CheckDetails";
             this.Navbtn7CheckDetails.Size = new System.Drawing.Size(124, 29);
@@ -360,6 +509,7 @@
             // 
             // Navbtn8Summary
             // 
+            this.Navbtn8Summary.Enabled = false;
             this.Navbtn8Summary.Location = new System.Drawing.Point(771, 3);
             this.Navbtn8Summary.Name = "Navbtn8Summary";
             this.Navbtn8Summary.Size = new System.Drawing.Size(124, 29);
@@ -370,6 +520,7 @@
             // 
             // Navbtn9Payments
             // 
+            this.Navbtn9Payments.Enabled = false;
             this.Navbtn9Payments.Location = new System.Drawing.Point(896, 3);
             this.Navbtn9Payments.Name = "Navbtn9Payments";
             this.Navbtn9Payments.Size = new System.Drawing.Size(124, 29);
@@ -398,1157 +549,1306 @@
             this.btnNextPage.UseVisualStyleBackColor = true;
             this.btnNextPage.Click += new System.EventHandler(this.btnNextPage_Click);
             // 
-            // plFlight
-            // 
-            this.plFlight.Controls.Add(this.label45);
-            this.plFlight.Controls.Add(this.linkLabel2);
-            this.plFlight.Controls.Add(this.linkLabel1);
-            this.plFlight.Controls.Add(this.button1);
-            this.plFlight.Controls.Add(this.textBox5);
-            this.plFlight.Controls.Add(this.textBox4);
-            this.plFlight.Controls.Add(this.label6);
-            this.plFlight.Controls.Add(this.label5);
-            this.plFlight.Controls.Add(this.checkBox1);
-            this.plFlight.Controls.Add(this.textBox3);
-            this.plFlight.Controls.Add(this.textBox2);
-            this.plFlight.Controls.Add(this.textBox1);
-            this.plFlight.Controls.Add(this.label1);
-            this.plFlight.Controls.Add(this.label7);
-            this.plFlight.Controls.Add(this.label8);
-            this.plFlight.Location = new System.Drawing.Point(16, 47);
-            this.plFlight.Name = "plFlight";
-            this.plFlight.Size = new System.Drawing.Size(1208, 555);
-            this.plFlight.TabIndex = 15;
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(524, 106);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(101, 13);
-            this.linkLabel2.TabIndex = 32;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "See All Destinations";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(559, 295);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(93, 13);
-            this.linkLabel1.TabIndex = 31;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Advanced Search";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(577, 323);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Show Flights";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(510, 261);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(142, 20);
-            this.textBox5.TabIndex = 29;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(510, 231);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(142, 20);
-            this.textBox4.TabIndex = 28;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(432, 261);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 15);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Travel Class*";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(434, 231);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 15);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Passengers*";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(669, 171);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 17);
-            this.checkBox1.TabIndex = 25;
-            this.checkBox1.Text = "Add a Return";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(510, 139);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(142, 20);
-            this.textBox3.TabIndex = 24;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(510, 171);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(142, 20);
-            this.textBox2.TabIndex = 23;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(510, 202);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 20);
-            this.textBox1.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(423, 173);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 15);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Via (optional) ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(400, 141);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 15);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Departure Airport*";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(418, 204);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 15);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Arrival Airport*";
-            // 
-            // plCarHire
-            // 
-            this.plCarHire.Controls.Add(this.label50);
-            this.plCarHire.Controls.Add(this.label49);
-            this.plCarHire.Controls.Add(this.label48);
-            this.plCarHire.Controls.Add(this.label47);
-            this.plCarHire.Controls.Add(this.label46);
-            this.plCarHire.Controls.Add(this.label9);
-            this.plCarHire.Controls.Add(this.comboBox1);
-            this.plCarHire.Controls.Add(this.dateTimePicker4);
-            this.plCarHire.Controls.Add(this.dateTimePicker3);
-            this.plCarHire.Controls.Add(this.checkBox3);
-            this.plCarHire.Controls.Add(this.checkBox2);
-            this.plCarHire.Location = new System.Drawing.Point(14, 45);
-            this.plCarHire.Name = "plCarHire";
-            this.plCarHire.Size = new System.Drawing.Size(1217, 560);
-            this.plCarHire.TabIndex = 16;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(480, 199);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(480, 268);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker4.TabIndex = 3;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(480, 325);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 2;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(490, 128);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(44, 17);
-            this.checkBox3.TabIndex = 1;
-            this.checkBox3.Text = "Yes";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(618, 126);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(40, 17);
-            this.checkBox2.TabIndex = 0;
-            this.checkBox2.Text = "No";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // plInsurance
-            // 
-            this.plInsurance.Controls.Add(this.label55);
-            this.plInsurance.Controls.Add(this.label54);
-            this.plInsurance.Controls.Add(this.label11);
-            this.plInsurance.Controls.Add(this.label10);
-            this.plInsurance.Controls.Add(this.checkBox5);
-            this.plInsurance.Controls.Add(this.checkBox4);
-            this.plInsurance.Location = new System.Drawing.Point(16, 44);
-            this.plInsurance.Name = "plInsurance";
-            this.plInsurance.Size = new System.Drawing.Size(1215, 561);
-            this.plInsurance.TabIndex = 17;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(569, 161);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Over 9000!";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(484, 161);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 13);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "EstimatedPrice: ";
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(475, 106);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(44, 17);
-            this.checkBox5.TabIndex = 1;
-            this.checkBox5.Text = "Yes";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(599, 106);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(40, 17);
-            this.checkBox4.TabIndex = 0;
-            this.checkBox4.Text = "No";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // plCheckDetails
-            // 
-            this.plCheckDetails.Controls.Add(this.label56);
-            this.plCheckDetails.Controls.Add(this.button2);
-            this.plCheckDetails.Controls.Add(this.label12);
-            this.plCheckDetails.Controls.Add(this.label13);
-            this.plCheckDetails.Controls.Add(this.textBox7);
-            this.plCheckDetails.Controls.Add(this.textBox6);
-            this.plCheckDetails.Controls.Add(this.textBox8);
-            this.plCheckDetails.Controls.Add(this.textBox9);
-            this.plCheckDetails.Controls.Add(this.textBox10);
-            this.plCheckDetails.Controls.Add(this.textBox11);
-            this.plCheckDetails.Controls.Add(this.label14);
-            this.plCheckDetails.Controls.Add(this.button3);
-            this.plCheckDetails.Controls.Add(this.textBox12);
-            this.plCheckDetails.Controls.Add(this.label15);
-            this.plCheckDetails.Controls.Add(this.label16);
-            this.plCheckDetails.Controls.Add(this.label17);
-            this.plCheckDetails.Controls.Add(this.label18);
-            this.plCheckDetails.Location = new System.Drawing.Point(16, 46);
-            this.plCheckDetails.Name = "plCheckDetails";
-            this.plCheckDetails.Size = new System.Drawing.Size(1215, 559);
-            this.plCheckDetails.TabIndex = 18;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(461, 98);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 37);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "Change Details";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(404, 286);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 15);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "First Name*";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(407, 329);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 15);
-            this.label13.TabIndex = 33;
-            this.label13.Text = "Last name*";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(486, 281);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(239, 25);
-            this.textBox7.TabIndex = 32;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(486, 324);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(239, 25);
-            this.textBox6.TabIndex = 31;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(486, 157);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(239, 25);
-            this.textBox8.TabIndex = 30;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(486, 197);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.PasswordChar = '*';
-            this.textBox9.Size = new System.Drawing.Size(239, 25);
-            this.textBox9.TabIndex = 29;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(486, 238);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(239, 25);
-            this.textBox10.TabIndex = 28;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(486, 370);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(239, 25);
-            this.textBox11.TabIndex = 27;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(411, 233);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(62, 30);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "Confirm \r\nPassword*";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(625, 98);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 37);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Correct Details";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(486, 412);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(239, 25);
-            this.textBox12.TabIndex = 24;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(429, 417);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 15);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "Email*";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(424, 375);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 15);
-            this.label16.TabIndex = 22;
-            this.label16.Text = "Phone*";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(408, 202);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 15);
-            this.label17.TabIndex = 21;
-            this.label17.Text = "Password*";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(408, 162);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(65, 15);
-            this.label18.TabIndex = 20;
-            this.label18.Text = "Username*";
-            // 
-            // plSummary
-            // 
-            this.plSummary.Controls.Add(this.label57);
-            this.plSummary.Controls.Add(this.richTextBox4);
-            this.plSummary.Controls.Add(this.label24);
-            this.plSummary.Controls.Add(this.richTextBox3);
-            this.plSummary.Controls.Add(this.dateTimePicker6);
-            this.plSummary.Controls.Add(this.label23);
-            this.plSummary.Controls.Add(this.dateTimePicker5);
-            this.plSummary.Controls.Add(this.label19);
-            this.plSummary.Controls.Add(this.richTextBox2);
-            this.plSummary.Controls.Add(this.label20);
-            this.plSummary.Controls.Add(this.richTextBox1);
-            this.plSummary.Controls.Add(this.label21);
-            this.plSummary.Controls.Add(this.label22);
-            this.plSummary.Controls.Add(this.label25);
-            this.plSummary.Location = new System.Drawing.Point(15, 47);
-            this.plSummary.Name = "plSummary";
-            this.plSummary.Size = new System.Drawing.Size(1213, 561);
-            this.plSummary.TabIndex = 19;
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.Location = new System.Drawing.Point(733, 216);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(159, 84);
-            this.richTextBox4.TabIndex = 29;
-            this.richTextBox4.Text = "";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(597, 218);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(77, 15);
-            this.label24.TabIndex = 28;
-            this.label24.Text = "Optional Info";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Location = new System.Drawing.Point(389, 216);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(159, 84);
-            this.richTextBox3.TabIndex = 27;
-            this.richTextBox3.Text = "";
-            // 
-            // dateTimePicker6
-            // 
-            this.dateTimePicker6.Location = new System.Drawing.Point(707, 115);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(159, 20);
-            this.dateTimePicker6.TabIndex = 26;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(585, 115);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(77, 15);
-            this.label23.TabIndex = 25;
-            this.label23.Text = "Date of issue:";
-            // 
-            // dateTimePicker5
-            // 
-            this.dateTimePicker5.Location = new System.Drawing.Point(394, 114);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(159, 20);
-            this.dateTimePicker5.TabIndex = 24;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(272, 114);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(77, 15);
-            this.label19.TabIndex = 23;
-            this.label19.Text = "Date of issue:";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(733, 324);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(159, 82);
-            this.richTextBox2.TabIndex = 22;
-            this.richTextBox2.Text = "";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(614, 324);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(100, 15);
-            this.label20.TabIndex = 21;
-            this.label20.Text = "Passenger details ";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(385, 324);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(159, 84);
-            this.richTextBox1.TabIndex = 20;
-            this.richTextBox1.Text = "";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(263, 324);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(103, 15);
-            this.label21.TabIndex = 19;
-            this.label21.Text = "Flight information";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(253, 218);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(113, 15);
-            this.label22.TabIndex = 17;
-            this.label22.Text = "Booking Infomation";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(442, 73);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(194, 20);
-            this.label25.TabIndex = 13;
-            this.label25.Text = "Thank you for choosing us ";
-            // 
-            // plPayment
-            // 
-            this.plPayment.Controls.Add(this.label58);
-            this.plPayment.Controls.Add(this.button4);
-            this.plPayment.Controls.Add(this.checkBox6);
-            this.plPayment.Controls.Add(this.checkBox7);
-            this.plPayment.Controls.Add(this.maskedTextBox8);
-            this.plPayment.Controls.Add(this.maskedTextBox7);
-            this.plPayment.Controls.Add(this.label26);
-            this.plPayment.Controls.Add(this.label27);
-            this.plPayment.Controls.Add(this.maskedTextBox6);
-            this.plPayment.Controls.Add(this.label28);
-            this.plPayment.Controls.Add(this.maskedTextBox4);
-            this.plPayment.Controls.Add(this.richTextBox5);
-            this.plPayment.Controls.Add(this.label29);
-            this.plPayment.Controls.Add(this.maskedTextBox5);
-            this.plPayment.Controls.Add(this.label30);
-            this.plPayment.Controls.Add(this.label31);
-            this.plPayment.Controls.Add(this.maskedTextBox3);
-            this.plPayment.Controls.Add(this.maskedTextBox2);
-            this.plPayment.Controls.Add(this.maskedTextBox1);
-            this.plPayment.Controls.Add(this.label32);
-            this.plPayment.Controls.Add(this.label33);
-            this.plPayment.Controls.Add(this.label34);
-            this.plPayment.Controls.Add(this.textBox13);
-            this.plPayment.Controls.Add(this.textBox15);
-            this.plPayment.Location = new System.Drawing.Point(13, 46);
-            this.plPayment.Name = "plPayment";
-            this.plPayment.Size = new System.Drawing.Size(1218, 559);
-            this.plPayment.TabIndex = 20;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(717, 454);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 37);
-            this.button4.TabIndex = 49;
-            this.button4.Text = "Make Payment";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(565, 381);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(77, 17);
-            this.checkBox6.TabIndex = 48;
-            this.checkBox6.Text = "Credit card";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(665, 381);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(58, 17);
-            this.checkBox7.TabIndex = 47;
-            this.checkBox7.Text = "Paypal";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBox8
-            // 
-            this.maskedTextBox8.Location = new System.Drawing.Point(583, 483);
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(80, 20);
-            this.maskedTextBox8.TabIndex = 46;
-            // 
-            // maskedTextBox7
-            // 
-            this.maskedTextBox7.Location = new System.Drawing.Point(443, 483);
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(85, 20);
-            this.maskedTextBox7.TabIndex = 45;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(580, 465);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(83, 15);
-            this.label26.TabIndex = 44;
-            this.label26.Text = "Security code*";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(442, 465);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(70, 15);
-            this.label27.TabIndex = 43;
-            this.label27.Text = "Expiry date*";
-            // 
-            // maskedTextBox6
-            // 
-            this.maskedTextBox6.Location = new System.Drawing.Point(443, 430);
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(220, 20);
-            this.maskedTextBox6.TabIndex = 42;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(440, 412);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(82, 15);
-            this.label28.TabIndex = 41;
-            this.label28.Text = "Card number*";
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(589, 283);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(171, 20);
-            this.maskedTextBox4.TabIndex = 40;
-            // 
-            // richTextBox5
-            // 
-            this.richTextBox5.Location = new System.Drawing.Point(589, 209);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(171, 42);
-            this.richTextBox5.TabIndex = 39;
-            this.richTextBox5.Text = "";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label29.Location = new System.Drawing.Point(476, 260);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(86, 13);
-            this.label29.TabIndex = 38;
-            this.label29.Text = "County (optional)";
-            // 
-            // maskedTextBox5
-            // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(589, 257);
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(171, 20);
-            this.maskedTextBox5.TabIndex = 37;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label30.Location = new System.Drawing.Point(476, 286);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(60, 13);
-            this.label30.TabIndex = 36;
-            this.label30.Text = "Post Code*";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label31.Location = new System.Drawing.Point(476, 212);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(49, 13);
-            this.label31.TabIndex = 35;
-            this.label31.Text = "Address*";
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(589, 129);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(171, 20);
-            this.maskedTextBox3.TabIndex = 34;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(589, 157);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(171, 20);
-            this.maskedTextBox2.TabIndex = 33;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(589, 183);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(171, 20);
-            this.maskedTextBox1.TabIndex = 32;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(475, 185);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(84, 15);
-            this.label32.TabIndex = 31;
-            this.label32.Text = "Email address*";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(476, 159);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(66, 15);
-            this.label33.TabIndex = 30;
-            this.label33.Text = "Last name*";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(476, 131);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(67, 15);
-            this.label34.TabIndex = 29;
-            this.label34.Text = "First name*";
-            // 
-            // textBox13
-            // 
-            this.textBox13.BackColor = System.Drawing.Color.LightGray;
-            this.textBox13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(560, 340);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(116, 25);
-            this.textBox13.TabIndex = 28;
-            this.textBox13.Text = "Payment Method";
-            // 
-            // textBox15
-            // 
-            this.textBox15.BackColor = System.Drawing.Color.LightGray;
-            this.textBox15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(475, 93);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(88, 25);
-            this.textBox15.TabIndex = 27;
-            this.textBox15.Text = "Billing Details";
-            // 
-            // plHotel
-            // 
-            this.plHotel.Controls.Add(this.label53);
-            this.plHotel.Controls.Add(this.label52);
-            this.plHotel.Controls.Add(this.label51);
-            this.plHotel.Controls.Add(this.label43);
-            this.plHotel.Controls.Add(this.label42);
-            this.plHotel.Controls.Add(this.dateTimePicker8);
-            this.plHotel.Controls.Add(this.dateTimePicker7);
-            this.plHotel.Controls.Add(this.label41);
-            this.plHotel.Controls.Add(this.label40);
-            this.plHotel.Controls.Add(this.label39);
-            this.plHotel.Controls.Add(this.label38);
-            this.plHotel.Controls.Add(this.label37);
-            this.plHotel.Controls.Add(this.monthCalendar2);
-            this.plHotel.Controls.Add(this.label36);
-            this.plHotel.Controls.Add(this.label35);
-            this.plHotel.Controls.Add(this.comboBox2);
-            this.plHotel.Controls.Add(this.checkBox9);
-            this.plHotel.Controls.Add(this.checkBox8);
-            this.plHotel.Location = new System.Drawing.Point(13, 47);
-            this.plHotel.Name = "plHotel";
-            this.plHotel.Size = new System.Drawing.Size(1218, 558);
-            this.plHotel.TabIndex = 21;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(659, 363);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(26, 13);
-            this.label43.TabIndex = 14;
-            this.label43.Text = "End";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(659, 306);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(29, 13);
-            this.label42.TabIndex = 13;
-            this.label42.Text = "Start";
-            // 
-            // dateTimePicker8
-            // 
-            this.dateTimePicker8.Enabled = false;
-            this.dateTimePicker8.Location = new System.Drawing.Point(588, 378);
-            this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker8.TabIndex = 12;
-            // 
-            // dateTimePicker7
-            // 
-            this.dateTimePicker7.Enabled = false;
-            this.dateTimePicker7.Location = new System.Drawing.Point(588, 322);
-            this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker7.TabIndex = 11;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(883, 136);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(47, 13);
-            this.label41.TabIndex = 10;
-            this.label41.Text = "Example";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(883, 93);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(47, 13);
-            this.label40.TabIndex = 9;
-            this.label40.Text = "Example";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(804, 136);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(26, 13);
-            this.label39.TabIndex = 8;
-            this.label39.Text = "End";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(804, 93);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(29, 13);
-            this.label38.TabIndex = 7;
-            this.label38.Text = "Start";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(877, 67);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(71, 13);
-            this.label37.TabIndex = 6;
-            this.label37.Text = "Holiday dates";
-            // 
-            // monthCalendar2
-            // 
-            this.monthCalendar2.Location = new System.Drawing.Point(335, 303);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.TabIndex = 5;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(540, 201);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(22, 13);
-            this.label36.TabIndex = 4;
-            this.label36.Text = "etc";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(427, 200);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(83, 13);
-            this.label35.TabIndex = 3;
-            this.label35.Text = "Hotel infomation";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(422, 174);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(266, 21);
-            this.comboBox2.TabIndex = 2;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(561, 114);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(40, 17);
-            this.checkBox9.TabIndex = 1;
-            this.checkBox9.Text = "No";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(490, 115);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(44, 17);
-            this.checkBox8.TabIndex = 0;
-            this.checkBox8.Text = "Yes";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Silver;
-            this.label44.Font = new System.Drawing.Font("Haettenschweiler", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label44.Location = new System.Drawing.Point(506, 39);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(173, 40);
-            this.label44.TabIndex = 8;
-            this.label44.Text = "New Booking";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Silver;
-            this.label45.Font = new System.Drawing.Font("Haettenschweiler", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label45.Location = new System.Drawing.Point(530, 33);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(100, 40);
-            this.label45.TabIndex = 33;
-            this.label45.Text = "Flights";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Silver;
-            this.label9.Font = new System.Drawing.Font("Haettenschweiler", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(514, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 40);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Car Hire";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(456, 106);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(228, 13);
-            this.label46.TabIndex = 9;
-            this.label46.Text = "Would you like to add a car hire to your holiday";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(456, 179);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(251, 13);
-            this.label47.TabIndex = 10;
-            this.label47.Text = "Please select a car from the drop down menu below";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(456, 252);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(93, 13);
-            this.label48.TabIndex = 11;
-            this.label48.Text = "Booking start date";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(456, 312);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(91, 13);
-            this.label49.TabIndex = 12;
-            this.label49.Text = "Booking end date";
+            // plPg3Flight
+            // 
+            this.plPg3Flight.Controls.Add(this.cbPg3DepartureAirport);
+            this.plPg3Flight.Controls.Add(this.lbPg3AddFlightsQuestion);
+            this.plPg3Flight.Controls.Add(this.chbPg3YesFlights);
+            this.plPg3Flight.Controls.Add(this.chbPg3NoFlights);
+            this.plPg3Flight.Controls.Add(this.cbPg3TravelClass);
+            this.plPg3Flight.Controls.Add(this.lbPg3FlightsTitle);
+            this.plPg3Flight.Controls.Add(this.lbPg3TravelClass);
+            this.plPg3Flight.Controls.Add(this.lbPg3DepartureAirport);
+            this.plPg3Flight.Location = new System.Drawing.Point(16, 47);
+            this.plPg3Flight.Name = "plPg3Flight";
+            this.plPg3Flight.Size = new System.Drawing.Size(1208, 555);
+            this.plPg3Flight.TabIndex = 15;
+            // 
+            // cbPg3DepartureAirport
+            // 
+            this.cbPg3DepartureAirport.FormattingEnabled = true;
+            this.cbPg3DepartureAirport.Location = new System.Drawing.Point(556, 155);
+            this.cbPg3DepartureAirport.Name = "cbPg3DepartureAirport";
+            this.cbPg3DepartureAirport.Size = new System.Drawing.Size(140, 21);
+            this.cbPg3DepartureAirport.TabIndex = 38;
+            this.cbPg3DepartureAirport.SelectedIndexChanged += new System.EventHandler(this.cbPg3DepartureAirport_SelectedIndexChanged);
+            // 
+            // lbPg3AddFlightsQuestion
+            // 
+            this.lbPg3AddFlightsQuestion.AutoSize = true;
+            this.lbPg3AddFlightsQuestion.Location = new System.Drawing.Point(469, 93);
+            this.lbPg3AddFlightsQuestion.Name = "lbPg3AddFlightsQuestion";
+            this.lbPg3AddFlightsQuestion.Size = new System.Drawing.Size(256, 13);
+            this.lbPg3AddFlightsQuestion.TabIndex = 37;
+            this.lbPg3AddFlightsQuestion.Text = "Would you like to add flights to your holiday package";
+            // 
+            // chbPg3YesFlights
+            // 
+            this.chbPg3YesFlights.AutoSize = true;
+            this.chbPg3YesFlights.Checked = true;
+            this.chbPg3YesFlights.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbPg3YesFlights.Location = new System.Drawing.Point(503, 115);
+            this.chbPg3YesFlights.Name = "chbPg3YesFlights";
+            this.chbPg3YesFlights.Size = new System.Drawing.Size(44, 17);
+            this.chbPg3YesFlights.TabIndex = 36;
+            this.chbPg3YesFlights.Text = "Yes";
+            this.chbPg3YesFlights.UseVisualStyleBackColor = true;
+            this.chbPg3YesFlights.CheckedChanged += new System.EventHandler(this.chbPg3YesFlights_CheckedChanged);
+            // 
+            // chbPg3NoFlights
+            // 
+            this.chbPg3NoFlights.AutoSize = true;
+            this.chbPg3NoFlights.Location = new System.Drawing.Point(631, 113);
+            this.chbPg3NoFlights.Name = "chbPg3NoFlights";
+            this.chbPg3NoFlights.Size = new System.Drawing.Size(40, 17);
+            this.chbPg3NoFlights.TabIndex = 35;
+            this.chbPg3NoFlights.Text = "No";
+            this.chbPg3NoFlights.UseVisualStyleBackColor = true;
+            this.chbPg3NoFlights.CheckedChanged += new System.EventHandler(this.chbPg3NoFlights_CheckedChanged);
+            // 
+            // cbPg3TravelClass
+            // 
+            this.cbPg3TravelClass.FormattingEnabled = true;
+            this.cbPg3TravelClass.Location = new System.Drawing.Point(558, 199);
+            this.cbPg3TravelClass.Name = "cbPg3TravelClass";
+            this.cbPg3TravelClass.Size = new System.Drawing.Size(140, 21);
+            this.cbPg3TravelClass.TabIndex = 34;
+            this.cbPg3TravelClass.SelectedIndexChanged += new System.EventHandler(this.cbPg3TravelClass_SelectedIndexChanged);
+            // 
+            // lbPg3FlightsTitle
+            // 
+            this.lbPg3FlightsTitle.AutoSize = true;
+            this.lbPg3FlightsTitle.BackColor = System.Drawing.Color.Silver;
+            this.lbPg3FlightsTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg3FlightsTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbPg3FlightsTitle.Location = new System.Drawing.Point(530, 33);
+            this.lbPg3FlightsTitle.Name = "lbPg3FlightsTitle";
+            this.lbPg3FlightsTitle.Size = new System.Drawing.Size(135, 42);
+            this.lbPg3FlightsTitle.TabIndex = 33;
+            this.lbPg3FlightsTitle.Text = "Flights";
+            // 
+            // lbPg3TravelClass
+            // 
+            this.lbPg3TravelClass.AutoSize = true;
+            this.lbPg3TravelClass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg3TravelClass.Location = new System.Drawing.Point(475, 199);
+            this.lbPg3TravelClass.Name = "lbPg3TravelClass";
+            this.lbPg3TravelClass.Size = new System.Drawing.Size(72, 15);
+            this.lbPg3TravelClass.TabIndex = 27;
+            this.lbPg3TravelClass.Text = "Travel Class*";
+            // 
+            // lbPg3DepartureAirport
+            // 
+            this.lbPg3DepartureAirport.AutoSize = true;
+            this.lbPg3DepartureAirport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg3DepartureAirport.Location = new System.Drawing.Point(446, 158);
+            this.lbPg3DepartureAirport.Name = "lbPg3DepartureAirport";
+            this.lbPg3DepartureAirport.Size = new System.Drawing.Size(104, 15);
+            this.lbPg3DepartureAirport.TabIndex = 20;
+            this.lbPg3DepartureAirport.Text = "Departure Airport*";
+            // 
+            // plPg5CarHire
+            // 
+            this.plPg5CarHire.Controls.Add(this.label50);
+            this.plPg5CarHire.Controls.Add(this.lbPg5CarEndDate);
+            this.plPg5CarHire.Controls.Add(this.lbPg5CarStartDate);
+            this.plPg5CarHire.Controls.Add(this.lbPg5CarHireSelection);
+            this.plPg5CarHire.Controls.Add(this.lbPg5HireCarQuestion);
+            this.plPg5CarHire.Controls.Add(this.lbPg5CarHireTitle);
+            this.plPg5CarHire.Controls.Add(this.cbPg5CarHireSelection);
+            this.plPg5CarHire.Controls.Add(this.dtPg5CarStartDate);
+            this.plPg5CarHire.Controls.Add(this.dtPg5CarEndDate);
+            this.plPg5CarHire.Controls.Add(this.chbPg5YesHireCar);
+            this.plPg5CarHire.Controls.Add(this.chbPg5NoHireCar);
+            this.plPg5CarHire.Location = new System.Drawing.Point(14, 45);
+            this.plPg5CarHire.Name = "plPg5CarHire";
+            this.plPg5CarHire.Size = new System.Drawing.Size(1217, 560);
+            this.plPg5CarHire.TabIndex = 16;
             // 
             // label50
             // 
             this.label50.Location = new System.Drawing.Point(705, 288);
             this.label50.MaximumSize = new System.Drawing.Size(0, 100);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(252, 65);
+            this.label50.Size = new System.Drawing.Size(0, 65);
             this.label50.TabIndex = 13;
             this.label50.Text = "Please note these dates have been supplied from your holiday booking, only edit i" +
     "f you would like the car for a shorter period than your whole holiday";
             // 
-            // label51
+            // lbPg5CarEndDate
             // 
-            this.label51.AutoSize = true;
-            this.label51.BackColor = System.Drawing.Color.Silver;
-            this.label51.Font = new System.Drawing.Font("Haettenschweiler", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label51.Location = new System.Drawing.Point(468, 24);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(182, 40);
-            this.label51.TabIndex = 15;
-            this.label51.Text = "Hotel Booking";
+            this.lbPg5CarEndDate.AutoSize = true;
+            this.lbPg5CarEndDate.Location = new System.Drawing.Point(456, 312);
+            this.lbPg5CarEndDate.Name = "lbPg5CarEndDate";
+            this.lbPg5CarEndDate.Size = new System.Drawing.Size(91, 13);
+            this.lbPg5CarEndDate.TabIndex = 12;
+            this.lbPg5CarEndDate.Text = "Booking end date";
             // 
-            // label52
+            // lbPg5CarStartDate
             // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(445, 93);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(221, 13);
-            this.label52.TabIndex = 16;
-            this.label52.Text = "Would you like a hotel added to your booking";
+            this.lbPg5CarStartDate.AutoSize = true;
+            this.lbPg5CarStartDate.Location = new System.Drawing.Point(456, 252);
+            this.lbPg5CarStartDate.Name = "lbPg5CarStartDate";
+            this.lbPg5CarStartDate.Size = new System.Drawing.Size(93, 13);
+            this.lbPg5CarStartDate.TabIndex = 11;
+            this.lbPg5CarStartDate.Text = "Booking start date";
             // 
-            // label53
+            // lbPg5CarHireSelection
             // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(458, 154);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(192, 13);
-            this.label53.TabIndex = 17;
-            this.label53.Text = "Please select a hotel from the list below";
+            this.lbPg5CarHireSelection.AutoSize = true;
+            this.lbPg5CarHireSelection.Location = new System.Drawing.Point(456, 179);
+            this.lbPg5CarHireSelection.Name = "lbPg5CarHireSelection";
+            this.lbPg5CarHireSelection.Size = new System.Drawing.Size(251, 13);
+            this.lbPg5CarHireSelection.TabIndex = 10;
+            this.lbPg5CarHireSelection.Text = "Please select a car from the drop down menu below";
             // 
-            // label54
+            // lbPg5HireCarQuestion
             // 
-            this.label54.AutoSize = true;
-            this.label54.BackColor = System.Drawing.Color.Silver;
-            this.label54.Font = new System.Drawing.Font("Haettenschweiler", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label54.Location = new System.Drawing.Point(497, 25);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(137, 40);
-            this.label54.TabIndex = 8;
-            this.label54.Text = "Insurance";
+            this.lbPg5HireCarQuestion.AutoSize = true;
+            this.lbPg5HireCarQuestion.Location = new System.Drawing.Point(456, 106);
+            this.lbPg5HireCarQuestion.Name = "lbPg5HireCarQuestion";
+            this.lbPg5HireCarQuestion.Size = new System.Drawing.Size(228, 13);
+            this.lbPg5HireCarQuestion.TabIndex = 9;
+            this.lbPg5HireCarQuestion.Text = "Would you like to add a car hire to your holiday";
             // 
-            // label55
+            // lbPg5CarHireTitle
             // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(245, 76);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(696, 13);
-            this.label55.TabIndex = 9;
-            this.label55.Text = "Would you like to add insurance to your holiday. This price will be based off of " +
+            this.lbPg5CarHireTitle.AutoSize = true;
+            this.lbPg5CarHireTitle.BackColor = System.Drawing.Color.Silver;
+            this.lbPg5CarHireTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg5CarHireTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbPg5CarHireTitle.Location = new System.Drawing.Point(514, 24);
+            this.lbPg5CarHireTitle.Name = "lbPg5CarHireTitle";
+            this.lbPg5CarHireTitle.Size = new System.Drawing.Size(164, 42);
+            this.lbPg5CarHireTitle.TabIndex = 8;
+            this.lbPg5CarHireTitle.Text = "Car Hire";
+            // 
+            // cbPg5CarHireSelection
+            // 
+            this.cbPg5CarHireSelection.FormattingEnabled = true;
+            this.cbPg5CarHireSelection.Location = new System.Drawing.Point(480, 199);
+            this.cbPg5CarHireSelection.Name = "cbPg5CarHireSelection";
+            this.cbPg5CarHireSelection.Size = new System.Drawing.Size(200, 21);
+            this.cbPg5CarHireSelection.TabIndex = 4;
+            this.cbPg5CarHireSelection.SelectedIndexChanged += new System.EventHandler(this.cbPg5CarHireSelection_SelectedIndexChanged);
+            // 
+            // dtPg5CarStartDate
+            // 
+            this.dtPg5CarStartDate.Location = new System.Drawing.Point(480, 268);
+            this.dtPg5CarStartDate.Name = "dtPg5CarStartDate";
+            this.dtPg5CarStartDate.Size = new System.Drawing.Size(200, 20);
+            this.dtPg5CarStartDate.TabIndex = 3;
+            this.dtPg5CarStartDate.ValueChanged += new System.EventHandler(this.dtPg5CarStartDate_ValueChanged);
+            // 
+            // dtPg5CarEndDate
+            // 
+            this.dtPg5CarEndDate.Location = new System.Drawing.Point(480, 325);
+            this.dtPg5CarEndDate.Name = "dtPg5CarEndDate";
+            this.dtPg5CarEndDate.Size = new System.Drawing.Size(200, 20);
+            this.dtPg5CarEndDate.TabIndex = 2;
+            this.dtPg5CarEndDate.ValueChanged += new System.EventHandler(this.dtPg5CarEndDate_ValueChanged);
+            // 
+            // chbPg5YesHireCar
+            // 
+            this.chbPg5YesHireCar.AutoSize = true;
+            this.chbPg5YesHireCar.Checked = true;
+            this.chbPg5YesHireCar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbPg5YesHireCar.Location = new System.Drawing.Point(490, 128);
+            this.chbPg5YesHireCar.Name = "chbPg5YesHireCar";
+            this.chbPg5YesHireCar.Size = new System.Drawing.Size(44, 17);
+            this.chbPg5YesHireCar.TabIndex = 1;
+            this.chbPg5YesHireCar.Text = "Yes";
+            this.chbPg5YesHireCar.UseVisualStyleBackColor = true;
+            this.chbPg5YesHireCar.CheckedChanged += new System.EventHandler(this.chbPg5YesHireCar_CheckedChanged);
+            // 
+            // chbPg5NoHireCar
+            // 
+            this.chbPg5NoHireCar.AutoSize = true;
+            this.chbPg5NoHireCar.Location = new System.Drawing.Point(618, 126);
+            this.chbPg5NoHireCar.Name = "chbPg5NoHireCar";
+            this.chbPg5NoHireCar.Size = new System.Drawing.Size(40, 17);
+            this.chbPg5NoHireCar.TabIndex = 0;
+            this.chbPg5NoHireCar.Text = "No";
+            this.chbPg5NoHireCar.UseVisualStyleBackColor = true;
+            this.chbPg5NoHireCar.CheckedChanged += new System.EventHandler(this.chbPg5NoHireCar_CheckedChanged);
+            // 
+            // plPg6Insurance
+            // 
+            this.plPg6Insurance.Controls.Add(this.lbPg6AddInsuranceQuestion);
+            this.plPg6Insurance.Controls.Add(this.lbPg6InsuranceTitle);
+            this.plPg6Insurance.Controls.Add(this.lbPg6InsurancePriceEstimate);
+            this.plPg6Insurance.Controls.Add(this.chbPg6YesInsurance);
+            this.plPg6Insurance.Controls.Add(this.chbPg6NoInsurance);
+            this.plPg6Insurance.Location = new System.Drawing.Point(16, 44);
+            this.plPg6Insurance.Name = "plPg6Insurance";
+            this.plPg6Insurance.Size = new System.Drawing.Size(1215, 561);
+            this.plPg6Insurance.TabIndex = 17;
+            // 
+            // lbPg6AddInsuranceQuestion
+            // 
+            this.lbPg6AddInsuranceQuestion.AutoSize = true;
+            this.lbPg6AddInsuranceQuestion.Location = new System.Drawing.Point(245, 76);
+            this.lbPg6AddInsuranceQuestion.Name = "lbPg6AddInsuranceQuestion";
+            this.lbPg6AddInsuranceQuestion.Size = new System.Drawing.Size(696, 13);
+            this.lbPg6AddInsuranceQuestion.TabIndex = 9;
+            this.lbPg6AddInsuranceQuestion.Text = "Would you like to add insurance to your holiday. This price will be based off of " +
     "loaction, length of holiday and the amount of extras you have added";
             // 
-            // label56
+            // lbPg6InsuranceTitle
             // 
-            this.label56.AutoSize = true;
-            this.label56.BackColor = System.Drawing.Color.Silver;
-            this.label56.Font = new System.Drawing.Font("Haettenschweiler", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label56.Location = new System.Drawing.Point(457, 23);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(284, 40);
-            this.label56.TabIndex = 36;
-            this.label56.Text = "Check current details";
+            this.lbPg6InsuranceTitle.AutoSize = true;
+            this.lbPg6InsuranceTitle.BackColor = System.Drawing.Color.Silver;
+            this.lbPg6InsuranceTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg6InsuranceTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbPg6InsuranceTitle.Location = new System.Drawing.Point(465, 25);
+            this.lbPg6InsuranceTitle.Name = "lbPg6InsuranceTitle";
+            this.lbPg6InsuranceTitle.Size = new System.Drawing.Size(191, 42);
+            this.lbPg6InsuranceTitle.TabIndex = 8;
+            this.lbPg6InsuranceTitle.Text = "Insurance";
             // 
-            // label57
+            // lbPg6InsurancePriceEstimate
             // 
-            this.label57.AutoSize = true;
-            this.label57.BackColor = System.Drawing.Color.Silver;
-            this.label57.Font = new System.Drawing.Font("Haettenschweiler", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label57.Location = new System.Drawing.Point(556, 10);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(133, 40);
-            this.label57.TabIndex = 30;
-            this.label57.Text = "Summary";
+            this.lbPg6InsurancePriceEstimate.AutoSize = true;
+            this.lbPg6InsurancePriceEstimate.Location = new System.Drawing.Point(511, 137);
+            this.lbPg6InsurancePriceEstimate.Name = "lbPg6InsurancePriceEstimate";
+            this.lbPg6InsurancePriceEstimate.Size = new System.Drawing.Size(83, 13);
+            this.lbPg6InsurancePriceEstimate.TabIndex = 2;
+            this.lbPg6InsurancePriceEstimate.Text = "EstimatedPrice: ";
             // 
-            // label58
+            // chbPg6YesInsurance
             // 
-            this.label58.AutoSize = true;
-            this.label58.BackColor = System.Drawing.Color.Silver;
-            this.label58.Font = new System.Drawing.Font("Haettenschweiler", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label58.Location = new System.Drawing.Point(553, 25);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(123, 40);
-            this.label58.TabIndex = 50;
-            this.label58.Text = "Payment";
+            this.chbPg6YesInsurance.AutoSize = true;
+            this.chbPg6YesInsurance.Checked = true;
+            this.chbPg6YesInsurance.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbPg6YesInsurance.Location = new System.Drawing.Point(475, 106);
+            this.chbPg6YesInsurance.Name = "chbPg6YesInsurance";
+            this.chbPg6YesInsurance.Size = new System.Drawing.Size(44, 17);
+            this.chbPg6YesInsurance.TabIndex = 1;
+            this.chbPg6YesInsurance.Text = "Yes";
+            this.chbPg6YesInsurance.UseVisualStyleBackColor = true;
+            this.chbPg6YesInsurance.CheckedChanged += new System.EventHandler(this.chbPg6YesAddInsurance_CheckedChanged);
+            // 
+            // chbPg6NoInsurance
+            // 
+            this.chbPg6NoInsurance.AutoSize = true;
+            this.chbPg6NoInsurance.Location = new System.Drawing.Point(599, 106);
+            this.chbPg6NoInsurance.Name = "chbPg6NoInsurance";
+            this.chbPg6NoInsurance.Size = new System.Drawing.Size(40, 17);
+            this.chbPg6NoInsurance.TabIndex = 0;
+            this.chbPg6NoInsurance.Text = "No";
+            this.chbPg6NoInsurance.UseVisualStyleBackColor = true;
+            this.chbPg6NoInsurance.CheckedChanged += new System.EventHandler(this.chbPg6NoInsurance_CheckedChanged);
+            // 
+            // plPg7CheckDetails
+            // 
+            this.plPg7CheckDetails.Controls.Add(this.lbPg7Postcode);
+            this.plPg7CheckDetails.Controls.Add(this.tbPg7Postcode);
+            this.plPg7CheckDetails.Controls.Add(this.tbPg7Town);
+            this.plPg7CheckDetails.Controls.Add(this.tbPg7Street);
+            this.plPg7CheckDetails.Controls.Add(this.tbPg7HouseNo);
+            this.plPg7CheckDetails.Controls.Add(this.lbPg7HouseNo);
+            this.plPg7CheckDetails.Controls.Add(this.lbPg7Street);
+            this.plPg7CheckDetails.Controls.Add(this.lbPg7Town);
+            this.plPg7CheckDetails.Controls.Add(this.lbPg7CheckDetailsTitle);
+            this.plPg7CheckDetails.Controls.Add(this.btnPg7ChangeDetails);
+            this.plPg7CheckDetails.Controls.Add(this.lbPg7FirstName);
+            this.plPg7CheckDetails.Controls.Add(this.lbPg7LastName);
+            this.plPg7CheckDetails.Controls.Add(this.tbPg7FirstName);
+            this.plPg7CheckDetails.Controls.Add(this.tbPg7LastName);
+            this.plPg7CheckDetails.Controls.Add(this.tbPg7MiddleName);
+            this.plPg7CheckDetails.Controls.Add(this.tbPg7Phone);
+            this.plPg7CheckDetails.Controls.Add(this.btnPg7CorrectDetails);
+            this.plPg7CheckDetails.Controls.Add(this.tbPg7Email);
+            this.plPg7CheckDetails.Controls.Add(this.lbPg7Email);
+            this.plPg7CheckDetails.Controls.Add(this.lbPg7Phone);
+            this.plPg7CheckDetails.Controls.Add(this.lbPg7MiddleName);
+            this.plPg7CheckDetails.Location = new System.Drawing.Point(16, 46);
+            this.plPg7CheckDetails.Name = "plPg7CheckDetails";
+            this.plPg7CheckDetails.Size = new System.Drawing.Size(1215, 559);
+            this.plPg7CheckDetails.TabIndex = 18;
+            // 
+            // lbPg7Postcode
+            // 
+            this.lbPg7Postcode.AutoSize = true;
+            this.lbPg7Postcode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg7Postcode.Location = new System.Drawing.Point(630, 319);
+            this.lbPg7Postcode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg7Postcode.Name = "lbPg7Postcode";
+            this.lbPg7Postcode.Size = new System.Drawing.Size(59, 15);
+            this.lbPg7Postcode.TabIndex = 51;
+            this.lbPg7Postcode.Text = "Postcode:";
+            // 
+            // tbPg7Postcode
+            // 
+            this.tbPg7Postcode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg7Postcode.Location = new System.Drawing.Point(712, 314);
+            this.tbPg7Postcode.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg7Postcode.Multiline = true;
+            this.tbPg7Postcode.Name = "tbPg7Postcode";
+            this.tbPg7Postcode.ReadOnly = true;
+            this.tbPg7Postcode.Size = new System.Drawing.Size(239, 25);
+            this.tbPg7Postcode.TabIndex = 50;
+            // 
+            // tbPg7Town
+            // 
+            this.tbPg7Town.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg7Town.Location = new System.Drawing.Point(712, 233);
+            this.tbPg7Town.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg7Town.Multiline = true;
+            this.tbPg7Town.Name = "tbPg7Town";
+            this.tbPg7Town.ReadOnly = true;
+            this.tbPg7Town.Size = new System.Drawing.Size(239, 25);
+            this.tbPg7Town.TabIndex = 49;
+            // 
+            // tbPg7Street
+            // 
+            this.tbPg7Street.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg7Street.Location = new System.Drawing.Point(712, 197);
+            this.tbPg7Street.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg7Street.Multiline = true;
+            this.tbPg7Street.Name = "tbPg7Street";
+            this.tbPg7Street.PasswordChar = '*';
+            this.tbPg7Street.ReadOnly = true;
+            this.tbPg7Street.Size = new System.Drawing.Size(239, 25);
+            this.tbPg7Street.TabIndex = 48;
+            // 
+            // tbPg7HouseNo
+            // 
+            this.tbPg7HouseNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg7HouseNo.Location = new System.Drawing.Point(712, 154);
+            this.tbPg7HouseNo.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg7HouseNo.Multiline = true;
+            this.tbPg7HouseNo.Name = "tbPg7HouseNo";
+            this.tbPg7HouseNo.ReadOnly = true;
+            this.tbPg7HouseNo.Size = new System.Drawing.Size(239, 25);
+            this.tbPg7HouseNo.TabIndex = 47;
+            // 
+            // lbPg7HouseNo
+            // 
+            this.lbPg7HouseNo.AutoSize = true;
+            this.lbPg7HouseNo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg7HouseNo.Location = new System.Drawing.Point(630, 164);
+            this.lbPg7HouseNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg7HouseNo.Name = "lbPg7HouseNo";
+            this.lbPg7HouseNo.Size = new System.Drawing.Size(63, 15);
+            this.lbPg7HouseNo.TabIndex = 46;
+            this.lbPg7HouseNo.Text = "House No:";
+            // 
+            // lbPg7Street
+            // 
+            this.lbPg7Street.AutoSize = true;
+            this.lbPg7Street.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg7Street.Location = new System.Drawing.Point(634, 202);
+            this.lbPg7Street.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg7Street.Name = "lbPg7Street";
+            this.lbPg7Street.Size = new System.Drawing.Size(40, 15);
+            this.lbPg7Street.TabIndex = 45;
+            this.lbPg7Street.Text = "Street:";
+            // 
+            // lbPg7Town
+            // 
+            this.lbPg7Town.AutoSize = true;
+            this.lbPg7Town.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg7Town.Location = new System.Drawing.Point(634, 238);
+            this.lbPg7Town.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg7Town.Name = "lbPg7Town";
+            this.lbPg7Town.Size = new System.Drawing.Size(38, 15);
+            this.lbPg7Town.TabIndex = 44;
+            this.lbPg7Town.Text = "Town:";
+            // 
+            // lbPg7CheckDetailsTitle
+            // 
+            this.lbPg7CheckDetailsTitle.AutoSize = true;
+            this.lbPg7CheckDetailsTitle.BackColor = System.Drawing.Color.Silver;
+            this.lbPg7CheckDetailsTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg7CheckDetailsTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbPg7CheckDetailsTitle.Location = new System.Drawing.Point(412, 23);
+            this.lbPg7CheckDetailsTitle.Name = "lbPg7CheckDetailsTitle";
+            this.lbPg7CheckDetailsTitle.Size = new System.Drawing.Size(390, 42);
+            this.lbPg7CheckDetailsTitle.TabIndex = 36;
+            this.lbPg7CheckDetailsTitle.Text = "Check current details";
+            // 
+            // btnPg7ChangeDetails
+            // 
+            this.btnPg7ChangeDetails.Location = new System.Drawing.Point(461, 98);
+            this.btnPg7ChangeDetails.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPg7ChangeDetails.Name = "btnPg7ChangeDetails";
+            this.btnPg7ChangeDetails.Size = new System.Drawing.Size(116, 37);
+            this.btnPg7ChangeDetails.TabIndex = 35;
+            this.btnPg7ChangeDetails.Text = "Change Details";
+            this.btnPg7ChangeDetails.UseVisualStyleBackColor = true;
+            this.btnPg7ChangeDetails.Click += new System.EventHandler(this.btnPg7ChangeDetails_Click);
+            // 
+            // lbPg7FirstName
+            // 
+            this.lbPg7FirstName.AutoSize = true;
+            this.lbPg7FirstName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg7FirstName.Location = new System.Drawing.Point(256, 162);
+            this.lbPg7FirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg7FirstName.Name = "lbPg7FirstName";
+            this.lbPg7FirstName.Size = new System.Drawing.Size(69, 15);
+            this.lbPg7FirstName.TabIndex = 34;
+            this.lbPg7FirstName.Text = "First Name*";
+            // 
+            // lbPg7LastName
+            // 
+            this.lbPg7LastName.AutoSize = true;
+            this.lbPg7LastName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg7LastName.Location = new System.Drawing.Point(259, 251);
+            this.lbPg7LastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg7LastName.Name = "lbPg7LastName";
+            this.lbPg7LastName.Size = new System.Drawing.Size(66, 15);
+            this.lbPg7LastName.TabIndex = 33;
+            this.lbPg7LastName.Text = "Last name*";
+            // 
+            // tbPg7FirstName
+            // 
+            this.tbPg7FirstName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg7FirstName.Location = new System.Drawing.Point(338, 157);
+            this.tbPg7FirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg7FirstName.Multiline = true;
+            this.tbPg7FirstName.Name = "tbPg7FirstName";
+            this.tbPg7FirstName.ReadOnly = true;
+            this.tbPg7FirstName.Size = new System.Drawing.Size(239, 25);
+            this.tbPg7FirstName.TabIndex = 32;
+            // 
+            // tbPg7LastName
+            // 
+            this.tbPg7LastName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg7LastName.Location = new System.Drawing.Point(338, 246);
+            this.tbPg7LastName.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg7LastName.Multiline = true;
+            this.tbPg7LastName.Name = "tbPg7LastName";
+            this.tbPg7LastName.ReadOnly = true;
+            this.tbPg7LastName.Size = new System.Drawing.Size(239, 25);
+            this.tbPg7LastName.TabIndex = 31;
+            // 
+            // tbPg7MiddleName
+            // 
+            this.tbPg7MiddleName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg7MiddleName.Location = new System.Drawing.Point(335, 200);
+            this.tbPg7MiddleName.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg7MiddleName.Multiline = true;
+            this.tbPg7MiddleName.Name = "tbPg7MiddleName";
+            this.tbPg7MiddleName.ReadOnly = true;
+            this.tbPg7MiddleName.Size = new System.Drawing.Size(239, 25);
+            this.tbPg7MiddleName.TabIndex = 30;
+            // 
+            // tbPg7Phone
+            // 
+            this.tbPg7Phone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg7Phone.Location = new System.Drawing.Point(338, 292);
+            this.tbPg7Phone.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg7Phone.Multiline = true;
+            this.tbPg7Phone.Name = "tbPg7Phone";
+            this.tbPg7Phone.ReadOnly = true;
+            this.tbPg7Phone.Size = new System.Drawing.Size(239, 25);
+            this.tbPg7Phone.TabIndex = 27;
+            // 
+            // btnPg7CorrectDetails
+            // 
+            this.btnPg7CorrectDetails.Location = new System.Drawing.Point(625, 98);
+            this.btnPg7CorrectDetails.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPg7CorrectDetails.Name = "btnPg7CorrectDetails";
+            this.btnPg7CorrectDetails.Size = new System.Drawing.Size(116, 37);
+            this.btnPg7CorrectDetails.TabIndex = 25;
+            this.btnPg7CorrectDetails.Text = "Correct Details";
+            this.btnPg7CorrectDetails.UseVisualStyleBackColor = true;
+            this.btnPg7CorrectDetails.Click += new System.EventHandler(this.btnPg7CorrectDetails_Click);
+            // 
+            // tbPg7Email
+            // 
+            this.tbPg7Email.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg7Email.Location = new System.Drawing.Point(338, 334);
+            this.tbPg7Email.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg7Email.Multiline = true;
+            this.tbPg7Email.Name = "tbPg7Email";
+            this.tbPg7Email.ReadOnly = true;
+            this.tbPg7Email.Size = new System.Drawing.Size(239, 25);
+            this.tbPg7Email.TabIndex = 24;
+            // 
+            // lbPg7Email
+            // 
+            this.lbPg7Email.AutoSize = true;
+            this.lbPg7Email.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg7Email.Location = new System.Drawing.Point(281, 340);
+            this.lbPg7Email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg7Email.Name = "lbPg7Email";
+            this.lbPg7Email.Size = new System.Drawing.Size(41, 15);
+            this.lbPg7Email.TabIndex = 23;
+            this.lbPg7Email.Text = "Email*";
+            // 
+            // lbPg7Phone
+            // 
+            this.lbPg7Phone.AutoSize = true;
+            this.lbPg7Phone.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg7Phone.Location = new System.Drawing.Point(276, 297);
+            this.lbPg7Phone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg7Phone.Name = "lbPg7Phone";
+            this.lbPg7Phone.Size = new System.Drawing.Size(46, 15);
+            this.lbPg7Phone.TabIndex = 22;
+            this.lbPg7Phone.Text = "Phone*";
+            // 
+            // lbPg7MiddleName
+            // 
+            this.lbPg7MiddleName.AutoSize = true;
+            this.lbPg7MiddleName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg7MiddleName.Location = new System.Drawing.Point(247, 205);
+            this.lbPg7MiddleName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg7MiddleName.Name = "lbPg7MiddleName";
+            this.lbPg7MiddleName.Size = new System.Drawing.Size(82, 15);
+            this.lbPg7MiddleName.TabIndex = 20;
+            this.lbPg7MiddleName.Text = "Middle Name:";
+            // 
+            // plPg8Summary
+            // 
+            this.plPg8Summary.Controls.Add(this.lbPg8SummaryTitle);
+            this.plPg8Summary.Controls.Add(this.rtbPgOptionalInfo);
+            this.plPg8Summary.Controls.Add(this.lbPg8OptionalInfo);
+            this.plPg8Summary.Controls.Add(this.rtbPg8BookingInfo);
+            this.plPg8Summary.Controls.Add(this.dtPg8EndDate);
+            this.plPg8Summary.Controls.Add(this.lbPg8EndDate);
+            this.plPg8Summary.Controls.Add(this.dtPg8StartDate);
+            this.plPg8Summary.Controls.Add(this.lbPg8StartDate);
+            this.plPg8Summary.Controls.Add(this.rtbPg8HotelInfo);
+            this.plPg8Summary.Controls.Add(this.lbPg8HotelInfo);
+            this.plPg8Summary.Controls.Add(this.rtbPg8FlightInfo);
+            this.plPg8Summary.Controls.Add(this.lbPg8FlightInfo);
+            this.plPg8Summary.Controls.Add(this.lbPg8BookingInfo);
+            this.plPg8Summary.Controls.Add(this.lbPg8ThankYou);
+            this.plPg8Summary.Location = new System.Drawing.Point(15, 47);
+            this.plPg8Summary.Name = "plPg8Summary";
+            this.plPg8Summary.Size = new System.Drawing.Size(1213, 561);
+            this.plPg8Summary.TabIndex = 19;
+            // 
+            // lbPg8SummaryTitle
+            // 
+            this.lbPg8SummaryTitle.AutoSize = true;
+            this.lbPg8SummaryTitle.BackColor = System.Drawing.Color.Silver;
+            this.lbPg8SummaryTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg8SummaryTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbPg8SummaryTitle.Location = new System.Drawing.Point(500, 10);
+            this.lbPg8SummaryTitle.Name = "lbPg8SummaryTitle";
+            this.lbPg8SummaryTitle.Size = new System.Drawing.Size(183, 42);
+            this.lbPg8SummaryTitle.TabIndex = 30;
+            this.lbPg8SummaryTitle.Text = "Summary";
+            // 
+            // rtbPgOptionalInfo
+            // 
+            this.rtbPgOptionalInfo.Location = new System.Drawing.Point(695, 204);
+            this.rtbPgOptionalInfo.Name = "rtbPgOptionalInfo";
+            this.rtbPgOptionalInfo.Size = new System.Drawing.Size(342, 145);
+            this.rtbPgOptionalInfo.TabIndex = 29;
+            this.rtbPgOptionalInfo.Text = "";
+            // 
+            // lbPg8OptionalInfo
+            // 
+            this.lbPg8OptionalInfo.AutoSize = true;
+            this.lbPg8OptionalInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg8OptionalInfo.Location = new System.Drawing.Point(585, 206);
+            this.lbPg8OptionalInfo.Name = "lbPg8OptionalInfo";
+            this.lbPg8OptionalInfo.Size = new System.Drawing.Size(77, 15);
+            this.lbPg8OptionalInfo.TabIndex = 28;
+            this.lbPg8OptionalInfo.Text = "Optional Info";
+            // 
+            // rtbPg8BookingInfo
+            // 
+            this.rtbPg8BookingInfo.Location = new System.Drawing.Point(215, 203);
+            this.rtbPg8BookingInfo.Name = "rtbPg8BookingInfo";
+            this.rtbPg8BookingInfo.Size = new System.Drawing.Size(311, 150);
+            this.rtbPg8BookingInfo.TabIndex = 27;
+            this.rtbPg8BookingInfo.Text = "";
+            // 
+            // dtPg8EndDate
+            // 
+            this.dtPg8EndDate.Enabled = false;
+            this.dtPg8EndDate.Location = new System.Drawing.Point(707, 115);
+            this.dtPg8EndDate.Name = "dtPg8EndDate";
+            this.dtPg8EndDate.Size = new System.Drawing.Size(159, 20);
+            this.dtPg8EndDate.TabIndex = 26;
+            // 
+            // lbPg8EndDate
+            // 
+            this.lbPg8EndDate.AutoSize = true;
+            this.lbPg8EndDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg8EndDate.Location = new System.Drawing.Point(585, 115);
+            this.lbPg8EndDate.Name = "lbPg8EndDate";
+            this.lbPg8EndDate.Size = new System.Drawing.Size(74, 15);
+            this.lbPg8EndDate.TabIndex = 25;
+            this.lbPg8EndDate.Text = "Holiday end:";
+            // 
+            // dtPg8StartDate
+            // 
+            this.dtPg8StartDate.Enabled = false;
+            this.dtPg8StartDate.Location = new System.Drawing.Point(394, 114);
+            this.dtPg8StartDate.Name = "dtPg8StartDate";
+            this.dtPg8StartDate.Size = new System.Drawing.Size(159, 20);
+            this.dtPg8StartDate.TabIndex = 24;
+            // 
+            // lbPg8StartDate
+            // 
+            this.lbPg8StartDate.AutoSize = true;
+            this.lbPg8StartDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg8StartDate.Location = new System.Drawing.Point(272, 114);
+            this.lbPg8StartDate.Name = "lbPg8StartDate";
+            this.lbPg8StartDate.Size = new System.Drawing.Size(77, 15);
+            this.lbPg8StartDate.TabIndex = 23;
+            this.lbPg8StartDate.Text = "Holiday start:";
+            // 
+            // rtbPg8HotelInfo
+            // 
+            this.rtbPg8HotelInfo.Location = new System.Drawing.Point(695, 364);
+            this.rtbPg8HotelInfo.Name = "rtbPg8HotelInfo";
+            this.rtbPg8HotelInfo.Size = new System.Drawing.Size(342, 138);
+            this.rtbPg8HotelInfo.TabIndex = 22;
+            this.rtbPg8HotelInfo.Text = "";
+            // 
+            // lbPg8HotelInfo
+            // 
+            this.lbPg8HotelInfo.AutoSize = true;
+            this.lbPg8HotelInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg8HotelInfo.Location = new System.Drawing.Point(588, 368);
+            this.lbPg8HotelInfo.Name = "lbPg8HotelInfo";
+            this.lbPg8HotelInfo.Size = new System.Drawing.Size(76, 15);
+            this.lbPg8HotelInfo.TabIndex = 21;
+            this.lbPg8HotelInfo.Text = "Hotel details ";
+            // 
+            // rtbPg8FlightInfo
+            // 
+            this.rtbPg8FlightInfo.Location = new System.Drawing.Point(211, 368);
+            this.rtbPg8FlightInfo.Name = "rtbPg8FlightInfo";
+            this.rtbPg8FlightInfo.Size = new System.Drawing.Size(315, 136);
+            this.rtbPg8FlightInfo.TabIndex = 20;
+            this.rtbPg8FlightInfo.Text = "";
+            // 
+            // lbPg8FlightInfo
+            // 
+            this.lbPg8FlightInfo.AutoSize = true;
+            this.lbPg8FlightInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg8FlightInfo.Location = new System.Drawing.Point(89, 368);
+            this.lbPg8FlightInfo.Name = "lbPg8FlightInfo";
+            this.lbPg8FlightInfo.Size = new System.Drawing.Size(103, 15);
+            this.lbPg8FlightInfo.TabIndex = 19;
+            this.lbPg8FlightInfo.Text = "Flight information";
+            // 
+            // lbPg8BookingInfo
+            // 
+            this.lbPg8BookingInfo.AutoSize = true;
+            this.lbPg8BookingInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg8BookingInfo.Location = new System.Drawing.Point(79, 205);
+            this.lbPg8BookingInfo.Name = "lbPg8BookingInfo";
+            this.lbPg8BookingInfo.Size = new System.Drawing.Size(113, 15);
+            this.lbPg8BookingInfo.TabIndex = 17;
+            this.lbPg8BookingInfo.Text = "Booking Infomation";
+            // 
+            // lbPg8ThankYou
+            // 
+            this.lbPg8ThankYou.AutoSize = true;
+            this.lbPg8ThankYou.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg8ThankYou.Location = new System.Drawing.Point(491, 69);
+            this.lbPg8ThankYou.Name = "lbPg8ThankYou";
+            this.lbPg8ThankYou.Size = new System.Drawing.Size(194, 20);
+            this.lbPg8ThankYou.TabIndex = 13;
+            this.lbPg8ThankYou.Text = "Thank you for choosing us ";
+            // 
+            // plPg9Payment
+            // 
+            this.plPg9Payment.Controls.Add(this.lbPg9PaymentMethod);
+            this.plPg9Payment.Controls.Add(this.lbPg9BillingDetails);
+            this.plPg9Payment.Controls.Add(this.mtbPg9CardNo);
+            this.plPg9Payment.Controls.Add(this.lbPg9CardNum);
+            this.plPg9Payment.Controls.Add(this.lbPg9Postcode);
+            this.plPg9Payment.Controls.Add(this.tbPg9Postcode);
+            this.plPg9Payment.Controls.Add(this.tbPg9Town);
+            this.plPg9Payment.Controls.Add(this.tbPg9Street);
+            this.plPg9Payment.Controls.Add(this.tbPg9HouseNo);
+            this.plPg9Payment.Controls.Add(this.lbPg9HouseNo);
+            this.plPg9Payment.Controls.Add(this.lbPg9Street);
+            this.plPg9Payment.Controls.Add(this.lbPg9Town);
+            this.plPg9Payment.Controls.Add(this.cbPg9Title);
+            this.plPg9Payment.Controls.Add(this.lbPg9Title);
+            this.plPg9Payment.Controls.Add(this.chbPg9BillingSameAsAccount);
+            this.plPg9Payment.Controls.Add(this.lbPg9PaymentTitle);
+            this.plPg9Payment.Controls.Add(this.btnPg9MakePayment);
+            this.plPg9Payment.Controls.Add(this.chbPg9CreditCard);
+            this.plPg9Payment.Controls.Add(this.chbPg9DebitCard);
+            this.plPg9Payment.Controls.Add(this.mtbPg9SercuityCode);
+            this.plPg9Payment.Controls.Add(this.mtbPg9ExpiryDate);
+            this.plPg9Payment.Controls.Add(this.lbPg9SercuityCode);
+            this.plPg9Payment.Controls.Add(this.lbPg9ExpiryDate);
+            this.plPg9Payment.Controls.Add(this.mtbPg9NameOnCard);
+            this.plPg9Payment.Controls.Add(this.lbPg9NameOnCard);
+            this.plPg9Payment.Controls.Add(this.mtbPg9FirstName);
+            this.plPg9Payment.Controls.Add(this.mtbPg9LastName);
+            this.plPg9Payment.Controls.Add(this.lbPg9LastName);
+            this.plPg9Payment.Controls.Add(this.lbPg9FirstName);
+            this.plPg9Payment.Location = new System.Drawing.Point(13, 46);
+            this.plPg9Payment.Name = "plPg9Payment";
+            this.plPg9Payment.Size = new System.Drawing.Size(1218, 559);
+            this.plPg9Payment.TabIndex = 20;
+            // 
+            // lbPg9PaymentMethod
+            // 
+            this.lbPg9PaymentMethod.AutoSize = true;
+            this.lbPg9PaymentMethod.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9PaymentMethod.Location = new System.Drawing.Point(589, 371);
+            this.lbPg9PaymentMethod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg9PaymentMethod.Name = "lbPg9PaymentMethod";
+            this.lbPg9PaymentMethod.Size = new System.Drawing.Size(99, 15);
+            this.lbPg9PaymentMethod.TabIndex = 65;
+            this.lbPg9PaymentMethod.Text = "Payment Method";
+            // 
+            // lbPg9BillingDetails
+            // 
+            this.lbPg9BillingDetails.AutoSize = true;
+            this.lbPg9BillingDetails.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9BillingDetails.Location = new System.Drawing.Point(583, 76);
+            this.lbPg9BillingDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg9BillingDetails.Name = "lbPg9BillingDetails";
+            this.lbPg9BillingDetails.Size = new System.Drawing.Size(77, 15);
+            this.lbPg9BillingDetails.TabIndex = 64;
+            this.lbPg9BillingDetails.Text = "Billing details";
+            // 
+            // mtbPg9CardNo
+            // 
+            this.mtbPg9CardNo.Location = new System.Drawing.Point(662, 453);
+            this.mtbPg9CardNo.Name = "mtbPg9CardNo";
+            this.mtbPg9CardNo.Size = new System.Drawing.Size(220, 20);
+            this.mtbPg9CardNo.TabIndex = 63;
+            // 
+            // lbPg9CardNum
+            // 
+            this.lbPg9CardNum.AutoSize = true;
+            this.lbPg9CardNum.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9CardNum.Location = new System.Drawing.Point(659, 435);
+            this.lbPg9CardNum.Name = "lbPg9CardNum";
+            this.lbPg9CardNum.Size = new System.Drawing.Size(82, 15);
+            this.lbPg9CardNum.TabIndex = 62;
+            this.lbPg9CardNum.Text = "Card number*";
+            // 
+            // lbPg9Postcode
+            // 
+            this.lbPg9Postcode.AutoSize = true;
+            this.lbPg9Postcode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9Postcode.Location = new System.Drawing.Point(452, 314);
+            this.lbPg9Postcode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg9Postcode.Name = "lbPg9Postcode";
+            this.lbPg9Postcode.Size = new System.Drawing.Size(59, 15);
+            this.lbPg9Postcode.TabIndex = 61;
+            this.lbPg9Postcode.Text = "Postcode:";
+            // 
+            // tbPg9Postcode
+            // 
+            this.tbPg9Postcode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg9Postcode.Location = new System.Drawing.Point(555, 311);
+            this.tbPg9Postcode.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg9Postcode.Multiline = true;
+            this.tbPg9Postcode.Name = "tbPg9Postcode";
+            this.tbPg9Postcode.ReadOnly = true;
+            this.tbPg9Postcode.Size = new System.Drawing.Size(198, 19);
+            this.tbPg9Postcode.TabIndex = 60;
+            // 
+            // tbPg9Town
+            // 
+            this.tbPg9Town.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg9Town.Location = new System.Drawing.Point(557, 279);
+            this.tbPg9Town.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg9Town.Multiline = true;
+            this.tbPg9Town.Name = "tbPg9Town";
+            this.tbPg9Town.ReadOnly = true;
+            this.tbPg9Town.Size = new System.Drawing.Size(198, 19);
+            this.tbPg9Town.TabIndex = 59;
+            // 
+            // tbPg9Street
+            // 
+            this.tbPg9Street.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg9Street.Location = new System.Drawing.Point(557, 247);
+            this.tbPg9Street.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg9Street.Multiline = true;
+            this.tbPg9Street.Name = "tbPg9Street";
+            this.tbPg9Street.PasswordChar = '*';
+            this.tbPg9Street.ReadOnly = true;
+            this.tbPg9Street.Size = new System.Drawing.Size(198, 19);
+            this.tbPg9Street.TabIndex = 58;
+            // 
+            // tbPg9HouseNo
+            // 
+            this.tbPg9HouseNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPg9HouseNo.Location = new System.Drawing.Point(557, 213);
+            this.tbPg9HouseNo.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPg9HouseNo.Multiline = true;
+            this.tbPg9HouseNo.Name = "tbPg9HouseNo";
+            this.tbPg9HouseNo.ReadOnly = true;
+            this.tbPg9HouseNo.Size = new System.Drawing.Size(198, 19);
+            this.tbPg9HouseNo.TabIndex = 57;
+            // 
+            // lbPg9HouseNo
+            // 
+            this.lbPg9HouseNo.AutoSize = true;
+            this.lbPg9HouseNo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9HouseNo.Location = new System.Drawing.Point(445, 215);
+            this.lbPg9HouseNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg9HouseNo.Name = "lbPg9HouseNo";
+            this.lbPg9HouseNo.Size = new System.Drawing.Size(63, 15);
+            this.lbPg9HouseNo.TabIndex = 56;
+            this.lbPg9HouseNo.Text = "House No:";
+            // 
+            // lbPg9Street
+            // 
+            this.lbPg9Street.AutoSize = true;
+            this.lbPg9Street.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9Street.Location = new System.Drawing.Point(458, 250);
+            this.lbPg9Street.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg9Street.Name = "lbPg9Street";
+            this.lbPg9Street.Size = new System.Drawing.Size(40, 15);
+            this.lbPg9Street.TabIndex = 55;
+            this.lbPg9Street.Text = "Street:";
+            // 
+            // lbPg9Town
+            // 
+            this.lbPg9Town.AutoSize = true;
+            this.lbPg9Town.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9Town.Location = new System.Drawing.Point(458, 282);
+            this.lbPg9Town.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg9Town.Name = "lbPg9Town";
+            this.lbPg9Town.Size = new System.Drawing.Size(38, 15);
+            this.lbPg9Town.TabIndex = 54;
+            this.lbPg9Town.Text = "Town:";
+            // 
+            // cbPg9Title
+            // 
+            this.cbPg9Title.Enabled = false;
+            this.cbPg9Title.FormattingEnabled = true;
+            this.cbPg9Title.Location = new System.Drawing.Point(560, 127);
+            this.cbPg9Title.Name = "cbPg9Title";
+            this.cbPg9Title.Size = new System.Drawing.Size(126, 21);
+            this.cbPg9Title.TabIndex = 53;
+            // 
+            // lbPg9Title
+            // 
+            this.lbPg9Title.AutoSize = true;
+            this.lbPg9Title.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9Title.Location = new System.Drawing.Point(473, 127);
+            this.lbPg9Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPg9Title.Name = "lbPg9Title";
+            this.lbPg9Title.Size = new System.Drawing.Size(34, 15);
+            this.lbPg9Title.TabIndex = 52;
+            this.lbPg9Title.Text = "Title*";
+            // 
+            // chbPg9BillingSameAsAccount
+            // 
+            this.chbPg9BillingSameAsAccount.AutoSize = true;
+            this.chbPg9BillingSameAsAccount.Checked = true;
+            this.chbPg9BillingSameAsAccount.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbPg9BillingSameAsAccount.Location = new System.Drawing.Point(497, 102);
+            this.chbPg9BillingSameAsAccount.Name = "chbPg9BillingSameAsAccount";
+            this.chbPg9BillingSameAsAccount.Size = new System.Drawing.Size(273, 17);
+            this.chbPg9BillingSameAsAccount.TabIndex = 51;
+            this.chbPg9BillingSameAsAccount.Text = "My billing adress and account address are the same ";
+            this.chbPg9BillingSameAsAccount.UseVisualStyleBackColor = true;
+            this.chbPg9BillingSameAsAccount.CheckedChanged += new System.EventHandler(this.chbPg9BillingSameAsAccount_CheckedChanged);
+            // 
+            // lbPg9PaymentTitle
+            // 
+            this.lbPg9PaymentTitle.AutoSize = true;
+            this.lbPg9PaymentTitle.BackColor = System.Drawing.Color.Silver;
+            this.lbPg9PaymentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9PaymentTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbPg9PaymentTitle.Location = new System.Drawing.Point(520, 11);
+            this.lbPg9PaymentTitle.Name = "lbPg9PaymentTitle";
+            this.lbPg9PaymentTitle.Size = new System.Drawing.Size(172, 42);
+            this.lbPg9PaymentTitle.TabIndex = 50;
+            this.lbPg9PaymentTitle.Text = "Payment";
+            // 
+            // btnPg9MakePayment
+            // 
+            this.btnPg9MakePayment.Location = new System.Drawing.Point(740, 495);
+            this.btnPg9MakePayment.Name = "btnPg9MakePayment";
+            this.btnPg9MakePayment.Size = new System.Drawing.Size(116, 37);
+            this.btnPg9MakePayment.TabIndex = 49;
+            this.btnPg9MakePayment.Text = "Make Payment";
+            this.btnPg9MakePayment.UseVisualStyleBackColor = true;
+            this.btnPg9MakePayment.Click += new System.EventHandler(this.btnPg9MakePayment_Click);
+            // 
+            // chbPg9CreditCard
+            // 
+            this.chbPg9CreditCard.AutoSize = true;
+            this.chbPg9CreditCard.Location = new System.Drawing.Point(540, 395);
+            this.chbPg9CreditCard.Name = "chbPg9CreditCard";
+            this.chbPg9CreditCard.Size = new System.Drawing.Size(77, 17);
+            this.chbPg9CreditCard.TabIndex = 48;
+            this.chbPg9CreditCard.Text = "Credit card";
+            this.chbPg9CreditCard.UseVisualStyleBackColor = true;
+            this.chbPg9CreditCard.CheckedChanged += new System.EventHandler(this.chbPg9CreditCard_CheckedChanged);
+            // 
+            // chbPg9DebitCard
+            // 
+            this.chbPg9DebitCard.AutoSize = true;
+            this.chbPg9DebitCard.Checked = true;
+            this.chbPg9DebitCard.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbPg9DebitCard.Location = new System.Drawing.Point(640, 395);
+            this.chbPg9DebitCard.Name = "chbPg9DebitCard";
+            this.chbPg9DebitCard.Size = new System.Drawing.Size(76, 17);
+            this.chbPg9DebitCard.TabIndex = 47;
+            this.chbPg9DebitCard.Text = "Debit Card";
+            this.chbPg9DebitCard.UseVisualStyleBackColor = true;
+            this.chbPg9DebitCard.CheckedChanged += new System.EventHandler(this.chbPg9DebitCard_CheckedChanged);
+            // 
+            // mtbPg9SercuityCode
+            // 
+            this.mtbPg9SercuityCode.Location = new System.Drawing.Point(623, 504);
+            this.mtbPg9SercuityCode.Name = "mtbPg9SercuityCode";
+            this.mtbPg9SercuityCode.Size = new System.Drawing.Size(80, 20);
+            this.mtbPg9SercuityCode.TabIndex = 46;
+            // 
+            // mtbPg9ExpiryDate
+            // 
+            this.mtbPg9ExpiryDate.Location = new System.Drawing.Point(483, 504);
+            this.mtbPg9ExpiryDate.Name = "mtbPg9ExpiryDate";
+            this.mtbPg9ExpiryDate.Size = new System.Drawing.Size(85, 20);
+            this.mtbPg9ExpiryDate.TabIndex = 45;
+            // 
+            // lbPg9SercuityCode
+            // 
+            this.lbPg9SercuityCode.AutoSize = true;
+            this.lbPg9SercuityCode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9SercuityCode.Location = new System.Drawing.Point(620, 486);
+            this.lbPg9SercuityCode.Name = "lbPg9SercuityCode";
+            this.lbPg9SercuityCode.Size = new System.Drawing.Size(83, 15);
+            this.lbPg9SercuityCode.TabIndex = 44;
+            this.lbPg9SercuityCode.Text = "Security code*";
+            // 
+            // lbPg9ExpiryDate
+            // 
+            this.lbPg9ExpiryDate.AutoSize = true;
+            this.lbPg9ExpiryDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9ExpiryDate.Location = new System.Drawing.Point(482, 486);
+            this.lbPg9ExpiryDate.Name = "lbPg9ExpiryDate";
+            this.lbPg9ExpiryDate.Size = new System.Drawing.Size(70, 15);
+            this.lbPg9ExpiryDate.TabIndex = 43;
+            this.lbPg9ExpiryDate.Text = "Expiry date*";
+            // 
+            // mtbPg9NameOnCard
+            // 
+            this.mtbPg9NameOnCard.Location = new System.Drawing.Point(422, 453);
+            this.mtbPg9NameOnCard.Name = "mtbPg9NameOnCard";
+            this.mtbPg9NameOnCard.Size = new System.Drawing.Size(220, 20);
+            this.mtbPg9NameOnCard.TabIndex = 42;
+            // 
+            // lbPg9NameOnCard
+            // 
+            this.lbPg9NameOnCard.AutoSize = true;
+            this.lbPg9NameOnCard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9NameOnCard.Location = new System.Drawing.Point(419, 435);
+            this.lbPg9NameOnCard.Name = "lbPg9NameOnCard";
+            this.lbPg9NameOnCard.Size = new System.Drawing.Size(87, 15);
+            this.lbPg9NameOnCard.TabIndex = 41;
+            this.lbPg9NameOnCard.Text = "Name on card*";
+            // 
+            // mtbPg9FirstName
+            // 
+            this.mtbPg9FirstName.Location = new System.Drawing.Point(559, 155);
+            this.mtbPg9FirstName.Name = "mtbPg9FirstName";
+            this.mtbPg9FirstName.ReadOnly = true;
+            this.mtbPg9FirstName.Size = new System.Drawing.Size(171, 20);
+            this.mtbPg9FirstName.TabIndex = 34;
+            // 
+            // mtbPg9LastName
+            // 
+            this.mtbPg9LastName.Location = new System.Drawing.Point(559, 183);
+            this.mtbPg9LastName.Name = "mtbPg9LastName";
+            this.mtbPg9LastName.ReadOnly = true;
+            this.mtbPg9LastName.Size = new System.Drawing.Size(171, 20);
+            this.mtbPg9LastName.TabIndex = 33;
+            // 
+            // lbPg9LastName
+            // 
+            this.lbPg9LastName.AutoSize = true;
+            this.lbPg9LastName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9LastName.Location = new System.Drawing.Point(446, 185);
+            this.lbPg9LastName.Name = "lbPg9LastName";
+            this.lbPg9LastName.Size = new System.Drawing.Size(66, 15);
+            this.lbPg9LastName.TabIndex = 30;
+            this.lbPg9LastName.Text = "Last name*";
+            // 
+            // lbPg9FirstName
+            // 
+            this.lbPg9FirstName.AutoSize = true;
+            this.lbPg9FirstName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg9FirstName.Location = new System.Drawing.Point(446, 157);
+            this.lbPg9FirstName.Name = "lbPg9FirstName";
+            this.lbPg9FirstName.Size = new System.Drawing.Size(67, 15);
+            this.lbPg9FirstName.TabIndex = 29;
+            this.lbPg9FirstName.Text = "First name*";
+            // 
+            // plPg4Hotel
+            // 
+            this.plPg4Hotel.Controls.Add(this.lbPg4FamilyRoomsRequired);
+            this.plPg4Hotel.Controls.Add(this.lbPg4TwinRoomsRequired);
+            this.plPg4Hotel.Controls.Add(this.lbPg4DoubleRoomsRequired);
+            this.plPg4Hotel.Controls.Add(this.lbPg4HotelRoomsRequired);
+            this.plPg4Hotel.Controls.Add(this.lbPg4FamilyRoomsAvalible);
+            this.plPg4Hotel.Controls.Add(this.lbPg4TwinsRoomsAvalible);
+            this.plPg4Hotel.Controls.Add(this.lbPg4DoubleRoomsAvalible);
+            this.plPg4Hotel.Controls.Add(this.lbPg4HotelRoomsAvalible);
+            this.plPg4Hotel.Controls.Add(this.lbPg4SelectHotel);
+            this.plPg4Hotel.Controls.Add(this.lbPg4AddHotelQuestion);
+            this.plPg4Hotel.Controls.Add(this.lbPg4HotelBookingTitle);
+            this.plPg4Hotel.Controls.Add(this.lbPg4HotelEnd);
+            this.plPg4Hotel.Controls.Add(this.lbPg4HotelStart);
+            this.plPg4Hotel.Controls.Add(this.dtPg4HotelEnd);
+            this.plPg4Hotel.Controls.Add(this.dtPg4HotelStart);
+            this.plPg4Hotel.Controls.Add(this.lbPg4HolidayEndDate);
+            this.plPg4Hotel.Controls.Add(this.lbPg4HolidayStartDate);
+            this.plPg4Hotel.Controls.Add(this.lbPg4HolidayDates);
+            this.plPg4Hotel.Controls.Add(this.lbPg4HotelInfo);
+            this.plPg4Hotel.Controls.Add(this.lbPg4HotelInfoSubTitle);
+            this.plPg4Hotel.Controls.Add(this.cbPg4SelectHotel);
+            this.plPg4Hotel.Controls.Add(this.chbPg4NoHotel);
+            this.plPg4Hotel.Controls.Add(this.chbPg4YesHotel);
+            this.plPg4Hotel.Controls.Add(this.calPg4HotelBooking);
+            this.plPg4Hotel.Location = new System.Drawing.Point(13, 47);
+            this.plPg4Hotel.Name = "plPg4Hotel";
+            this.plPg4Hotel.Size = new System.Drawing.Size(1218, 558);
+            this.plPg4Hotel.TabIndex = 21;
+            // 
+            // lbPg4FamilyRoomsRequired
+            // 
+            this.lbPg4FamilyRoomsRequired.AutoSize = true;
+            this.lbPg4FamilyRoomsRequired.Location = new System.Drawing.Point(813, 412);
+            this.lbPg4FamilyRoomsRequired.Name = "lbPg4FamilyRoomsRequired";
+            this.lbPg4FamilyRoomsRequired.Size = new System.Drawing.Size(36, 13);
+            this.lbPg4FamilyRoomsRequired.TabIndex = 25;
+            this.lbPg4FamilyRoomsRequired.Text = "Family";
+            // 
+            // lbPg4TwinRoomsRequired
+            // 
+            this.lbPg4TwinRoomsRequired.AutoSize = true;
+            this.lbPg4TwinRoomsRequired.Location = new System.Drawing.Point(813, 382);
+            this.lbPg4TwinRoomsRequired.Name = "lbPg4TwinRoomsRequired";
+            this.lbPg4TwinRoomsRequired.Size = new System.Drawing.Size(30, 13);
+            this.lbPg4TwinRoomsRequired.TabIndex = 24;
+            this.lbPg4TwinRoomsRequired.Text = "Twin";
+            // 
+            // lbPg4DoubleRoomsRequired
+            // 
+            this.lbPg4DoubleRoomsRequired.AutoSize = true;
+            this.lbPg4DoubleRoomsRequired.Location = new System.Drawing.Point(815, 352);
+            this.lbPg4DoubleRoomsRequired.Name = "lbPg4DoubleRoomsRequired";
+            this.lbPg4DoubleRoomsRequired.Size = new System.Drawing.Size(41, 13);
+            this.lbPg4DoubleRoomsRequired.TabIndex = 23;
+            this.lbPg4DoubleRoomsRequired.Text = "Double";
+            // 
+            // lbPg4HotelRoomsRequired
+            // 
+            this.lbPg4HotelRoomsRequired.AutoSize = true;
+            this.lbPg4HotelRoomsRequired.Location = new System.Drawing.Point(815, 318);
+            this.lbPg4HotelRoomsRequired.Name = "lbPg4HotelRoomsRequired";
+            this.lbPg4HotelRoomsRequired.Size = new System.Drawing.Size(81, 13);
+            this.lbPg4HotelRoomsRequired.TabIndex = 22;
+            this.lbPg4HotelRoomsRequired.Text = "Rooms required";
+            // 
+            // lbPg4FamilyRoomsAvalible
+            // 
+            this.lbPg4FamilyRoomsAvalible.AutoSize = true;
+            this.lbPg4FamilyRoomsAvalible.Location = new System.Drawing.Point(583, 411);
+            this.lbPg4FamilyRoomsAvalible.Name = "lbPg4FamilyRoomsAvalible";
+            this.lbPg4FamilyRoomsAvalible.Size = new System.Drawing.Size(36, 13);
+            this.lbPg4FamilyRoomsAvalible.TabIndex = 21;
+            this.lbPg4FamilyRoomsAvalible.Text = "Family";
+            // 
+            // lbPg4TwinsRoomsAvalible
+            // 
+            this.lbPg4TwinsRoomsAvalible.AutoSize = true;
+            this.lbPg4TwinsRoomsAvalible.Location = new System.Drawing.Point(583, 381);
+            this.lbPg4TwinsRoomsAvalible.Name = "lbPg4TwinsRoomsAvalible";
+            this.lbPg4TwinsRoomsAvalible.Size = new System.Drawing.Size(30, 13);
+            this.lbPg4TwinsRoomsAvalible.TabIndex = 20;
+            this.lbPg4TwinsRoomsAvalible.Text = "Twin";
+            // 
+            // lbPg4DoubleRoomsAvalible
+            // 
+            this.lbPg4DoubleRoomsAvalible.AutoSize = true;
+            this.lbPg4DoubleRoomsAvalible.Location = new System.Drawing.Point(585, 351);
+            this.lbPg4DoubleRoomsAvalible.Name = "lbPg4DoubleRoomsAvalible";
+            this.lbPg4DoubleRoomsAvalible.Size = new System.Drawing.Size(41, 13);
+            this.lbPg4DoubleRoomsAvalible.TabIndex = 19;
+            this.lbPg4DoubleRoomsAvalible.Text = "Double";
+            // 
+            // lbPg4HotelRoomsAvalible
+            // 
+            this.lbPg4HotelRoomsAvalible.AutoSize = true;
+            this.lbPg4HotelRoomsAvalible.Location = new System.Drawing.Point(585, 317);
+            this.lbPg4HotelRoomsAvalible.Name = "lbPg4HotelRoomsAvalible";
+            this.lbPg4HotelRoomsAvalible.Size = new System.Drawing.Size(79, 13);
+            this.lbPg4HotelRoomsAvalible.TabIndex = 18;
+            this.lbPg4HotelRoomsAvalible.Text = "Rooms availble";
+            // 
+            // lbPg4SelectHotel
+            // 
+            this.lbPg4SelectHotel.AutoSize = true;
+            this.lbPg4SelectHotel.Location = new System.Drawing.Point(458, 154);
+            this.lbPg4SelectHotel.Name = "lbPg4SelectHotel";
+            this.lbPg4SelectHotel.Size = new System.Drawing.Size(192, 13);
+            this.lbPg4SelectHotel.TabIndex = 17;
+            this.lbPg4SelectHotel.Text = "Please select a hotel from the list below";
+            // 
+            // lbPg4AddHotelQuestion
+            // 
+            this.lbPg4AddHotelQuestion.AutoSize = true;
+            this.lbPg4AddHotelQuestion.Location = new System.Drawing.Point(445, 93);
+            this.lbPg4AddHotelQuestion.Name = "lbPg4AddHotelQuestion";
+            this.lbPg4AddHotelQuestion.Size = new System.Drawing.Size(221, 13);
+            this.lbPg4AddHotelQuestion.TabIndex = 16;
+            this.lbPg4AddHotelQuestion.Text = "Would you like a hotel added to your booking";
+            // 
+            // lbPg4HotelBookingTitle
+            // 
+            this.lbPg4HotelBookingTitle.AutoSize = true;
+            this.lbPg4HotelBookingTitle.BackColor = System.Drawing.Color.Silver;
+            this.lbPg4HotelBookingTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPg4HotelBookingTitle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbPg4HotelBookingTitle.Location = new System.Drawing.Point(435, 22);
+            this.lbPg4HotelBookingTitle.Name = "lbPg4HotelBookingTitle";
+            this.lbPg4HotelBookingTitle.Size = new System.Drawing.Size(264, 42);
+            this.lbPg4HotelBookingTitle.TabIndex = 15;
+            this.lbPg4HotelBookingTitle.Text = "Hotel Booking";
+            // 
+            // lbPg4HotelEnd
+            // 
+            this.lbPg4HotelEnd.AutoSize = true;
+            this.lbPg4HotelEnd.Location = new System.Drawing.Point(399, 390);
+            this.lbPg4HotelEnd.Name = "lbPg4HotelEnd";
+            this.lbPg4HotelEnd.Size = new System.Drawing.Size(26, 13);
+            this.lbPg4HotelEnd.TabIndex = 14;
+            this.lbPg4HotelEnd.Text = "End";
+            // 
+            // lbPg4HotelStart
+            // 
+            this.lbPg4HotelStart.AutoSize = true;
+            this.lbPg4HotelStart.Location = new System.Drawing.Point(399, 333);
+            this.lbPg4HotelStart.Name = "lbPg4HotelStart";
+            this.lbPg4HotelStart.Size = new System.Drawing.Size(29, 13);
+            this.lbPg4HotelStart.TabIndex = 13;
+            this.lbPg4HotelStart.Text = "Start";
+            // 
+            // dtPg4HotelEnd
+            // 
+            this.dtPg4HotelEnd.Location = new System.Drawing.Point(328, 405);
+            this.dtPg4HotelEnd.Name = "dtPg4HotelEnd";
+            this.dtPg4HotelEnd.Size = new System.Drawing.Size(200, 20);
+            this.dtPg4HotelEnd.TabIndex = 12;
+            this.dtPg4HotelEnd.ValueChanged += new System.EventHandler(this.dtPg4HotelEnd_ValueChanged);
+            // 
+            // dtPg4HotelStart
+            // 
+            this.dtPg4HotelStart.Location = new System.Drawing.Point(328, 349);
+            this.dtPg4HotelStart.Name = "dtPg4HotelStart";
+            this.dtPg4HotelStart.Size = new System.Drawing.Size(200, 20);
+            this.dtPg4HotelStart.TabIndex = 11;
+            this.dtPg4HotelStart.ValueChanged += new System.EventHandler(this.dtPg4HotelStart_ValueChanged);
+            // 
+            // lbPg4HolidayEndDate
+            // 
+            this.lbPg4HolidayEndDate.AutoSize = true;
+            this.lbPg4HolidayEndDate.Location = new System.Drawing.Point(1006, 103);
+            this.lbPg4HolidayEndDate.Name = "lbPg4HolidayEndDate";
+            this.lbPg4HolidayEndDate.Size = new System.Drawing.Size(26, 13);
+            this.lbPg4HolidayEndDate.TabIndex = 8;
+            this.lbPg4HolidayEndDate.Text = "End";
+            // 
+            // lbPg4HolidayStartDate
+            // 
+            this.lbPg4HolidayStartDate.AutoSize = true;
+            this.lbPg4HolidayStartDate.Location = new System.Drawing.Point(1006, 69);
+            this.lbPg4HolidayStartDate.Name = "lbPg4HolidayStartDate";
+            this.lbPg4HolidayStartDate.Size = new System.Drawing.Size(29, 13);
+            this.lbPg4HolidayStartDate.TabIndex = 7;
+            this.lbPg4HolidayStartDate.Text = "Start";
+            // 
+            // lbPg4HolidayDates
+            // 
+            this.lbPg4HolidayDates.AutoSize = true;
+            this.lbPg4HolidayDates.Location = new System.Drawing.Point(1026, 39);
+            this.lbPg4HolidayDates.Name = "lbPg4HolidayDates";
+            this.lbPg4HolidayDates.Size = new System.Drawing.Size(71, 13);
+            this.lbPg4HolidayDates.TabIndex = 6;
+            this.lbPg4HolidayDates.Text = "Holiday dates";
+            // 
+            // lbPg4HotelInfo
+            // 
+            this.lbPg4HotelInfo.AutoSize = true;
+            this.lbPg4HotelInfo.Location = new System.Drawing.Point(509, 223);
+            this.lbPg4HotelInfo.Name = "lbPg4HotelInfo";
+            this.lbPg4HotelInfo.Size = new System.Drawing.Size(78, 13);
+            this.lbPg4HotelInfo.TabIndex = 4;
+            this.lbPg4HotelInfo.Text = "rating/ location";
+            // 
+            // lbPg4HotelInfoSubTitle
+            // 
+            this.lbPg4HotelInfoSubTitle.AutoSize = true;
+            this.lbPg4HotelInfoSubTitle.Location = new System.Drawing.Point(509, 199);
+            this.lbPg4HotelInfoSubTitle.Name = "lbPg4HotelInfoSubTitle";
+            this.lbPg4HotelInfoSubTitle.Size = new System.Drawing.Size(83, 13);
+            this.lbPg4HotelInfoSubTitle.TabIndex = 3;
+            this.lbPg4HotelInfoSubTitle.Text = "Hotel infomation";
+            // 
+            // cbPg4SelectHotel
+            // 
+            this.cbPg4SelectHotel.FormattingEnabled = true;
+            this.cbPg4SelectHotel.Location = new System.Drawing.Point(422, 174);
+            this.cbPg4SelectHotel.Name = "cbPg4SelectHotel";
+            this.cbPg4SelectHotel.Size = new System.Drawing.Size(266, 21);
+            this.cbPg4SelectHotel.TabIndex = 2;
+            this.cbPg4SelectHotel.SelectedIndexChanged += new System.EventHandler(this.cbPg4SelectHotel_SelectedIndexChanged);
+            // 
+            // chbPg4NoHotel
+            // 
+            this.chbPg4NoHotel.AutoSize = true;
+            this.chbPg4NoHotel.Location = new System.Drawing.Point(561, 114);
+            this.chbPg4NoHotel.Name = "chbPg4NoHotel";
+            this.chbPg4NoHotel.Size = new System.Drawing.Size(40, 17);
+            this.chbPg4NoHotel.TabIndex = 1;
+            this.chbPg4NoHotel.Text = "No";
+            this.chbPg4NoHotel.UseVisualStyleBackColor = true;
+            this.chbPg4NoHotel.CheckedChanged += new System.EventHandler(this.chbPg4NoHotel_CheckedChanged);
+            // 
+            // chbPg4YesHotel
+            // 
+            this.chbPg4YesHotel.AutoSize = true;
+            this.chbPg4YesHotel.Checked = true;
+            this.chbPg4YesHotel.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbPg4YesHotel.Location = new System.Drawing.Point(490, 115);
+            this.chbPg4YesHotel.Name = "chbPg4YesHotel";
+            this.chbPg4YesHotel.Size = new System.Drawing.Size(44, 17);
+            this.chbPg4YesHotel.TabIndex = 0;
+            this.chbPg4YesHotel.Text = "Yes";
+            this.chbPg4YesHotel.UseVisualStyleBackColor = true;
+            this.chbPg4YesHotel.CheckedChanged += new System.EventHandler(this.chbPg4YesHotel_CheckedChanged);
+            // 
+            // calPg4HotelBooking
+            // 
+            this.calPg4HotelBooking.Location = new System.Drawing.Point(73, 310);
+            this.calPg4HotelBooking.Name = "calPg4HotelBooking";
+            this.calPg4HotelBooking.TabIndex = 5;
+            this.calPg4HotelBooking.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calPg4HotelBooking_DateChanged);
+            // 
+            // lbRunningPrice
+            // 
+            this.lbRunningPrice.AutoSize = true;
+            this.lbRunningPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRunningPrice.Location = new System.Drawing.Point(567, 622);
+            this.lbRunningPrice.Name = "lbRunningPrice";
+            this.lbRunningPrice.Size = new System.Drawing.Size(36, 15);
+            this.lbRunningPrice.TabIndex = 39;
+            this.lbRunningPrice.Text = "Price:";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1236, 656);
+            this.Controls.Add(this.lbRunningPrice);
             this.Controls.Add(this.btnNextPage);
             this.Controls.Add(this.btnPreviousPage);
             this.Controls.Add(this.Navbtn9Payments);
@@ -1562,52 +1862,53 @@
             this.Controls.Add(this.Navbtn2Dates);
             this.Controls.Add(this.Navbtn1NewBooking);
             this.Controls.Add(this.BookingProgressBar);
-            this.Controls.Add(this.plFlight);
-            this.Controls.Add(this.plCarHire);
-            this.Controls.Add(this.plHotel);
-            this.Controls.Add(this.plInsurance);
-            this.Controls.Add(this.plCheckDetails);
-            this.Controls.Add(this.plSummary);
-            this.Controls.Add(this.plPayment);
-            this.Controls.Add(this.plBookingDates);
-            this.Controls.Add(this.plGetLocation);
+            this.Controls.Add(this.plPg9Payment);
+            this.Controls.Add(this.plPg2BookingDates);
+            this.Controls.Add(this.plPg1GetLocation);
+            this.Controls.Add(this.plPg3Flight);
+            this.Controls.Add(this.plPg5CarHire);
+            this.Controls.Add(this.plPg4Hotel);
+            this.Controls.Add(this.plPg6Insurance);
+            this.Controls.Add(this.plPg7CheckDetails);
+            this.Controls.Add(this.plPg8Summary);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.plGetLocation.ResumeLayout(false);
-            this.plGetLocation.PerformLayout();
-            this.plBookingDates.ResumeLayout(false);
-            this.plBookingDates.PerformLayout();
-            this.plFlight.ResumeLayout(false);
-            this.plFlight.PerformLayout();
-            this.plCarHire.ResumeLayout(false);
-            this.plCarHire.PerformLayout();
-            this.plInsurance.ResumeLayout(false);
-            this.plInsurance.PerformLayout();
-            this.plCheckDetails.ResumeLayout(false);
-            this.plCheckDetails.PerformLayout();
-            this.plSummary.ResumeLayout(false);
-            this.plSummary.PerformLayout();
-            this.plPayment.ResumeLayout(false);
-            this.plPayment.PerformLayout();
-            this.plHotel.ResumeLayout(false);
-            this.plHotel.PerformLayout();
+            this.plPg1GetLocation.ResumeLayout(false);
+            this.plPg1GetLocation.PerformLayout();
+            this.plPg2BookingDates.ResumeLayout(false);
+            this.plPg2BookingDates.PerformLayout();
+            this.plPg3Flight.ResumeLayout(false);
+            this.plPg3Flight.PerformLayout();
+            this.plPg5CarHire.ResumeLayout(false);
+            this.plPg5CarHire.PerformLayout();
+            this.plPg6Insurance.ResumeLayout(false);
+            this.plPg6Insurance.PerformLayout();
+            this.plPg7CheckDetails.ResumeLayout(false);
+            this.plPg7CheckDetails.PerformLayout();
+            this.plPg8Summary.ResumeLayout(false);
+            this.plPg8Summary.PerformLayout();
+            this.plPg9Payment.ResumeLayout(false);
+            this.plPg9Payment.PerformLayout();
+            this.plPg4Hotel.ResumeLayout(false);
+            this.plPg4Hotel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel plGetLocation;
-        private System.Windows.Forms.ComboBox cbLocations;
-        private System.Windows.Forms.Label lbGetHolidayLocation;
-        private System.Windows.Forms.Panel plBookingDates;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Panel plPg1GetLocation;
+        private System.Windows.Forms.ComboBox cbPg1GetLocation;
+        private System.Windows.Forms.Label lbPg1WhereLabel;
+        private System.Windows.Forms.Panel plPg2BookingDates;
+        private System.Windows.Forms.DateTimePicker dtPg2HolidayEnd;
+        private System.Windows.Forms.Label lbPg2End;
+        private System.Windows.Forms.MonthCalendar CalPg2HolidayDates;
+        private System.Windows.Forms.Label lbPg2Start;
+        private System.Windows.Forms.Label lbPg2DatesTitle;
+        private System.Windows.Forms.DateTimePicker dtPg2HolidayStart;
         private System.Windows.Forms.ProgressBar BookingProgressBar;
         private System.Windows.Forms.Button Navbtn1NewBooking;
         private System.Windows.Forms.Button Navbtn2Dates;
@@ -1621,118 +1922,135 @@
         private System.Windows.Forms.Button Navbtn9Payments;
         private System.Windows.Forms.Button btnPreviousPage;
         private System.Windows.Forms.Button btnNextPage;
-        private System.Windows.Forms.Panel plFlight;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel plCarHire;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Panel plInsurance;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.Panel plCheckDetails;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel plSummary;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Panel plPayment;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox7;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Panel plHotel;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.MonthCalendar monthCalendar2;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.DateTimePicker dateTimePicker8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker7;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Panel plPg3Flight;
+        private System.Windows.Forms.Label lbPg3TravelClass;
+        private System.Windows.Forms.Label lbPg3DepartureAirport;
+        private System.Windows.Forms.Panel plPg5CarHire;
+        private System.Windows.Forms.ComboBox cbPg5CarHireSelection;
+        private System.Windows.Forms.DateTimePicker dtPg5CarStartDate;
+        private System.Windows.Forms.DateTimePicker dtPg5CarEndDate;
+        private System.Windows.Forms.CheckBox chbPg5YesHireCar;
+        private System.Windows.Forms.CheckBox chbPg5NoHireCar;
+        private System.Windows.Forms.Panel plPg6Insurance;
+        private System.Windows.Forms.Label lbPg6InsurancePriceEstimate;
+        private System.Windows.Forms.CheckBox chbPg6YesInsurance;
+        private System.Windows.Forms.CheckBox chbPg6NoInsurance;
+        private System.Windows.Forms.Panel plPg7CheckDetails;
+        private System.Windows.Forms.Button btnPg7ChangeDetails;
+        private System.Windows.Forms.Label lbPg7FirstName;
+        private System.Windows.Forms.Label lbPg7LastName;
+        private System.Windows.Forms.TextBox tbPg7FirstName;
+        private System.Windows.Forms.TextBox tbPg7LastName;
+        private System.Windows.Forms.TextBox tbPg7MiddleName;
+        private System.Windows.Forms.TextBox tbPg7Phone;
+        private System.Windows.Forms.Button btnPg7CorrectDetails;
+        private System.Windows.Forms.TextBox tbPg7Email;
+        private System.Windows.Forms.Label lbPg7Email;
+        private System.Windows.Forms.Label lbPg7Phone;
+        private System.Windows.Forms.Label lbPg7MiddleName;
+        private System.Windows.Forms.Panel plPg8Summary;
+        private System.Windows.Forms.RichTextBox rtbPgOptionalInfo;
+        private System.Windows.Forms.Label lbPg8OptionalInfo;
+        private System.Windows.Forms.RichTextBox rtbPg8BookingInfo;
+        private System.Windows.Forms.DateTimePicker dtPg8EndDate;
+        private System.Windows.Forms.Label lbPg8EndDate;
+        private System.Windows.Forms.DateTimePicker dtPg8StartDate;
+        private System.Windows.Forms.Label lbPg8StartDate;
+        private System.Windows.Forms.RichTextBox rtbPg8HotelInfo;
+        private System.Windows.Forms.Label lbPg8HotelInfo;
+        private System.Windows.Forms.RichTextBox rtbPg8FlightInfo;
+        private System.Windows.Forms.Label lbPg8FlightInfo;
+        private System.Windows.Forms.Label lbPg8BookingInfo;
+        private System.Windows.Forms.Label lbPg8ThankYou;
+        private System.Windows.Forms.Panel plPg9Payment;
+        private System.Windows.Forms.Button btnPg9MakePayment;
+        private System.Windows.Forms.CheckBox chbPg9CreditCard;
+        private System.Windows.Forms.CheckBox chbPg9DebitCard;
+        private System.Windows.Forms.MaskedTextBox mtbPg9SercuityCode;
+        private System.Windows.Forms.MaskedTextBox mtbPg9ExpiryDate;
+        private System.Windows.Forms.Label lbPg9SercuityCode;
+        private System.Windows.Forms.Label lbPg9ExpiryDate;
+        private System.Windows.Forms.MaskedTextBox mtbPg9NameOnCard;
+        private System.Windows.Forms.Label lbPg9NameOnCard;
+        private System.Windows.Forms.MaskedTextBox mtbPg9FirstName;
+        private System.Windows.Forms.MaskedTextBox mtbPg9LastName;
+        private System.Windows.Forms.Label lbPg9LastName;
+        private System.Windows.Forms.Label lbPg9FirstName;
+        private System.Windows.Forms.Panel plPg4Hotel;
+        private System.Windows.Forms.Label lbPg4HolidayEndDate;
+        private System.Windows.Forms.Label lbPg4HolidayStartDate;
+        private System.Windows.Forms.Label lbPg4HolidayDates;
+        private System.Windows.Forms.MonthCalendar calPg4HotelBooking;
+        private System.Windows.Forms.Label lbPg4HotelInfo;
+        private System.Windows.Forms.Label lbPg4HotelInfoSubTitle;
+        private System.Windows.Forms.ComboBox cbPg4SelectHotel;
+        private System.Windows.Forms.CheckBox chbPg4NoHotel;
+        private System.Windows.Forms.CheckBox chbPg4YesHotel;
+        private System.Windows.Forms.Label lbPg4HotelEnd;
+        private System.Windows.Forms.Label lbPg4HotelStart;
+        private System.Windows.Forms.DateTimePicker dtPg4HotelEnd;
+        private System.Windows.Forms.DateTimePicker dtPg4HotelStart;
+        private System.Windows.Forms.Label lbPg1NewBookingTitle;
+        private System.Windows.Forms.Label lbPg3FlightsTitle;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label lbPg5CarEndDate;
+        private System.Windows.Forms.Label lbPg5CarStartDate;
+        private System.Windows.Forms.Label lbPg5CarHireSelection;
+        private System.Windows.Forms.Label lbPg5HireCarQuestion;
+        private System.Windows.Forms.Label lbPg5CarHireTitle;
+        private System.Windows.Forms.Label lbPg6AddInsuranceQuestion;
+        private System.Windows.Forms.Label lbPg6InsuranceTitle;
+        private System.Windows.Forms.Label lbPg4SelectHotel;
+        private System.Windows.Forms.Label lbPg4AddHotelQuestion;
+        private System.Windows.Forms.Label lbPg4HotelBookingTitle;
+        private System.Windows.Forms.Label lbPg7CheckDetailsTitle;
+        private System.Windows.Forms.Label lbPg8SummaryTitle;
+        private System.Windows.Forms.Label lbPg9PaymentTitle;
+        private System.Windows.Forms.Button btnPg1AddChild;
+        private System.Windows.Forms.Button btnPg1AddAdult;
+        private System.Windows.Forms.TextBox tbPg1NoOfChildren;
+        private System.Windows.Forms.Button btnPg1MinusChild;
+        private System.Windows.Forms.Button btnPg1MinusAdult;
+        private System.Windows.Forms.TextBox tbPg1NoOfAdults;
+        private System.Windows.Forms.Label lbPg1HowManyLabel;
+        private System.Windows.Forms.Label lbPg1ChildrenLabel;
+        private System.Windows.Forms.Label lbPg1AdultsLabel;
+        private System.Windows.Forms.ComboBox cbPg3DepartureAirport;
+        private System.Windows.Forms.Label lbPg3AddFlightsQuestion;
+        private System.Windows.Forms.CheckBox chbPg3YesFlights;
+        private System.Windows.Forms.CheckBox chbPg3NoFlights;
+        private System.Windows.Forms.ComboBox cbPg3TravelClass;
+        private System.Windows.Forms.Label lbPg4FamilyRoomsRequired;
+        private System.Windows.Forms.Label lbPg4TwinRoomsRequired;
+        private System.Windows.Forms.Label lbPg4DoubleRoomsRequired;
+        private System.Windows.Forms.Label lbPg4HotelRoomsRequired;
+        private System.Windows.Forms.Label lbPg4FamilyRoomsAvalible;
+        private System.Windows.Forms.Label lbPg4TwinsRoomsAvalible;
+        private System.Windows.Forms.Label lbPg4DoubleRoomsAvalible;
+        private System.Windows.Forms.Label lbPg4HotelRoomsAvalible;
+        private System.Windows.Forms.Label lbPg7Postcode;
+        private System.Windows.Forms.TextBox tbPg7Postcode;
+        private System.Windows.Forms.TextBox tbPg7Town;
+        private System.Windows.Forms.TextBox tbPg7Street;
+        private System.Windows.Forms.TextBox tbPg7HouseNo;
+        private System.Windows.Forms.Label lbPg7HouseNo;
+        private System.Windows.Forms.Label lbPg7Street;
+        private System.Windows.Forms.Label lbPg7Town;
+        private System.Windows.Forms.CheckBox chbPg9BillingSameAsAccount;
+        private System.Windows.Forms.ComboBox cbPg9Title;
+        private System.Windows.Forms.Label lbPg9Title;
+        private System.Windows.Forms.MaskedTextBox mtbPg9CardNo;
+        private System.Windows.Forms.Label lbPg9CardNum;
+        private System.Windows.Forms.Label lbPg9Postcode;
+        private System.Windows.Forms.TextBox tbPg9Postcode;
+        private System.Windows.Forms.TextBox tbPg9Town;
+        private System.Windows.Forms.TextBox tbPg9Street;
+        private System.Windows.Forms.TextBox tbPg9HouseNo;
+        private System.Windows.Forms.Label lbPg9HouseNo;
+        private System.Windows.Forms.Label lbPg9Street;
+        private System.Windows.Forms.Label lbPg9Town;
+        private System.Windows.Forms.Label lbRunningPrice;
+        private System.Windows.Forms.Label lbPg9PaymentMethod;
+        private System.Windows.Forms.Label lbPg9BillingDetails;
     }
 }
