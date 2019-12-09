@@ -376,7 +376,9 @@
             // 
             // CalPg2HolidayDates
             // 
+            this.CalPg2HolidayDates.Enabled = false;
             this.CalPg2HolidayDates.Location = new System.Drawing.Point(473, 110);
+            this.CalPg2HolidayDates.MinDate = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
             this.CalPg2HolidayDates.Name = "CalPg2HolidayDates";
             this.CalPg2HolidayDates.TabIndex = 9;
             this.CalPg2HolidayDates.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.CalPg2HolidayDates_DateChanged);
@@ -1137,6 +1139,7 @@
             // 
             this.rtbPgOptionalInfo.Location = new System.Drawing.Point(695, 204);
             this.rtbPgOptionalInfo.Name = "rtbPgOptionalInfo";
+            this.rtbPgOptionalInfo.ReadOnly = true;
             this.rtbPgOptionalInfo.Size = new System.Drawing.Size(342, 145);
             this.rtbPgOptionalInfo.TabIndex = 29;
             this.rtbPgOptionalInfo.Text = "";
@@ -1155,6 +1158,7 @@
             // 
             this.rtbPg8BookingInfo.Location = new System.Drawing.Point(215, 203);
             this.rtbPg8BookingInfo.Name = "rtbPg8BookingInfo";
+            this.rtbPg8BookingInfo.ReadOnly = true;
             this.rtbPg8BookingInfo.Size = new System.Drawing.Size(311, 150);
             this.rtbPg8BookingInfo.TabIndex = 27;
             this.rtbPg8BookingInfo.Text = "";
@@ -1199,6 +1203,7 @@
             // 
             this.rtbPg8HotelInfo.Location = new System.Drawing.Point(695, 364);
             this.rtbPg8HotelInfo.Name = "rtbPg8HotelInfo";
+            this.rtbPg8HotelInfo.ReadOnly = true;
             this.rtbPg8HotelInfo.Size = new System.Drawing.Size(342, 138);
             this.rtbPg8HotelInfo.TabIndex = 22;
             this.rtbPg8HotelInfo.Text = "";
@@ -1217,6 +1222,7 @@
             // 
             this.rtbPg8FlightInfo.Location = new System.Drawing.Point(211, 368);
             this.rtbPg8FlightInfo.Name = "rtbPg8FlightInfo";
+            this.rtbPg8FlightInfo.ReadOnly = true;
             this.rtbPg8FlightInfo.Size = new System.Drawing.Size(315, 136);
             this.rtbPg8FlightInfo.TabIndex = 20;
             this.rtbPg8FlightInfo.Text = "";
@@ -1862,7 +1868,6 @@
             this.Controls.Add(this.Navbtn2Dates);
             this.Controls.Add(this.Navbtn1NewBooking);
             this.Controls.Add(this.BookingProgressBar);
-            this.Controls.Add(this.plPg9Payment);
             this.Controls.Add(this.plPg2BookingDates);
             this.Controls.Add(this.plPg1GetLocation);
             this.Controls.Add(this.plPg3Flight);
@@ -1871,6 +1876,7 @@
             this.Controls.Add(this.plPg6Insurance);
             this.Controls.Add(this.plPg7CheckDetails);
             this.Controls.Add(this.plPg8Summary);
+            this.Controls.Add(this.plPg9Payment);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);

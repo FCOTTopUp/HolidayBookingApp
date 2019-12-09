@@ -19,7 +19,13 @@ namespace HolidayBooking
         int MaxNavIndex;
 
         //List used for locations
-        List<string> AllLocations = new List<string>();
+        List<string>Alllocations = new List<string> { "One", "Two", "Three" };
+
+
+        //Creation of customer object to hold all users details either that have just been made or retrieved from the database
+        CustomerDetails CurrentCustomer = new CustomerDetails();
+
+        NewBooking CurrentBooking = new NewBooking();
 
 
         public MainForm()
@@ -27,8 +33,6 @@ namespace HolidayBooking
             InitializeComponent();
         }
 
-        #region GENERAL BUTTONS AND FUNCTIONS
-        //********************************** General Buttons and functions ****************************************************
         private void MainForm_Load(object sender, EventArgs e)
         {
             //Adds all the panels to a list on start up so nav code can flip through them abnd resets index
@@ -43,8 +47,15 @@ namespace HolidayBooking
             NavPanels.Add(plPg8Summary);
             NavPanels.Add(plPg9Payment);
             LoadPage();
+
+            //Setup of locations combobox
+            var LocationBindingSource = new BindingSource();
+            LocationBindingSource.DataSource = Alllocations;
+            cbPg1GetLocation.DataSource = LocationBindingSource.DataSource;
         }
 
+        #region GENERAL BUTTONS AND FUNCTIONS
+        //********************************** General Buttons and functions ****************************************************
         private void btnClose_Click(object sender, EventArgs e)
         {
             //Closes the Application
@@ -70,6 +81,11 @@ namespace HolidayBooking
             {
                 NavIndex++;
                 LoadPage();
+                if (NavIndex == 1)
+                {
+                    //Create new object of new booking and pass it variables
+                    CurrentBooking.SetupBooking(cbPg1GetLocation.SelectedIndex, Convert.ToInt32(tbPg1NoOfAdults.Text), Convert.ToInt32(tbPg1NoOfChildren.Text));
+                }
             }
             else if (NavIndex ==8)
             {
@@ -123,6 +139,7 @@ namespace HolidayBooking
             else if (NavIndex == 8)
             { page9PaymentsSetup(); }
         }
+        #endregion
 
         #region PAGE SETUP
         private void page1NewBookingSetup()
@@ -135,6 +152,11 @@ namespace HolidayBooking
         {
             btnPreviousPage.Enabled = true;
             btnNextPage.Enabled = true;
+
+            dtPg2HolidayStart.MinDate = DateTime.Today;
+            dtPg2HolidayEnd.MinDate = DateTime.Today;
+            dtPg2HolidayEnd.MaxDate = DateTime.Today.AddMonths(1);
+
         }
 
         private void page3FlightsSetup()
@@ -260,10 +282,10 @@ namespace HolidayBooking
         }
 
         #endregion
-        #endregion
+        
         #endregion
 
-        #region PAGE 1
+        #region PAGE 1 - GET LOCATION
         //********************************** Page 1 - Get location Buttons and functions ****************************************************
         private void cbPg1GetLocation_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -274,8 +296,6 @@ namespace HolidayBooking
             locationID = cbPg1GetLocation.SelectedIndex;
             tbPg1NoOfAdults.Text = noOfAdults.ToString();
             tbPg1NoOfChildren.Text = noOfChildren.ToString();
-
-            //Create new object of new booking and pass it variables above
         }
 
         private void btnPg1AddAdult_Click(object sender, EventArgs e)
@@ -307,8 +327,10 @@ namespace HolidayBooking
 
         #endregion
 
-        #region PAGE 2
+        #region PAGE 2 - GET DATE
         //********************************** Page 2 - Get Date ****************************************************
+        //http://geekswithblogs.net/dotNETvinz/archive/2009/03/09/tiptrick-aspnet-calendar-control-with-multiple-date-selections.aspx
+
         private void CalPg2HolidayDates_DateChanged(object sender, DateRangeEventArgs e)
         {
 
@@ -321,13 +343,13 @@ namespace HolidayBooking
 
         private void dtPg2HolidayEnd_ValueChanged(object sender, EventArgs e)
         {
-
+            //CalPg2HolidayDates.SelectionRange = new SelectionRange(CurrentBooking.);
         }
 
 
         #endregion
 
-        #region PAGE 3
+        #region PAGE 3 - FLIGHTS
         //********************************** Page 3 - Flights ***************************************************************
         private void chbPg3YesFlights_CheckedChanged(object sender, EventArgs e)
         {
@@ -364,7 +386,7 @@ namespace HolidayBooking
 
         #endregion
 
-        #region PAGE 4
+        #region PAGE 4 - HOTEL
         //********************************** Page 4 - Hotel ***************************************************************
         private void chbPg4YesHotel_CheckedChanged(object sender, EventArgs e)
         {
@@ -550,6 +572,7 @@ namespace HolidayBooking
        iMPLEMENT CALANDER
        RUNNING TOTAL PRICE
        ADD IN BOOKED HOLIDAY OBJECT WHICH LOADS START AND ENDDATES OF HOLIDAYA BUT ALSO OF HOTELS
+       ADD BASIC AND PREMIUM OPTION TO INSURANCE
        */
     }
 }
