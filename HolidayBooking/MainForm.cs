@@ -85,6 +85,7 @@ namespace HolidayBooking
                 {
                     //Create new object of new booking and pass it variables
                     CurrentBooking.SetupBooking(cbPg1GetLocation.SelectedIndex, Convert.ToInt32(tbPg1NoOfAdults.Text), Convert.ToInt32(tbPg1NoOfChildren.Text));
+                    DisableNavButtons();
                 }
             }
             else if (NavIndex ==8)
@@ -156,7 +157,6 @@ namespace HolidayBooking
             dtPg2HolidayStart.MinDate = DateTime.Today;
             dtPg2HolidayEnd.MinDate = DateTime.Today;
             dtPg2HolidayEnd.MaxDate = DateTime.Today.AddMonths(1);
-
         }
 
         private void page3FlightsSetup()
@@ -258,6 +258,8 @@ namespace HolidayBooking
             LoadPage();
         }
 
+
+        //Change next two functions to take a parameter that decideds how many buttons to be activated - requires addition of a list to hold the NAV buttons
         private void EnableNavButtons()
         {
             //Enables each of the navigation buttons at the top each time they are reached using the next buttons - Means no skip forward
@@ -279,6 +281,18 @@ namespace HolidayBooking
             {Navbtn8Summary.Enabled = true; }
             else if (MaxNavIndex == 8)
             {Navbtn9Payments.Enabled = true; }
+        }
+
+        private void DisableNavButtons()
+        {
+            Navbtn3Flights.Enabled = false;
+            Navbtn4Hotel.Enabled = false;
+            Navbtn5Car.Enabled = false;
+            Navbtn6Inusrance.Enabled = false;
+            Navbtn7CheckDetails.Enabled = false;
+            Navbtn8Summary.Enabled = false;
+            Navbtn9Payments.Enabled = false;
+            MaxNavIndex = 1;
         }
 
         #endregion
@@ -333,17 +347,21 @@ namespace HolidayBooking
 
         private void CalPg2HolidayDates_DateChanged(object sender, DateRangeEventArgs e)
         {
-
+            
         }
 
         private void dtPg2HolidayStart_ValueChanged(object sender, EventArgs e)
         {
+            CurrentBooking.holidayStartDate = dtPg2HolidayStart.Value;
+            dtPg2HolidayEnd.MinDate = CurrentBooking.holidayStartDate.AddDays(1);
+            CalPg2HolidayDates.SelectionRange = new SelectionRange(CurrentBooking.holidayStartDate, CurrentBooking.holidayEndDate);
 
         }
 
         private void dtPg2HolidayEnd_ValueChanged(object sender, EventArgs e)
         {
-            //CalPg2HolidayDates.SelectionRange = new SelectionRange(CurrentBooking.);
+            CurrentBooking.holidayEndDate = dtPg2HolidayEnd.Value;
+            CalPg2HolidayDates.SelectionRange = new SelectionRange(CurrentBooking.holidayStartDate, CurrentBooking.holidayEndDate);
         }
 
 
