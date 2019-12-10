@@ -9,11 +9,11 @@ namespace HolidayBooking
     class Booking
     {
         //Parent class for new booking and exsisting booking holding shared variables
-        protected int bookingid;
+        public int bookingid;
 
-        protected DateTime holidayStartDate;
-        protected DateTime holidayEndDate;
-        protected int LengthOfHoliday;
-        protected int LocationID;
+        public DateTime holidayStartDate;
+        public DateTime holidayEndDate;
+        public int LengthOfHoliday;
+        public int LocationID;
     }
 }
