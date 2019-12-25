@@ -8,8 +8,29 @@ namespace HolidayBooking
 {
     class NewBooking: Booking
     {
+        //Variables used for optional addons
+        public bool WantFlights = true;
+        public bool WantHotel = true;
+        public bool WantCar = true;
+        public bool WantInsurance = true;
+
+        //Variables used for get location - Page 1
         int NoOfAdults;
         int NoOfChildren;
+
+        //Variables for holiday dates inherited from booking class - Page 2
+
+        //Variables used for flights - Page 3
+        public int DepartureAirportID;
+        public int TravelClassID;
+
+        //Variables for hotel dates inherited from booking class - Page 4
+
+        //Variables used for car hire - Page 5
+        public int CarHireID;
+
+        //Variables used for insurance - Page 6
+        public int LocationSafetyRating;
 
         public NewBooking()
         {
@@ -30,7 +51,10 @@ namespace HolidayBooking
             holidayEndDate = DateTime.Today;
             LengthOfHoliday = 0;
             LocationID = 0;
+            WantFlights = true;
+            WantHotel = true;
+            WantCar = true;
+            WantInsurance = true;
         }
-        //customer details
     }
 }

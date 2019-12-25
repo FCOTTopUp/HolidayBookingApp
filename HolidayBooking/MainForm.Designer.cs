@@ -1868,8 +1868,6 @@
             this.Controls.Add(this.Navbtn2Dates);
             this.Controls.Add(this.Navbtn1NewBooking);
             this.Controls.Add(this.BookingProgressBar);
-            this.Controls.Add(this.plPg2BookingDates);
-            this.Controls.Add(this.plPg1GetLocation);
             this.Controls.Add(this.plPg3Flight);
             this.Controls.Add(this.plPg5CarHire);
             this.Controls.Add(this.plPg4Hotel);
@@ -1877,6 +1875,8 @@
             this.Controls.Add(this.plPg7CheckDetails);
             this.Controls.Add(this.plPg8Summary);
             this.Controls.Add(this.plPg9Payment);
+            this.Controls.Add(this.plPg2BookingDates);
+            this.Controls.Add(this.plPg1GetLocation);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);

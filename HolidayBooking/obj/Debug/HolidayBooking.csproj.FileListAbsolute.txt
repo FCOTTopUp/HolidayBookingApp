@@ -20,7 +20,6 @@ C:\Users\Andrew\Documents\Work\TopUp\SystemIntegration\HolidayBooking\obj\Debug\
 C:\Users\Andrew\Documents\Work\TopUp\SystemIntegration\HolidayBooking\obj\Debug\HolidayBooking.MainForm.resources
 C:\Users\Andrew\Documents\Work\TopUp\SystemIntegration\HolidayBooking\obj\Debug\HolidayBooking.Properties.Resources.resources
 C:\Users\Andrew\Documents\Work\TopUp\SystemIntegration\HolidayBooking\obj\Debug\HolidayBooking.csproj.GenerateResource.cache
-C:\Users\Andrew\Documents\Work\TopUp\SystemIntegration\HolidayBooking\obj\Debug\HolidayBooking.csproj.CoreCompileInputs.cache
 C:\Users\Andrew\Documents\Work\TopUp\SystemIntegration\HolidayBooking\obj\Debug\HolidayBooking.exe
 C:\Users\Andrew\Documents\Work\TopUp\SystemIntegration\HolidayBooking\obj\Debug\HolidayBooking.pdb
 C:\Users\20211752\Downloads\HolidayBookingApp-master\HolidayBookingApp-master\HolidayBooking\bin\Debug\HolidayBooking.exe.config

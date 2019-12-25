@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Booking.cs" />
+    <Compile Include="CarTypes.cs" />
     <Compile Include="CreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +63,9 @@
     <Compile Include="Comfirmation.Designer.cs">
       <DependentUpon>Comfirmation.cs</DependentUpon>
     </Compile>
+    <Compile Include="FlightClass.cs" />
+    <Compile Include="HotelInfo.cs" />
+    <Compile Include="HotelRooms.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

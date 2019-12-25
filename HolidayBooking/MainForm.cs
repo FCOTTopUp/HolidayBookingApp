@@ -12,6 +12,7 @@ namespace HolidayBooking
 {
     public partial class MainForm : Form
     {
+        #region LIST INITALISATION
         //********************************** Initalisations of Lists ****************************************************
         //List used for navigation of panels
         List<Panel> NavPanels = new List<Panel>();
@@ -19,14 +20,29 @@ namespace HolidayBooking
         int MaxNavIndex;
 
         //List used for locations
-        List<string>Alllocations = new List<string> { "One", "Two", "Three" };
+        List<string>AllLocationList = new List<string> { "One", "Two", "Three" };
+
+        //List used for depature airports
+        List<string> DepatureAirportsList = new List<string> { "One1", "Two2", "Three3" };
+
+        //List used for travel class of flights
+        List<FlightClass> FlightClassList = new List<FlightClass>();
+
+        //List of hotels in the users selected location
+        List<HotelInfo> HotelsInLocationList = new List<HotelInfo>();
+
+        //List of Car types availble
+        List<CarTypes> CarsAvailbleList = new List<CarTypes>();
 
 
         //Creation of customer object to hold all users details either that have just been made or retrieved from the database
         CustomerDetails CurrentCustomer = new CustomerDetails();
 
+        //Creation of booking object that will be used as the new booking through the pages
         NewBooking CurrentBooking = new NewBooking();
 
+
+        #endregion
 
         public MainForm()
         {
@@ -48,10 +64,11 @@ namespace HolidayBooking
             NavPanels.Add(plPg9Payment);
             LoadPage();
 
-            //Setup of locations combobox
-            var LocationBindingSource = new BindingSource();
-            LocationBindingSource.DataSource = Alllocations;
-            cbPg1GetLocation.DataSource = LocationBindingSource.DataSource;
+            BindLocations();
+            BindDepartureAirports();
+            BindTravelClass();
+            BindHotels();
+            BindCars();
         }
 
         #region GENERAL BUTTONS AND FUNCTIONS
@@ -62,6 +79,7 @@ namespace HolidayBooking
             //TO ADD GIVE THE OPTION OF LOG OUT ONLY
             Application.Exit();
         }
+        #endregion
 
         #region PAGE NAVIGATION
         private void btnPreviousPage_Click(object sender, EventArgs e)
@@ -296,7 +314,105 @@ namespace HolidayBooking
         }
 
         #endregion
-        
+
+        #region DATABASE READ FUNCTIONS
+        private void GetLocations()
+        {
+
+            //Loads all avalible locations from database into AllLocations list for use in dropdown box on page 1
+        }
+
+        private void GetBookedHolidays()
+        {
+            //Loads all the already booked holidays from database so that they can be shown on the holiday booking calander for how busy places are
+            //Will also need to call hotel data below in order to compare how busy to number of rooms left in hotels ---- MAYBE
+        }
+
+        private List<FlightClass> GetFlightData(List<FlightClass> _FlightClass)
+        {
+            //Get the Flight classes and departure locations so user can select option from drop down lists on page 3
+            _FlightClass.Add(new FlightClass(0, "basic", 100));
+            _FlightClass.Add(new FlightClass(1, "Premium", 100));
+            _FlightClass.Add(new FlightClass(2, "Business", 100));
+
+            return _FlightClass;
+        }
+
+        private List<> GetHotelData()
+        {
+            //Gets all hotels availble ***Within the selected location*** and the number of rooms left - Will need to be calculated from max and number of booked already
+            _CarsAvailble.Add(new CarTypes(0, "Test1", 100));
+            _CarsAvailble.Add(new CarTypes(1, "Test2", 100));
+            _CarsAvailble.Add(new CarTypes(2, "Test3", 100));
+
+            return _CarsAvailble;
+        }
+
+        private List<CarTypes> GetCarData(List<CarTypes> _CarsAvailble)
+        {
+            //Gets list of cars availble and fills the drop down list on page 5
+            _CarsAvailble.Add(new CarTypes(0, "Test1", 100));
+            _CarsAvailble.Add(new CarTypes(1, "Test2", 100));
+            _CarsAvailble.Add(new CarTypes(2, "Test3", 100));
+
+            return _CarsAvailble;
+        }
+
+        private void GetInsuranceData()
+        {
+            //Get safety rating of areas so insurance can be calulated on page 6
+        }
+        #endregion
+
+        #region DATABINDING SETUPS
+        private void BindLocations()
+        {
+            //Setup of locations combobox
+            var LocationBindingSource = new BindingSource();
+            LocationBindingSource.DataSource = AllLocationList;
+            cbPg1GetLocation.DataSource = LocationBindingSource.DataSource;
+        }
+
+        private void BindDepartureAirports()
+        {
+            //Setup of depature airport combobox
+            var DepartureAirportsBindingSource = new BindingSource();
+            DepartureAirportsBindingSource.DataSource = DepatureAirportsList;
+            cbPg3DepartureAirport.DataSource = DepartureAirportsBindingSource.DataSource;
+        }
+
+        private void BindTravelClass()
+        {
+            //Setup of flight class combobox
+            FlightClassList = GetFlightData(FlightClassList);
+            var FlightBindingSource = new BindingSource();
+            FlightBindingSource.DataSource = FlightClassList;
+            cbPg3TravelClass.DataSource = FlightBindingSource.DataSource;
+
+            cbPg3TravelClass.ValueMember = null;
+            cbPg3TravelClass.DisplayMember = "_FlightClassName";
+        }
+
+        private void BindHotels()
+        {
+            //Setup of gotels combobox
+            var HotelBindingSource = new BindingSource();
+            HotelBindingSource.DataSource = FlightClassList;
+            cbPg4SelectHotel.DataSource = HotelBindingSource.DataSource;
+        }
+
+        private void BindCars()
+        {
+            //Setup of car choice combobox
+            CarsAvailbleList = GetCarData(CarsAvailbleList);
+            var CarBindingSource = new BindingSource();
+            CarBindingSource.DataSource = CarsAvailbleList;
+            cbPg5CarHireSelection.DataSource = CarBindingSource.DataSource;
+
+            cbPg5CarHireSelection.ValueMember = null;
+            cbPg5CarHireSelection.DisplayMember = "_CarTypeName";
+        }
+
         #endregion
 
         #region PAGE 1 - GET LOCATION
@@ -372,7 +488,9 @@ namespace HolidayBooking
         private void chbPg3YesFlights_CheckedChanged(object sender, EventArgs e)
         {
             chbPg3NoFlights.Checked = !chbPg3YesFlights.Checked;
+            CurrentBooking.WantFlights = true;
 
+            //Enables and disables drop down boxes on page if the user doesnt want flights and vice versa
             if (chbPg3YesFlights.Checked == true)
             {
                 cbPg3DepartureAirport.Enabled = true;
@@ -383,6 +501,7 @@ namespace HolidayBooking
         private void chbPg3NoFlights_CheckedChanged(object sender, EventArgs e)
         {
             chbPg3YesFlights.Checked = !chbPg3NoFlights.Checked;
+            CurrentBooking.WantFlights = false;
 
             if (chbPg3NoFlights.Checked == true)
             {
@@ -409,6 +528,7 @@ namespace HolidayBooking
         private void chbPg4YesHotel_CheckedChanged(object sender, EventArgs e)
         {
             chbPg4NoHotel.Checked = !chbPg4YesHotel.Checked;
+            CurrentBooking.WantHotel = true;
 
             if (chbPg4YesHotel.Checked == true)
             {
@@ -422,6 +542,7 @@ namespace HolidayBooking
         private void chbPg4NoHotel_CheckedChanged(object sender, EventArgs e)
         {
             chbPg4YesHotel.Checked = !chbPg4NoHotel.Checked;
+            CurrentBooking.WantHotel = false;
 
             if (chbPg4NoHotel.Checked == true)
             {
@@ -458,6 +579,7 @@ namespace HolidayBooking
         private void chbPg5YesHireCar_CheckedChanged(object sender, EventArgs e)
         {
             chbPg5NoHireCar.Checked = !chbPg5YesHireCar.Checked;
+            CurrentBooking.WantCar = true;
 
             if (chbPg5YesHireCar.Checked == true)
             {
@@ -470,6 +592,7 @@ namespace HolidayBooking
         private void chbPg5NoHireCar_CheckedChanged(object sender, EventArgs e)
         {
             chbPg5YesHireCar.Checked = !chbPg5NoHireCar.Checked;
+            CurrentBooking.WantCar = false;
 
             if (chbPg5NoHireCar.Checked == true)
             {
@@ -503,11 +626,13 @@ namespace HolidayBooking
         private void chbPg6YesAddInsurance_CheckedChanged(object sender, EventArgs e)
         {
             chbPg6NoInsurance.Checked = !chbPg6YesInsurance.Checked;
+            CurrentBooking.WantInsurance = true;
         }
 
         private void chbPg6NoInsurance_CheckedChanged(object sender, EventArgs e)
         {
             chbPg6YesInsurance.Checked = !chbPg6NoInsurance.Checked;
+            CurrentBooking.WantInsurance = false;
         }
 
 

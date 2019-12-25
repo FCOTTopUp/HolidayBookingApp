@@ -15,5 +15,11 @@ namespace HolidayBooking
         public DateTime holidayEndDate;
         public int LengthOfHoliday;
         public int LocationID;
+
+        public int HotelID;
+        public DateTime HotelStartDate;
+        public DateTime HotelEndDate;
+
+
     }
 }
