@@ -181,6 +181,12 @@
             this.chbPg4YesHotel = new System.Windows.Forms.CheckBox();
             this.calPg4HotelBooking = new System.Windows.Forms.MonthCalendar();
             this.lbRunningPrice = new System.Windows.Forms.Label();
+            this.lbPg4DoubleRoomsAvalibleVar = new System.Windows.Forms.Label();
+            this.lbPg4FamilyRoomsAvalibleVar = new System.Windows.Forms.Label();
+            this.lbPg4TwinsRoomsAvalibleVar = new System.Windows.Forms.Label();
+            this.lbPg4DoubleRoomsRequiredVar = new System.Windows.Forms.Label();
+            this.lbPg4TwinRoomsRequiredVar = new System.Windows.Forms.Label();
+            this.lbPg4FamilyRoomsRequiredVar = new System.Windows.Forms.Label();
             this.plPg1GetLocation.SuspendLayout();
             this.plPg2BookingDates.SuspendLayout();
             this.plPg3Flight.SuspendLayout();
@@ -1589,6 +1595,12 @@
             // 
             // plPg4Hotel
             // 
+            this.plPg4Hotel.Controls.Add(this.lbPg4FamilyRoomsRequiredVar);
+            this.plPg4Hotel.Controls.Add(this.lbPg4TwinRoomsRequiredVar);
+            this.plPg4Hotel.Controls.Add(this.lbPg4DoubleRoomsRequiredVar);
+            this.plPg4Hotel.Controls.Add(this.lbPg4TwinsRoomsAvalibleVar);
+            this.plPg4Hotel.Controls.Add(this.lbPg4FamilyRoomsAvalibleVar);
+            this.plPg4Hotel.Controls.Add(this.lbPg4DoubleRoomsAvalibleVar);
             this.plPg4Hotel.Controls.Add(this.lbPg4FamilyRoomsRequired);
             this.plPg4Hotel.Controls.Add(this.lbPg4TwinRoomsRequired);
             this.plPg4Hotel.Controls.Add(this.lbPg4DoubleRoomsRequired);
@@ -1849,6 +1861,60 @@
             this.lbRunningPrice.TabIndex = 39;
             this.lbRunningPrice.Text = "Price:";
             // 
+            // lbPg4DoubleRoomsAvalibleVar
+            // 
+            this.lbPg4DoubleRoomsAvalibleVar.AutoSize = true;
+            this.lbPg4DoubleRoomsAvalibleVar.Location = new System.Drawing.Point(639, 351);
+            this.lbPg4DoubleRoomsAvalibleVar.Name = "lbPg4DoubleRoomsAvalibleVar";
+            this.lbPg4DoubleRoomsAvalibleVar.Size = new System.Drawing.Size(13, 13);
+            this.lbPg4DoubleRoomsAvalibleVar.TabIndex = 26;
+            this.lbPg4DoubleRoomsAvalibleVar.Text = "0";
+            // 
+            // lbPg4FamilyRoomsAvalibleVar
+            // 
+            this.lbPg4FamilyRoomsAvalibleVar.AutoSize = true;
+            this.lbPg4FamilyRoomsAvalibleVar.Location = new System.Drawing.Point(638, 411);
+            this.lbPg4FamilyRoomsAvalibleVar.Name = "lbPg4FamilyRoomsAvalibleVar";
+            this.lbPg4FamilyRoomsAvalibleVar.Size = new System.Drawing.Size(13, 13);
+            this.lbPg4FamilyRoomsAvalibleVar.TabIndex = 27;
+            this.lbPg4FamilyRoomsAvalibleVar.Text = "0";
+            // 
+            // lbPg4TwinsRoomsAvalibleVar
+            // 
+            this.lbPg4TwinsRoomsAvalibleVar.AutoSize = true;
+            this.lbPg4TwinsRoomsAvalibleVar.Location = new System.Drawing.Point(639, 382);
+            this.lbPg4TwinsRoomsAvalibleVar.Name = "lbPg4TwinsRoomsAvalibleVar";
+            this.lbPg4TwinsRoomsAvalibleVar.Size = new System.Drawing.Size(13, 13);
+            this.lbPg4TwinsRoomsAvalibleVar.TabIndex = 28;
+            this.lbPg4TwinsRoomsAvalibleVar.Text = "0";
+            // 
+            // lbPg4DoubleRoomsRequiredVar
+            // 
+            this.lbPg4DoubleRoomsRequiredVar.AutoSize = true;
+            this.lbPg4DoubleRoomsRequiredVar.Location = new System.Drawing.Point(880, 351);
+            this.lbPg4DoubleRoomsRequiredVar.Name = "lbPg4DoubleRoomsRequiredVar";
+            this.lbPg4DoubleRoomsRequiredVar.Size = new System.Drawing.Size(13, 13);
+            this.lbPg4DoubleRoomsRequiredVar.TabIndex = 29;
+            this.lbPg4DoubleRoomsRequiredVar.Text = "0";
+            // 
+            // lbPg4TwinRoomsRequiredVar
+            // 
+            this.lbPg4TwinRoomsRequiredVar.AutoSize = true;
+            this.lbPg4TwinRoomsRequiredVar.Location = new System.Drawing.Point(880, 382);
+            this.lbPg4TwinRoomsRequiredVar.Name = "lbPg4TwinRoomsRequiredVar";
+            this.lbPg4TwinRoomsRequiredVar.Size = new System.Drawing.Size(13, 13);
+            this.lbPg4TwinRoomsRequiredVar.TabIndex = 30;
+            this.lbPg4TwinRoomsRequiredVar.Text = "0";
+            // 
+            // lbPg4FamilyRoomsRequiredVar
+            // 
+            this.lbPg4FamilyRoomsRequiredVar.AutoSize = true;
+            this.lbPg4FamilyRoomsRequiredVar.Location = new System.Drawing.Point(880, 412);
+            this.lbPg4FamilyRoomsRequiredVar.Name = "lbPg4FamilyRoomsRequiredVar";
+            this.lbPg4FamilyRoomsRequiredVar.Size = new System.Drawing.Size(13, 13);
+            this.lbPg4FamilyRoomsRequiredVar.TabIndex = 31;
+            this.lbPg4FamilyRoomsRequiredVar.Text = "0";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1868,8 +1934,6 @@
             this.Controls.Add(this.Navbtn2Dates);
             this.Controls.Add(this.Navbtn1NewBooking);
             this.Controls.Add(this.BookingProgressBar);
-            this.Controls.Add(this.plPg3Flight);
-            this.Controls.Add(this.plPg5CarHire);
             this.Controls.Add(this.plPg4Hotel);
             this.Controls.Add(this.plPg6Insurance);
             this.Controls.Add(this.plPg7CheckDetails);
@@ -1877,6 +1941,8 @@
             this.Controls.Add(this.plPg9Payment);
             this.Controls.Add(this.plPg2BookingDates);
             this.Controls.Add(this.plPg1GetLocation);
+            this.Controls.Add(this.plPg3Flight);
+            this.Controls.Add(this.plPg5CarHire);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -2058,5 +2124,11 @@
         private System.Windows.Forms.Label lbRunningPrice;
         private System.Windows.Forms.Label lbPg9PaymentMethod;
         private System.Windows.Forms.Label lbPg9BillingDetails;
+        private System.Windows.Forms.Label lbPg4FamilyRoomsRequiredVar;
+        private System.Windows.Forms.Label lbPg4TwinRoomsRequiredVar;
+        private System.Windows.Forms.Label lbPg4DoubleRoomsRequiredVar;
+        private System.Windows.Forms.Label lbPg4TwinsRoomsAvalibleVar;
+        private System.Windows.Forms.Label lbPg4FamilyRoomsAvalibleVar;
+        private System.Windows.Forms.Label lbPg4DoubleRoomsAvalibleVar;
     }
 }

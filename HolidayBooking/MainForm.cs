@@ -187,6 +187,14 @@ namespace HolidayBooking
         {
             btnPreviousPage.Enabled = true;
             btnNextPage.Enabled = true;
+
+        }
+
+        private void page4HotelRoomSetup()
+        {
+            lbPg4DoubleRoomsAvalibleVar.Text = HotelsInLocationList[cbPg4SelectHotel.SelectedIndex]._DoubleRoomsMax.ToString();
+            lbPg4TwinsRoomsAvalibleVar.Text = HotelsInLocationList[cbPg4SelectHotel.SelectedIndex]._TwinRoomsMax.ToString();
+            lbPg4FamilyRoomsAvalibleVar.Text = HotelsInLocationList[cbPg4SelectHotel.SelectedIndex]._FamilyRoomsMax.ToString();
         }
 
         private void page5CarSetup()
@@ -338,14 +346,14 @@ namespace HolidayBooking
             return _FlightClass;
         }
 
-        private List<> GetHotelData()
+        private List<HotelInfo> GetHotelData(List<HotelInfo> _HotelInfo) //May also add other parameters to be poassed through to room creation function
         {
             //Gets all hotels availble ***Within the selected location*** and the number of rooms left - Will need to be calculated from max and number of booked already
-            _CarsAvailble.Add(new CarTypes(0, "Test1", 100));
-            _CarsAvailble.Add(new CarTypes(1, "Test2", 100));
-            _CarsAvailble.Add(new CarTypes(2, "Test3", 100));
+            _HotelInfo.Add(new HotelInfo(0, "Hotel1", 100, 9, 8, 7));
+            _HotelInfo.Add(new HotelInfo(1, "Hotel2", 100, 6, 5, 4));
+            _HotelInfo.Add(new HotelInfo(2, "Hotel3", 100, 3, 2, 1));
 
-            return _CarsAvailble;
+            return _HotelInfo;
         }
 
         private List<CarTypes> GetCarData(List<CarTypes> _CarsAvailble)
@@ -396,9 +404,18 @@ namespace HolidayBooking
         private void BindHotels()
         {
             //Setup of gotels combobox
+            //var HotelBindingSource = new BindingSource();
+            //HotelBindingSource.DataSource = FlightClassList;
+            //cbPg4SelectHotel.DataSource = HotelBindingSource.DataSource;
+
+            //Setup of flight class combobox
+            HotelsInLocationList = GetHotelData(HotelsInLocationList);
             var HotelBindingSource = new BindingSource();
-            HotelBindingSource.DataSource = FlightClassList;
+            HotelBindingSource.DataSource = HotelsInLocationList;
             cbPg4SelectHotel.DataSource = HotelBindingSource.DataSource;
+
+            cbPg4SelectHotel.ValueMember = null;
+            cbPg4SelectHotel.DisplayMember = "_HotelName";
         }
 
         private void BindCars()
@@ -555,7 +572,7 @@ namespace HolidayBooking
 
         private void cbPg4SelectHotel_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            page4HotelRoomSetup();
         }
 
         private void calPg4HotelBooking_DateChanged(object sender, DateRangeEventArgs e)
@@ -706,6 +723,48 @@ namespace HolidayBooking
             Comfirmation comfirmation = new Comfirmation();
             comfirmation.Show();
             this.Hide();
+        }
+        #endregion
+
+        #region Update Booking Object
+        void SavePage1Details()
+        {
+            //NOT NEEDED DUE TO 1 PAGE CREATING THE OBJECT
+        }
+
+        void SavePage2Details()
+        {
+
+        }
+        void SavePage3Details()
+        {
+
+        }
+        void SavePage4Details()
+        {
+
+        }
+        void SavePage5Details()
+        {
+
+        }
+        void SavePage6Details()
+        {
+
+        }
+        void SavePage7Details()
+        {
+
+        }
+
+        void SavePage8Details()
+        {
+
+        }
+
+        void SavePage9Details()
+        {
+
         }
         #endregion
 
