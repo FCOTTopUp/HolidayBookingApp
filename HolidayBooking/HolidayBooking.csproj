@@ -55,14 +55,13 @@
     <Compile Include="CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDetails.cs" />
-    <Compile Include="ExsistingBoookings.cs" />
     <Compile Include="Comfirmation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Comfirmation.Designer.cs">
       <DependentUpon>Comfirmation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Excel.cs" />
     <Compile Include="FlightClass.cs" />
     <Compile Include="HotelInfo.cs" />
     <Compile Include="HotelRooms.cs" />

@@ -20,6 +20,8 @@ namespace HolidayBooking
         public DateTime HotelStartDate;
         public DateTime HotelEndDate;
 
-
+        public int HotelDoubleRoomsRequired;
+        public int HotelFamilyRoomsRequired;
+        public int HotelTwinRoomsRequired;
     }
 }

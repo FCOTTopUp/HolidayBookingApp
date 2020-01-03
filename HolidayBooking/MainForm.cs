@@ -36,7 +36,7 @@ namespace HolidayBooking
 
 
         //Creation of customer object to hold all users details either that have just been made or retrieved from the database
-        CustomerDetails CurrentCustomer = new CustomerDetails();
+        //CustomerDetails CurrentCustomer = new CustomerDetails();
 
         //Creation of booking object that will be used as the new booking through the pages
         NewBooking CurrentBooking = new NewBooking();
@@ -44,9 +44,11 @@ namespace HolidayBooking
 
         #endregion
 
-        public MainForm()
+        public MainForm(string _Username)
         {
             InitializeComponent();
+
+            GetCustomerDetails(_Username);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -87,6 +89,7 @@ namespace HolidayBooking
             //Takes user back one page in navigation
             if (NavIndex > 0)
             {
+                PageCheckerSaving();
                 NavIndex--;
                 LoadPage();
             }
@@ -97,17 +100,20 @@ namespace HolidayBooking
             //Takes user to next page in navigation
             if (NavIndex < NavPanels.Count - 1)
             {
+                PageCheckerSaving();
                 NavIndex++;
                 LoadPage();
                 if (NavIndex == 1)
                 {
                     //Create new object of new booking and pass it variables
                     CurrentBooking.SetupBooking(cbPg1GetLocation.SelectedIndex, Convert.ToInt32(tbPg1NoOfAdults.Text), Convert.ToInt32(tbPg1NoOfChildren.Text));
+                    CurrentBooking.LocationName = cbPg1GetLocation.Text;
                     DisableNavButtons();
                 }
             }
             else if (NavIndex ==8)
             {
+                WriteToCSV();
                 Comfirmation comfirmation = new Comfirmation();
                 comfirmation.Show();
                 this.Hide();
@@ -119,7 +125,7 @@ namespace HolidayBooking
             //Loads the new page by bringing the panel to the front
             NavPanels[NavIndex].BringToFront();
             updateProgressBar(NavIndex);
-            PageChecker();
+            PageCheckerLoading();
 
             //Call page checker 
         }
@@ -137,7 +143,7 @@ namespace HolidayBooking
             EnableNavButtons();
         }
 
-        private void PageChecker()
+        private void PageCheckerLoading()
         {
             if (NavIndex == 0)
             { page1NewBookingSetup(); }
@@ -157,6 +163,28 @@ namespace HolidayBooking
             { page8SummarySetup(); }
             else if (NavIndex == 8)
             { page9PaymentsSetup(); }
+        }
+
+        private void PageCheckerSaving()
+        {
+            if (NavIndex == 0)
+            { SavePage1Details(); }
+            else if (NavIndex == 1)
+            { SavePage2DatesDetails(); }
+            else if (NavIndex == 2)
+            { SavePage3FlightsDetails(); }
+            else if (NavIndex == 3)
+            { SavePage4HotelDetails(); }
+            else if (NavIndex == 4)
+            { SavePage5CarDetails(); }
+            else if (NavIndex == 5)
+            { SavePage6InsuranceDetails(); }
+            else if (NavIndex == 6)
+            { SavePage7CheckDetails(); }
+            else if (NavIndex == 7)
+            { SavePage8SummaryDetails(); }
+            else if (NavIndex == 8)
+            { SavePage9PaymentDetails(); }
         }
         #endregion
 
@@ -188,6 +216,19 @@ namespace HolidayBooking
             btnPreviousPage.Enabled = true;
             btnNextPage.Enabled = true;
 
+            //Sets up holiday dates labels in top left corner of the screen
+            lbPg4HolidayStartDate.Text = "Start:" + CurrentBooking.holidayStartDate.Date.ToString();
+            lbPg4HolidayEndDate.Text = "End:" + CurrentBooking.holidayEndDate.Date.ToString();
+
+            //Sets up hotel date boxes so that the selected hotel dates have to be within holiday dates
+            dtPg4HotelStart.MinDate = CurrentBooking.holidayStartDate.Date;
+
+            dtPg4HotelStart.MaxDate = CurrentBooking.holidayEndDate.Date.AddDays(-1);
+
+
+
+            dtPg4HotelEnd.MinDate = dtPg4HotelStart.Value.AddDays(1);
+            dtPg4HotelEnd.MaxDate = CurrentBooking.holidayEndDate.Date;
         }
 
         private void page4HotelRoomSetup()
@@ -195,6 +236,8 @@ namespace HolidayBooking
             lbPg4DoubleRoomsAvalibleVar.Text = HotelsInLocationList[cbPg4SelectHotel.SelectedIndex]._DoubleRoomsMax.ToString();
             lbPg4TwinsRoomsAvalibleVar.Text = HotelsInLocationList[cbPg4SelectHotel.SelectedIndex]._TwinRoomsMax.ToString();
             lbPg4FamilyRoomsAvalibleVar.Text = HotelsInLocationList[cbPg4SelectHotel.SelectedIndex]._FamilyRoomsMax.ToString();
+
+
         }
 
         private void page5CarSetup()
@@ -213,18 +256,73 @@ namespace HolidayBooking
         {
             btnPreviousPage.Enabled = true;
             btnNextPage.Enabled = false;
+
+            tbPg7FirstName.Text = CurrentBooking.FirstName;
+            tbPg7MiddleName.Text = CurrentBooking.MiddleName;
+            tbPg7LastName.Text = CurrentBooking.LastName;
+            tbPg7Phone.Text = CurrentBooking.PhoneNo;
+            tbPg7Email.Text = CurrentBooking.Email;
+            tbPg7HouseNo.Text = CurrentBooking.HouseNo;
+            tbPg7Street.Text = CurrentBooking.Street;
+            tbPg7Town.Text = CurrentBooking.Town;
+            tbPg7Postcode.Text = CurrentBooking.Postcode;
         }
 
         private void page8SummarySetup()
         {
             btnPreviousPage.Enabled = true;
             btnNextPage.Enabled = true;
+
+            rtbPg8BookingInfo.Clear();
+            rtbPg8FlightInfo.Clear();
+            rtbPg8HotelInfo.Clear();
+            rtbPg8OptionalInfo.Clear();
+
+            dtPg8StartDate.Value = CurrentBooking.holidayStartDate.Date;
+            dtPg8EndDate.Value = CurrentBooking.holidayEndDate.Date;
+
+            rtbPg8BookingInfo.AppendText(CurrentBooking.LocationName + Environment.NewLine);
+            rtbPg8BookingInfo.AppendText("Adults: " + CurrentBooking.NoOfAdults + Environment.NewLine);
+            rtbPg8BookingInfo.AppendText("Children: " + CurrentBooking.NoOfChildren + Environment.NewLine);
+            rtbPg8BookingInfo.AppendText("Holiday Start: " + CurrentBooking.holidayStartDate.Date + Environment.NewLine);
+            rtbPg8BookingInfo.AppendText("Holiday End: " + CurrentBooking.holidayEndDate.Date + Environment.NewLine);
+
+            rtbPg8FlightInfo.AppendText(CurrentBooking.DepartureAirportName + Environment.NewLine);
+            rtbPg8FlightInfo.AppendText(CurrentBooking.TravelClassName + Environment.NewLine);
+
+            rtbPg8HotelInfo.AppendText(CurrentBooking.HotelName + Environment.NewLine);
+            rtbPg8HotelInfo.AppendText("Hotel Start Date: " + CurrentBooking.HotelStartDate + Environment.NewLine);
+            rtbPg8HotelInfo.AppendText("Hotel End Date: " + CurrentBooking.HotelEndDate + Environment.NewLine);
+            rtbPg8HotelInfo.AppendText("Double Rooms Required: " + CurrentBooking.HotelDoubleRoomsRequired + Environment.NewLine);
+            rtbPg8HotelInfo.AppendText("Twin Rooms Required: " + CurrentBooking.HotelTwinRoomsRequired + Environment.NewLine);
+            rtbPg8HotelInfo.AppendText("Family Rooms Required: " + CurrentBooking.HotelFamilyRoomsRequired + Environment.NewLine);
+
+            if (CurrentBooking.WantCar == true)
+            {
+                rtbPg8OptionalInfo.AppendText("Car Supplied: " + CurrentBooking.CarHireName + Environment.NewLine);
+            }
+            else
+            {
+                rtbPg8OptionalInfo.AppendText("N/A" + Environment.NewLine);
+            }
+            if (CurrentBooking.WantInsurance == true)
+            {
+                rtbPg8OptionalInfo.AppendText("Insurance Supplied" + Environment.NewLine);
+            }
+            else
+            {
+                rtbPg8OptionalInfo.AppendText("N/A" + Environment.NewLine);
+            }
         }
+
 
         private void page9PaymentsSetup()
         {
             btnPreviousPage.Enabled = true;
             btnNextPage.Enabled = false;
+
+
+            //ADD CODE TO AUTO PUT IN CUSTOEMR DETAILS AS BILLING DETAILS AND THEN GIVE USER THE OPTION TO CHENAGE
         }
         #endregion
 
@@ -232,54 +330,63 @@ namespace HolidayBooking
         //Start - Code for each of the nav buttons at the top of the page
         private void Navbtn1NewBooking_Click(object sender, EventArgs e)
         {
+            PageCheckerSaving();
             NavIndex = 0;
             LoadPage();
         }
 
         private void Navbtn2Dates_Click(object sender, EventArgs e)
         {
+            PageCheckerSaving();
             NavIndex = 1;
             LoadPage();
         }
 
         private void Navbtn3Flights_Click(object sender, EventArgs e)
         {
+            PageCheckerSaving();
             NavIndex = 2;
             LoadPage();
         }
 
         private void Navbtn4Hotel_Click(object sender, EventArgs e)
         {
+            PageCheckerSaving();
             NavIndex = 3;
             LoadPage();
         }
 
         private void Navbtn5Car_Click(object sender, EventArgs e)
         {
+            PageCheckerSaving();
             NavIndex = 4;
             LoadPage();
         }
 
         private void Navbtn6Inusrance_Click(object sender, EventArgs e)
         {
+            PageCheckerSaving();
             NavIndex = 5;
             LoadPage();
         }
 
         private void Navbtn7CheckDetails_Click(object sender, EventArgs e)
         {
+            PageCheckerSaving();
             NavIndex = 6;
             LoadPage();
         }
 
         private void Navbtn8Summary_Click(object sender, EventArgs e)
         {
+            PageCheckerSaving();
             NavIndex = 7;
             LoadPage();
         }
 
         private void Navbtn9Payments_Click(object sender, EventArgs e)
         {
+            PageCheckerSaving();
             NavIndex = 8;
             LoadPage();
         }
@@ -324,6 +431,22 @@ namespace HolidayBooking
         #endregion
 
         #region DATABASE READ FUNCTIONS
+        private void GetCustomerDetails(string _Username)
+        {
+            //Loads customer data using the username
+
+            //Test Code
+            CurrentBooking.FirstName = "First";
+            CurrentBooking.MiddleName = "Middle";
+            CurrentBooking.LastName = "Last";
+            CurrentBooking.PhoneNo = "07711223456";
+            CurrentBooking.Email = "Test@gmail.com";
+            CurrentBooking.HouseNo = "21";
+            CurrentBooking.Street = "Test Street";
+            CurrentBooking.Town = "Test Town";
+            CurrentBooking.Postcode = "TN31 1EJ";
+        }
+
         private void GetLocations()
         {
 
@@ -403,12 +526,7 @@ namespace HolidayBooking
 
         private void BindHotels()
         {
-            //Setup of gotels combobox
-            //var HotelBindingSource = new BindingSource();
-            //HotelBindingSource.DataSource = FlightClassList;
-            //cbPg4SelectHotel.DataSource = HotelBindingSource.DataSource;
-
-            //Setup of flight class combobox
+            //Setup of hotels combobox
             HotelsInLocationList = GetHotelData(HotelsInLocationList);
             var HotelBindingSource = new BindingSource();
             HotelBindingSource.DataSource = HotelsInLocationList;
@@ -542,6 +660,7 @@ namespace HolidayBooking
 
         #region PAGE 4 - HOTEL
         //********************************** Page 4 - Hotel ***************************************************************
+        //HOTEL SELECTION BUTTONS
         private void chbPg4YesHotel_CheckedChanged(object sender, EventArgs e)
         {
             chbPg4NoHotel.Checked = !chbPg4YesHotel.Checked;
@@ -575,6 +694,8 @@ namespace HolidayBooking
             page4HotelRoomSetup();
         }
 
+
+        //DATE BUTTIONS
         private void calPg4HotelBooking_DateChanged(object sender, DateRangeEventArgs e)
         {
 
@@ -582,13 +703,78 @@ namespace HolidayBooking
 
         private void dtPg4HotelStart_ValueChanged(object sender, EventArgs e)
         {
-
+            CurrentBooking.HotelStartDate = dtPg4HotelStart.Value;
+            dtPg4HotelEnd.MinDate = CurrentBooking.HotelStartDate.AddDays(1);
+            calPg4HotelBooking.SelectionRange = new SelectionRange(CurrentBooking.HotelStartDate, CurrentBooking.HotelEndDate);
         }
 
         private void dtPg4HotelEnd_ValueChanged(object sender, EventArgs e)
         {
-
+            CurrentBooking.HotelEndDate = dtPg4HotelEnd.Value;
+            calPg4HotelBooking.SelectionRange = new SelectionRange(CurrentBooking.HotelStartDate, CurrentBooking.HotelEndDate);
         }
+
+        //ROOM BUTTONS
+        private void btnPg4MinusDoubleRoomsRequired_Click(object sender, EventArgs e)
+        {
+            int DoubleRoom = Convert.ToInt32(lbPg4DoubleRoomsRequiredVar.Text);
+            if (DoubleRoom > 0)
+            {
+                DoubleRoom--;
+                lbPg4DoubleRoomsRequiredVar.Text = DoubleRoom.ToString();
+            }
+        }
+
+        private void btnPg4AddDoubleRoomsRequired_Click(object sender, EventArgs e)
+        {
+            int DoubleRoom = Convert.ToInt32(lbPg4DoubleRoomsRequiredVar.Text);
+            if (DoubleRoom < Convert.ToInt32(lbPg4DoubleRoomsAvalibleVar.Text))
+            {
+                DoubleRoom++;
+                lbPg4DoubleRoomsRequiredVar.Text = DoubleRoom.ToString();
+            }
+        }
+
+        private void btnPg4MinusTwinRoomsRequired_Click(object sender, EventArgs e)
+        {
+            int TwinRoom = Convert.ToInt32(lbPg4TwinRoomsRequiredVar.Text);
+            if (TwinRoom > 0)
+            {
+                TwinRoom--;
+                lbPg4TwinRoomsRequiredVar.Text = TwinRoom.ToString();
+            }
+        }
+
+        private void btnPg4AddTwinRoomsRequired_Click(object sender, EventArgs e)
+        {
+            int TwinRoom = Convert.ToInt32(lbPg4TwinRoomsRequiredVar.Text);
+            if (TwinRoom < Convert.ToInt32(lbPg4TwinsRoomsAvalibleVar.Text))
+            {
+                TwinRoom++;
+                lbPg4TwinRoomsRequiredVar.Text = TwinRoom.ToString();
+            }
+        }
+
+        private void btnPg4MinusFamilyRoomsRequired_Click(object sender, EventArgs e)
+        {
+            int FamilyRoom = Convert.ToInt32(lbPg4FamilyRoomsRequiredVar.Text);
+            if (FamilyRoom > 0)
+            {
+                FamilyRoom--;
+                lbPg4FamilyRoomsRequiredVar.Text = FamilyRoom.ToString();
+            }
+        }
+
+        private void btnPg4AddFamilyRoomsRequired_Click(object sender, EventArgs e)
+        {
+            int FamilyRoom = Convert.ToInt32(lbPg4FamilyRoomsRequiredVar.Text);
+            if (FamilyRoom < Convert.ToInt32(lbPg4FamilyRoomsAvalibleVar.Text))
+            {
+                FamilyRoom++;
+                lbPg4FamilyRoomsRequiredVar.Text = FamilyRoom.ToString();
+            }
+        }
+
         #endregion
 
         #region PAGE 5 - CAR
@@ -672,6 +858,7 @@ namespace HolidayBooking
         private void btnPg7CorrectDetails_Click(object sender, EventArgs e)
         {
             //Error checks for details
+            SavePage7CheckDetails();
             NavIndex++;
             LoadPage();
         }
@@ -720,49 +907,142 @@ namespace HolidayBooking
         private void btnPg9MakePayment_Click(object sender, EventArgs e)
         {
             //ADD ERROR CHECKS FOR CARD DETAILS
+            SavePage9PaymentDetails();
+
             Comfirmation comfirmation = new Comfirmation();
             comfirmation.Show();
             this.Hide();
         }
         #endregion
 
-        #region Update Booking Object
+        #region UPDATE BOOKING OBJECT
         void SavePage1Details()
         {
             //NOT NEEDED DUE TO 1 PAGE CREATING THE OBJECT
         }
 
-        void SavePage2Details()
+        void SavePage2DatesDetails()
         {
+            CurrentBooking.holidayStartDate = dtPg2HolidayStart.Value;
+            CurrentBooking.holidayEndDate = dtPg2HolidayEnd.Value;
+        }
+        void SavePage3FlightsDetails()
+        {
+            if (chbPg3YesFlights.Checked == true)
+            {
+                CurrentBooking.WantFlights = true;
+
+                CurrentBooking.DepartureAirportID = cbPg3DepartureAirport.SelectedIndex;
+                CurrentBooking.TravelClassID = cbPg3TravelClass.SelectedIndex;
+
+                CurrentBooking.DepartureAirportName = cbPg3DepartureAirport.Text;
+                CurrentBooking.TravelClassName = cbPg3TravelClass.Text;
+            }
+            else
+            {
+                CurrentBooking.WantFlights = false;
+            }
+        }
+        void SavePage4HotelDetails()
+        {
+            if (chbPg4YesHotel.Checked == true)
+            {
+                CurrentBooking.WantHotel = true;
+
+                CurrentBooking.HotelID = cbPg4SelectHotel.SelectedIndex;
+                CurrentBooking.holidayStartDate = dtPg4HotelStart.Value;
+                CurrentBooking.holidayEndDate = dtPg4HotelEnd.Value;
+                CurrentBooking.HotelName = cbPg4SelectHotel.Text;
+
+                CurrentBooking.HotelDoubleRoomsRequired = Convert.ToInt32(lbPg4DoubleRoomsRequiredVar.Text);
+                CurrentBooking.HotelFamilyRoomsRequired = Convert.ToInt32(lbPg4FamilyRoomsRequiredVar.Text);
+                CurrentBooking.HotelTwinRoomsRequired = Convert.ToInt32(lbPg4TwinRoomsRequiredVar.Text);
+            }
+            else
+            {
+                CurrentBooking.WantHotel = false;
+            }
+        }
+        void SavePage5CarDetails()
+        {
+            if (chbPg5YesHireCar.Checked == true)
+            {
+                CurrentBooking.WantCar = true;
+
+                CurrentBooking.CarHireID = cbPg5CarHireSelection.SelectedIndex;
+                CurrentBooking.CarHireName = cbPg5CarHireSelection.Text;
+            }
+            else
+            {
+                CurrentBooking.WantCar = false;
+            }
 
         }
-        void SavePage3Details()
+        void SavePage6InsuranceDetails()
         {
+            if (chbPg6YesInsurance.Checked == true)
+            {
+                CurrentBooking.WantInsurance = true;
+            }
+            else
+            {
+                CurrentBooking.WantInsurance = false;
+            }
+        }
+        void SavePage7CheckDetails()
+        {
+            CurrentBooking.FirstName = tbPg7FirstName.Text;
+            CurrentBooking.MiddleName = tbPg7FirstName.Text;
+            CurrentBooking.LastName = tbPg7LastName.Text;
+            CurrentBooking.PhoneNo = tbPg7Phone.Text;
+            CurrentBooking.Email = tbPg7Email.Text;
+            CurrentBooking.HouseNo = tbPg7HouseNo.Text;
+            CurrentBooking.Street = tbPg7Street.Text;
+            CurrentBooking.Town = tbPg7Town.Text;
+            CurrentBooking.Postcode = tbPg7Postcode.Text;
+    }
+
+        void SavePage8SummaryDetails()
+        {
+            //NO DATA TO SAVE
+        }
+
+        void SavePage9PaymentDetails()
+        {
+            if (chbPg9BillingSameAsAccount.Checked == true)
+            {
+                CurrentBooking.BillingSameAsAccount();
+            }
+            else
+            {
+                CurrentBooking.BillingFirstName = mtbPg9FirstName.Text;
+                //CurrentBooking.BillingMiddleName = tbPg7FirstName.Text;
+                CurrentBooking.BillingLastName = mtbPg9LastName.Text;
+                CurrentBooking.BillingHouseNo = tbPg9HouseNo.Text;
+                CurrentBooking.BillingStreet = tbPg9Street.Text;
+                CurrentBooking.BillingTown = tbPg9Town.Text;
+                CurrentBooking.BillingPostcode = tbPg9Postcode.Text;
+            }
+
+            if (chbPg9CreditCard.Checked == true)
+            {
+                CurrentBooking.CreditCard = true;
+            }
+            else if (chbPg9DebitCard.Checked == true)
+            {
+                CurrentBooking.DebitCard = true;
+            }
+
+            CurrentBooking.NameOnCard = mtbPg9NameOnCard.Text;
+            CurrentBooking.CardNo = mtbPg9CardNo.Text;
+            CurrentBooking.CardExpiry = mtbPg9ExpiryDate.Text;
+            CurrentBooking.CardSercuityCode = mtbPg9SercuityCode.Text;
 
         }
-        void SavePage4Details()
-        {
+        #endregion
 
-        }
-        void SavePage5Details()
-        {
-
-        }
-        void SavePage6Details()
-        {
-
-        }
-        void SavePage7Details()
-        {
-
-        }
-
-        void SavePage8Details()
-        {
-
-        }
-
-        void SavePage9Details()
+        #region EXPORT DATA
+        public void WriteToCSV()
         {
 
         }

@@ -31,7 +31,7 @@ namespace HolidayBooking
             //NEED TO ADD SQL CODE TO CHECK AGAINST DATABASE
             if (_Username == "test" && _Password == "test")
             {
-                OpenMainPage();
+                OpenMainPage(_Username);
             }
             else
             {
@@ -39,11 +39,11 @@ namespace HolidayBooking
             }
         }
 
-        private void OpenMainPage()
+        private void OpenMainPage(string _Username)
         {
             //Opens main form and hides the login page
             //NEED TO ADD FULLSCREEN CODE WHEN PAGES HAS BEEN FINASLISED
-            MainForm MainForm = new MainForm();
+            MainForm MainForm = new MainForm(_Username);
             MainForm.Show();
             this.Hide();
         }

@@ -26,6 +26,7 @@ namespace HolidayBooking
         {
             //TO ADD CODE TO ALSO CLOSE MAINFORM AND THEN SHOW LOGIN FORM AGAIN
             this.Close();
+            Application.Exit();
 
         }
 
@@ -34,5 +35,6 @@ namespace HolidayBooking
             //TO ADD CODE TO SHOW MAIN FORM AGAIN
             this.Close();
         }
+
     }
 }
